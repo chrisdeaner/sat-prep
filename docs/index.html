@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Master SAT vocabulary with interactive flashcards. 256 words from official SAT exams (2024–2026), weighted by frequency.">
+  <title>SAT Vocab Flash — Master High-Frequency SAT Words</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       Design Tokens
+       ======================================== */
+    :root {
+      --bg-primary: #0b0b11;
+      --bg-card-front: #151525;
+      --bg-card-back: #1a1a35;
+      --accent: #e94560;
+      --accent-glow: rgba(233, 69, 96, 0.25);
+      --accent-soft: #ff6b81;
+      --text-primary: #eaeaea;
+      --text-secondary: #8888a0;
+      --text-dim: #55556a;
+      --border: rgba(255, 255, 255, 0.06);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --radius: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ========================================
+       Reset & Base
+       ======================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    /* ========================================
+       App Layout
+       ======================================== */
+    .app {
+      width: 100%;
+      max-width: 480px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 20px env(safe-area-inset-bottom, 16px);
+    }
+
+    /* ========================================
+       Header
+       ======================================== */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0 12px;
+      flex-shrink: 0;
+    }
+
+    .header h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .counter {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ========================================
+       Filter Pills
+       ======================================== */
+    .filters {
+      display: flex;
+      gap: 8px;
+      padding: 0 0 16px;
+      flex-shrink: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar { display: none; }
+
+    .filter-pill {
+      padding: 6px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+      font-weight: 500;
+      font-family: var(--font);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .filter-pill:hover {
+      border-color: var(--accent);
+      color: var(--text-primary);
+    }
+
+    .filter-pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    /* ========================================
+       Card Container
+       ======================================== */
+    .card-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+      min-height: 0;
+    }
+
+    .card {
+      width: 100%;
+      max-height: 100%;
+      aspect-ratio: 3 / 4;
+      position: relative;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      overflow-y: auto;
+    }
+
+    /* Front */
+    .card-front {
+      background: linear-gradient(145deg, var(--bg-card-front), #1c1c38);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .card-front .word {
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .card-front .score-badge {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(233, 69, 96, 0.12);
+      border: 1px solid rgba(233, 69, 96, 0.2);
+    }
+
+    .score-badge .dots {
+      display: flex;
+      gap: 3px;
+    }
+
+    .score-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .score-badge .dot.empty {
+      background: rgba(233, 69, 96, 0.25);
+    }
+
+    .score-badge .label {
+      font-size: 0.7rem;
+      color: var(--accent-soft);
+      font-weight: 500;
+    }
+
+    .tap-hint {
+      position: absolute;
+      bottom: 24px;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Back */
+    .card-back {
+      background: linear-gradient(145deg, var(--bg-card-back), #1f1f45);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      transform: rotateY(180deg);
+    }
+
+    .card-back .word-small {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .card-back .definition {
+      font-size: clamp(1.05rem, 4vw, 1.3rem);
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       Navigation
+       ======================================== */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 0 8px;
+      flex-shrink: 0;
+    }
+
+    .nav-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      font-family: var(--font);
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-btn:active {
+      transform: scale(0.92);
+    }
+
+    .shuffle-btn {
+      padding: 0 20px;
+      width: auto;
+      border-radius: 100px;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      height: 48px;
+      background: linear-gradient(135deg, var(--accent), #d63851);
+      border: none;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    .shuffle-btn:hover {
+      background: linear-gradient(135deg, #f05070, var(--accent));
+      box-shadow: 0 6px 28px rgba(233, 69, 96, 0.35);
+    }
+
+    /* ========================================
+       Loading State
+       ======================================== */
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      color: var(--text-secondary);
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ========================================
+       Responsive tweaks
+       ======================================== */
+    @media (min-width: 600px) {
+      .app {
+        padding: 24px 32px;
+      }
+      .card {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-height: 600px) {
+      .card {
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+    /* ========================================
+       Swipe animation
+       ======================================== */
+    .card.exit-left {
+      animation: exitLeft 0.3s forwards;
+    }
+    .card.exit-right {
+      animation: exitRight 0.3s forwards;
+    }
+    .card.enter {
+      animation: enterCard 0.3s forwards;
+    }
+
+    @keyframes exitLeft {
+      to { transform: translateX(-120%) rotate(-8deg); opacity: 0; }
+    }
+    @keyframes exitRight {
+      to { transform: translateX(120%) rotate(8deg); opacity: 0; }
+    }
+    @keyframes enterCard {
+      from { transform: translateX(80px) scale(0.95); opacity: 0; }
+      to { transform: translateX(0) scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <span>Loading vocabulary…</span>
+    </div>
+  </div>
+
+  <script>
+    // =============================================
+    // SAT Vocab Flash — Core App Logic
+    // =============================================
+
+    const App = {
+      words: [],           // All loaded words
+      filtered: [],        // Currently filtered/shuffled deck
+      currentIndex: 0,
+      activeFilter: 'all',
+
+      // ----- Initialization -----
+
+      async init() {
+        try {
+          const resp = await fetch('words.json');
+          this.words = await resp.json();
+          this.applyFilter('all');
+          this.render();
+        } catch (err) {
+          document.getElementById('loading').innerHTML =
+            `<span style="color: var(--accent)">Failed to load vocabulary data.</span>`;
+          console.error(err);
+        }
+      },
+
+      // ----- Filtering -----
+
+      getFilterRange(filter) {
+        switch (filter) {
+          case 'high':   return w => w.score >= 3;
+          case 'medium': return w => w.score === 2;
+          case 'single': return w => w.score === 1;
+          default:       return () => true;
+        }
+      },
+
+      applyFilter(filter) {
+        this.activeFilter = filter;
+        const predicate = this.getFilterRange(filter);
+        this.filtered = this.words.filter(predicate);
+        this.currentIndex = 0;
+      },
+
+      // ----- Weighted Shuffle -----
+      // Uses score as weight: higher score = more likely to appear earlier.
+
+      weightedShuffle() {
+        const items = [...this.filtered];
+        const shuffled = [];
+
+        while (items.length > 0) {
+          // Build cumulative weights
+          const totalWeight = items.reduce((sum, w) => sum + w.score, 0);
+          let rand = Math.random() * totalWeight;
+
+          for (let i = 0; i < items.length; i++) {
+            rand -= items[i].score;
+            if (rand <= 0) {
+              shuffled.push(items.splice(i, 1)[0]);
+              break;
+            }
+          }
+        }
+
+        this.filtered = shuffled;
+        this.currentIndex = 0;
+      },
+
+      // ----- Navigation -----
+
+      next() {
+        if (this.filtered.length === 0) return;
+        const card = document.getElementById('card');
+        if (card) {
+          card.classList.remove('flipped');
+          card.classList.add('exit-left');
+          setTimeout(() => {
+            this.currentIndex = (this.currentIndex + 1) % this.filtered.length;
+            this.renderCard();
+            card.classList.remove('exit-left');
+            card.classList.add('enter');
+            setTimeout(() => card.classList.remove('enter'), 300);
+          }, 250);
+        }
+      },
+
+      prev() {
+        if (this.filtered.length === 0) return;
+        const card = document.getElementById('card');
+        if (card) {
+          card.classList.remove('flipped');
+          card.classList.add('exit-right');
+          setTimeout(() => {
+            this.currentIndex = (this.currentIndex - 1 + this.filtered.length) % this.filtered.length;
+            this.renderCard();
+            card.classList.remove('exit-right');
+            card.classList.add('enter');
+            setTimeout(() => card.classList.remove('enter'), 300);
+          }, 250);
+        }
+      },
+
+      flip() {
+        const card = document.getElementById('card');
+        if (card) card.classList.toggle('flipped');
+      },
+
+      // ----- Score Badge (visual dots) -----
+
+      renderScoreBadge(score) {
+        const maxDots = 6;
+        const filled = Math.min(score, maxDots);
+        const empty = maxDots - filled;
+        const dots = '<span class="dot"></span>'.repeat(filled) +
+                     '<span class="dot empty"></span>'.repeat(empty);
+        
+        const labels = { 1: 'Low', 2: 'Medium', 3: 'High', 4: 'High', 5: 'Very High', 6: 'Very High' };
+        const label = labels[Math.min(score, 6)] || 'Low';
+
+        return `<div class="score-badge">
+          <div class="dots">${dots}</div>
+          <span class="label">${label} freq.</span>
+        </div>`;
+      },
+
+      // ----- Rendering -----
+
+      renderCard() {
+        const word = this.filtered[this.currentIndex];
+        if (!word) return;
+
+        const cardEl = document.getElementById('card');
+        if (!cardEl) return;
+
+        const front = cardEl.querySelector('.card-front');
+        const back = cardEl.querySelector('.card-back');
+
+        front.innerHTML = `
+          <div class="word">${word.word}</div>
+          ${this.renderScoreBadge(word.score)}
+          <div class="tap-hint">tap to reveal</div>
+        `;
+
+        back.innerHTML = `
+          <div class="word-small">${word.word}</div>
+          <div class="definition">${word.definition || 'No definition available.'}</div>
+        `;
+
+        // Update counter
+        document.getElementById('counter').textContent =
+          `${this.currentIndex + 1} / ${this.filtered.length}`;
+      },
+
+      render() {
+        const app = document.getElementById('app');
+        app.innerHTML = `
+          <header class="header">
+            <h1>SAT Vocab Flash</h1>
+            <span class="counter" id="counter">1 / ${this.filtered.length}</span>
+          </header>
+
+          <div class="filters" id="filters">
+            <button class="filter-pill active" data-filter="all">All (${this.words.length})</button>
+            <button class="filter-pill" data-filter="high">High Freq (${this.words.filter(w => w.score >= 3).length})</button>
+            <button class="filter-pill" data-filter="medium">Medium (${this.words.filter(w => w.score === 2).length})</button>
+            <button class="filter-pill" data-filter="single">Single (${this.words.filter(w => w.score === 1).length})</button>
+          </div>
+
+          <div class="card-area">
+            <div class="card" id="card">
+              <div class="card-face card-front"></div>
+              <div class="card-face card-back"></div>
+            </div>
+          </div>
+
+          <nav class="nav">
+            <button class="nav-btn" id="prevBtn" aria-label="Previous card">←</button>
+            <button class="nav-btn shuffle-btn" id="shuffleBtn">🔀 Shuffle</button>
+            <button class="nav-btn" id="nextBtn" aria-label="Next card">→</button>
+          </nav>
+        `;
+
+        this.renderCard();
+        this.bindEvents();
+      },
+
+      // ----- Event Binding -----
+
+      bindEvents() {
+        // Card flip
+        document.getElementById('card').addEventListener('click', () => this.flip());
+
+        // Nav buttons
+        document.getElementById('prevBtn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.prev();
+        });
+        document.getElementById('nextBtn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.next();
+        });
+        document.getElementById('shuffleBtn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.weightedShuffle();
+          this.renderCard();
+          // Unflip card on shuffle
+          document.getElementById('card').classList.remove('flipped');
+        });
+
+        // Filter pills
+        document.getElementById('filters').addEventListener('click', (e) => {
+          const pill = e.target.closest('.filter-pill');
+          if (!pill) return;
+
+          document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          this.applyFilter(pill.dataset.filter);
+          this.renderCard();
+          document.getElementById('card').classList.remove('flipped');
+        });
+
+        // Keyboard nav (desktop)
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') this.next();
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') this.prev();
+          else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); this.flip(); }
+        });
+
+        // Touch swipe
+        let touchStartX = 0;
+        const cardArea = document.querySelector('.card-area');
+        cardArea.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        cardArea.addEventListener('touchend', (e) => {
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          if (Math.abs(dx) > 60) {
+            if (dx < 0) this.next();
+            else this.prev();
+          }
+        }, { passive: true });
+      }
+    };
+
+    // Boot
+    document.addEventListener('DOMContentLoaded', () => App.init());
+  </script>
+</body>
+</html>
