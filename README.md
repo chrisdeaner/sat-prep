@@ -24,21 +24,23 @@ All 256 words are stored in `sat_vocabulary.csv`.
 
 ```
 sat-prep/
-├── AGENTS.md                     # AI coding guidelines & project conventions
-├── README.md                     # This file
-├── .gitignore                    # Git ignore rules
-├── .env                          # Gemini API key (git-ignored)
-├── requirements.txt              # Python dependencies
-├── sat_vocabulary.csv            # Source of truth — 255 words with definitions & scores
+├── AGENTS.md                          # AI coding guidelines & project conventions
+├── README.md                          # This file
+├── .gitignore                         # Git ignore rules
+├── .env                               # Gemini API key (git-ignored)
+├── requirements.txt                   # Python dependencies
+├── sat_vocabulary.csv                 # Source of truth — 255 words with definitions & scores
 ├── scripts/
-│   ├── backfill_definitions.py   # Fill missing definitions (Free Dictionary API + Gemini)
-│   └── build_site.py             # Generate docs/words.json from CSV
+│   ├── backfill_definitions.py        # Fill missing definitions (Free Dictionary API + Gemini)
+│   └── build_site.py                  # Generate docs/words.json from CSV
 ├── tests/
-│   ├── test_backfill.py          # Tests for backfill script
-│   └── test_build.py             # Tests for build script
-└── docs/                         # GitHub Pages root (static site)
-    ├── index.html                # Flashcard app (HTML/CSS/JS)
-    └── words.json                # Generated vocabulary data
+│   ├── test_backfill.py               # Tests for backfill script
+│   └── test_build.py                  # Tests for build script
+├── developer-documentation/           # Plans, design docs, dev notes
+│   └── flashcard-site-plan.md         # Implementation plan
+└── docs/                              # GitHub Pages root (static site only)
+    ├── index.html                     # Flashcard app (HTML/CSS/JS)
+    └── words.json                     # Generated vocabulary data
 ```
 
 ## Getting Started
