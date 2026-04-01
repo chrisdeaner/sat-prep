@@ -407,6 +407,7 @@
           const resp = await fetch('words.json');
           this.words = await resp.json();
           this.applyFilter('all');
+          this.weightedShuffle();
           this.render();
         } catch (err) {
           document.getElementById('loading').innerHTML =
