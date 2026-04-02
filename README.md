@@ -85,8 +85,7 @@ If you add new words to `sat_vocabulary.csv` and they're missing definitions, th
 # Make sure your venv is activated
 source venv/bin/activate
 
-# (Optional) Set up your Gemini API key for fallback
-# Create a .env file in the project root:
+# Set up your Gemini API key (required)
 echo "GEMINI_API_KEY=your-key-here" > .env
 
 # Run the backfill script
@@ -95,9 +94,8 @@ python scripts/backfill_definitions.py
 
 **How it works:**
 1. Reads `sat_vocabulary.csv` and finds words with empty `definition` fields
-2. Looks up each word via the [Free Dictionary API](https://dictionaryapi.dev/) (free, no key required)
-3. Any words not found are batch-sent to Gemini as a fallback
-4. Writes the updated definitions back to the CSV
+2. Sends words to Gemini in batches with an SAT-focused prompt
+3. Writes the definitions back to the CSV
 
 You can preview what would happen without making changes:
 

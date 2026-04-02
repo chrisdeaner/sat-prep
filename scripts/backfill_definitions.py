@@ -1,9 +1,8 @@
 """
 backfill_definitions.py — Fill missing definitions in sat_vocabulary.csv.
 
-Strategy:
-  1. Try the Free Dictionary API (no key required)
-  2. Fall back to Gemini for words the dictionary doesn't cover
+Uses Gemini to generate concise, SAT-appropriate definitions for any words
+that are missing a definition in the CSV.
 
 Usage:
   python scripts/backfill_definitions.py [--dry-run]
@@ -17,7 +16,6 @@ import sys
 import time
 from pathlib import Path
 
-import requests
 from dotenv import load_dotenv
 
 # ---------------------------------------------------------------------------
@@ -26,8 +24,6 @@ from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = PROJECT_ROOT / "sat_vocabulary.csv"
-DICT_API_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
-DICT_API_DELAY = 0.5  # seconds between free API calls
 GEMINI_BATCH_SIZE = 25  # words per Gemini request
 GEMINI_DELAY = 4  # seconds between Gemini calls (rate limit)
 
@@ -35,48 +31,14 @@ load_dotenv(PROJECT_ROOT / ".env")
 
 
 # ---------------------------------------------------------------------------
-# Free Dictionary API
-# ---------------------------------------------------------------------------
-
-def fetch_definition_free_api(word: str) -> str | None:
-    """
-    Fetch a concise definition from the Free Dictionary API.
-
-    Returns the first definition found, or None if the word isn't in the
-    database or the request fails.
-    """
-    url = DICT_API_URL.format(word=word.strip().lower())
-    try:
-        resp = requests.get(url, timeout=10)
-        if resp.status_code != 200:
-            return None
-
-        data = resp.json()
-        if not isinstance(data, list) or len(data) == 0:
-            return None
-
-        # Walk through meanings and grab the first definition
-        for entry in data:
-            for meaning in entry.get("meanings", []):
-                definitions = meaning.get("definitions", [])
-                if definitions:
-                    defn = definitions[0].get("definition", "").strip()
-                    if defn:
-                        return defn
-        return None
-
-    except Exception:
-        return None
-
-
-# ---------------------------------------------------------------------------
-# Gemini fallback
+# Gemini helpers
 # ---------------------------------------------------------------------------
 
 GEMINI_PROMPT = (
     "You are a vocabulary tutor preparing students for the SAT.\n"
     "For each word below, provide a concise, clear definition (1 sentence max) "
-    "that a high school student would understand.\n\n"
+    "that a high school student would understand. Use the meaning most likely "
+    "to appear on the SAT — avoid archaic, overly technical, or niche definitions.\n\n"
     "Return a JSON array of objects, each with 'word' and 'definition' keys.\n"
     "Maintain the same order as the input list.\n\n"
     "Words:\n{word_list}"
@@ -119,13 +81,13 @@ def _api_call_with_retry(client, model_id: str, contents: str, config, max_retri
 
 def fetch_definitions_gemini(words: list[str]) -> dict[str, str]:
     """
-    Batch-fetch definitions from Gemini for a list of words.
+    Batch-fetch SAT-appropriate definitions from Gemini.
 
     Returns a dict mapping word → definition.
     """
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("  ⚠️  GEMINI_API_KEY not set in .env — skipping Gemini fallback")
+        print("❌ GEMINI_API_KEY not set in .env — cannot fetch definitions")
         return {}
 
     from google import genai
@@ -140,7 +102,9 @@ def fetch_definitions_gemini(words: list[str]) -> dict[str, str]:
         word_list_str = "\n".join(f"- {w}" for w in batch)
         prompt = GEMINI_PROMPT.format(word_list=word_list_str)
 
-        print(f"  🤖 Gemini batch {i // GEMINI_BATCH_SIZE + 1}: {len(batch)} words...")
+        batch_num = i // GEMINI_BATCH_SIZE + 1
+        total_batches = (len(words) + GEMINI_BATCH_SIZE - 1) // GEMINI_BATCH_SIZE
+        print(f"  🤖 Batch {batch_num}/{total_batches}: {len(batch)} words...")
 
         try:
             resp = _api_call_with_retry(
@@ -162,9 +126,10 @@ def fetch_definitions_gemini(words: list[str]) -> dict[str, str]:
                         d = item.get("definition", "").strip()
                         if w and d:
                             results[w] = d
+                            print(f"    ✅ {w}: {d[:60]}...")
 
         except Exception as e:
-            print(f"  ❌ Gemini batch failed: {e}")
+            print(f"  ❌ Batch failed: {e}")
 
         if i + GEMINI_BATCH_SIZE < len(words):
             time.sleep(GEMINI_DELAY)
@@ -178,7 +143,7 @@ def fetch_definitions_gemini(words: list[str]) -> dict[str, str]:
 
 def backfill(dry_run: bool = False) -> dict:
     """
-    Read the CSV, fill missing definitions, and write back.
+    Read the CSV, fill missing definitions via Gemini, and write back.
 
     Returns stats dict with counts of what happened.
     """
@@ -196,63 +161,43 @@ def backfill(dry_run: bool = False) -> dict:
 
     if not missing:
         print("✅ All definitions already filled!")
-        return {"total": len(rows), "missing": 0, "filled_api": 0, "filled_gemini": 0, "still_missing": 0}
+        return {"total": len(rows), "missing": 0, "filled": 0, "still_missing": 0}
 
-    # Phase 1: Free Dictionary API
-    filled_api = 0
-    gemini_queue: list[tuple[int, str]] = []
+    if dry_run:
+        print(f"\n🔍 DRY RUN — {len(missing)} words would be sent to Gemini:")
+        for _, word in missing:
+            print(f"  • {word}")
+        return {"total": len(rows), "missing": len(missing), "filled": 0, "still_missing": len(missing)}
 
-    print(f"\n🔍 Phase 1: Free Dictionary API ({len(missing)} words)...")
+    # Fetch definitions from Gemini
+    print(f"\n🤖 Fetching definitions from Gemini ({len(missing)} words)...")
+    words_to_define = [w for _, w in missing]
+    gemini_defs = fetch_definitions_gemini(words_to_define)
+
+    filled = 0
     for idx, word in missing:
-        if dry_run:
-            gemini_queue.append((idx, word))
-            continue
-
-        defn = fetch_definition_free_api(word)
+        defn = gemini_defs.get(word.lower(), "")
         if defn:
             rows[idx]["definition"] = defn
-            filled_api += 1
-            print(f"  ✅ {word}: {defn[:60]}...")
-        else:
-            gemini_queue.append((idx, word))
-            print(f"  ❌ {word}: not found")
-
-        time.sleep(DICT_API_DELAY)
-
-    print(f"\n📈 Free API: {filled_api} filled, {len(gemini_queue)} remaining")
-
-    # Phase 2: Gemini fallback
-    filled_gemini = 0
-    if gemini_queue and not dry_run:
-        print(f"\n🤖 Phase 2: Gemini fallback ({len(gemini_queue)} words)...")
-        words_for_gemini = [w for _, w in gemini_queue]
-        gemini_defs = fetch_definitions_gemini(words_for_gemini)
-
-        for idx, word in gemini_queue:
-            defn = gemini_defs.get(word.lower(), "")
-            if defn:
-                rows[idx]["definition"] = defn
-                filled_gemini += 1
-                print(f"  ✅ {word}: {defn[:60]}...")
+            filled += 1
 
     # Write updated CSV
-    if not dry_run and (filled_api > 0 or filled_gemini > 0):
+    if filled > 0:
         with open(CSV_PATH, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
         print(f"\n💾 Saved updated CSV to {CSV_PATH}")
 
-    still_missing = len(missing) - filled_api - filled_gemini
+    still_missing = len(missing) - filled
     stats = {
         "total": len(rows),
         "missing": len(missing),
-        "filled_api": filled_api,
-        "filled_gemini": filled_gemini,
+        "filled": filled,
         "still_missing": still_missing,
     }
 
-    print(f"\n🏁 Done! API: {filled_api}, Gemini: {filled_gemini}, Still missing: {still_missing}")
+    print(f"\n🏁 Done! Filled: {filled}, Still missing: {still_missing}")
     return stats
 
 
