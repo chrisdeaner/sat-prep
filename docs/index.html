@@ -328,6 +328,30 @@
       margin-top: 6px;
     }
 
+    .info-link {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .info-link:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
     /* ========================================
        Navigation
        ======================================== */
@@ -618,11 +642,14 @@
              <div class="example-sentence" id="exampleSentence" style="display: none;"></div>`
           : '';
 
+        const googleUrl = `https://www.google.com/search?q=define:+${encodeURIComponent(word.word)}`;
+
         back.innerHTML = `
           <div class="word-small">${word.word}</div>
           <div class="definition">${word.definition || 'No definition available.'}</div>
           ${altMeaningHtml}
           ${exampleBtn}
+          <a class="info-link" href="${googleUrl}" target="_blank" rel="noopener" title="Look up on Google" aria-label="Look up definition on Google">ⓘ</a>
         `;
 
         // Bind example toggle
@@ -684,8 +711,11 @@
       // ----- Event Binding -----
 
       bindEvents() {
-        // Card flip
-        document.getElementById('card').addEventListener('click', () => this.flip());
+        // Card flip (ignore clicks on links and buttons inside the card)
+        document.getElementById('card').addEventListener('click', (e) => {
+          if (e.target.closest('a') || e.target.closest('button')) return;
+          this.flip();
+        });
 
         // Nav buttons
         document.getElementById('prevBtn').addEventListener('click', (e) => {
