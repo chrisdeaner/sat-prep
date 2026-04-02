@@ -36,7 +36,7 @@
   },
   {
     "word": "index",
-    "definition": "An indicator, sign, or measure",
+    "definition": "A sign or measure that indicates a trend, condition, or value.",
     "score": 4
   },
   {
@@ -146,12 +146,12 @@
   },
   {
     "word": "abound",
-    "definition": "To be full to overflowing.",
+    "definition": "To exist in large numbers or amounts; to be plentiful.",
     "score": 2
   },
   {
     "word": "appraise",
-    "definition": "To determine the value or worth of something, particularly as a person appointed for this purpose.",
+    "definition": "To assess the value or quality of something.",
     "score": 2
   },
   {
@@ -161,7 +161,7 @@
   },
   {
     "word": "augment",
-    "definition": "(grammar) In some Indo-European languages, a prefix e- (a- in Sanskrit) indicating a past tense of a verb.",
+    "definition": "To increase or enlarge something.",
     "score": 2
   },
   {
@@ -176,7 +176,7 @@
   },
   {
     "word": "conflate",
-    "definition": "(biblical criticism) A conflate text, one which conflates multiple version of a text together.",
+    "definition": "To combine or fuse into one; to confuse or mistake one thing for another.",
     "score": 2
   },
   {
@@ -206,7 +206,7 @@
   },
   {
     "word": "dearth",
-    "definition": "A period or condition when food is rare and hence expensive; famine.",
+    "definition": "A scarcity or lack of something.",
     "score": 2
   },
   {
@@ -226,7 +226,7 @@
   },
   {
     "word": "discerning",
-    "definition": "To detect with the senses, especially with the eyes.",
+    "definition": "Having or showing good judgment; perceptive.",
     "score": 2
   },
   {
@@ -236,7 +236,7 @@
   },
   {
     "word": "eclipse",
-    "definition": "An alignment of astronomical objects whereby one object comes between the observer (or notional observer) and another object, thus obscuring the latter.",
+    "definition": "To obscure or block out; to surpass or diminish in importance.",
     "score": 2
   },
   {
@@ -251,22 +251,22 @@
   },
   {
     "word": "epitomize",
-    "definition": "To make an epitome of; to shorten; to condense.",
+    "definition": "To be a perfect example of; to represent in miniature.",
     "score": 2
   },
   {
     "word": "excise",
-    "definition": "A tax charged on goods produced within the country (as opposed to customs duties, charged on goods from outside the country).",
+    "definition": "To remove by cutting; to eliminate.",
     "score": 2
   },
   {
     "word": "exhaustive",
-    "definition": "Including every possible element",
+    "definition": "Thorough and complete; including all possibilities.",
     "score": 2
   },
   {
     "word": "exploit",
-    "definition": "A heroic or extraordinary deed.",
+    "definition": "To use selfishly or for profit; to take unfair advantage of.",
     "score": 2
   },
   {
@@ -296,7 +296,7 @@
   },
   {
     "word": "iconoclasm",
-    "definition": "The belief in, participation in, or sanction of destroying religious icons and other symbols or monuments, usually with religious or political motives.",
+    "definition": "The practice of attacking cherished beliefs or institutions.",
     "score": 2
   },
   {
@@ -311,12 +311,12 @@
   },
   {
     "word": "impugn",
-    "definition": "To assault, attack.",
+    "definition": "To challenge or attack as false; to cast doubt upon.",
     "score": 2
   },
   {
     "word": "incongruence",
-    "definition": "Incongruence is the state of not fitting together or not being suitable for each other.",
+    "definition": "The state of being incompatible or inconsistent.",
     "score": 2
   },
   {
@@ -356,17 +356,17 @@
   },
   {
     "word": "outmoded",
-    "definition": "To render no longer fashionable.",
+    "definition": "No longer fashionable or useful; outdated.",
     "score": 2
   },
   {
     "word": "partition",
-    "definition": "An action which divides a thing into parts, or separates one thing from another.",
+    "definition": "To divide into parts; something that separates.",
     "score": 2
   },
   {
     "word": "perceptible",
-    "definition": "Anything that can be perceived.",
+    "definition": "Able to be noticed or felt; easily perceived.",
     "score": 2
   },
   {
@@ -396,7 +396,7 @@
   },
   {
     "word": "redundancy",
-    "definition": "The state of being redundant",
+    "definition": "The state of being unnecessary or repetitive.",
     "score": 2
   },
   {
@@ -416,12 +416,12 @@
   },
   {
     "word": "sporadic",
-    "definition": "(of diseases) occurring in isolated instances; not epidemic.",
+    "definition": "Occurring at irregular intervals; having no set plan or order.",
     "score": 2
   },
   {
     "word": "supersede",
-    "definition": "An updated newsgroup post that supersedes an earlier version.",
+    "definition": "To replace or take the place of something, often something old or obsolete.",
     "score": 2
   },
   {
@@ -441,7 +441,7 @@
   },
   {
     "word": "testament",
-    "definition": "A solemn, authentic instrument in writing, by which a person declares his or her will as to disposal of his or her inheritance (estate and effects) after his or her death, benefiting specified heir(s).",
+    "definition": "Proof or evidence that something exists or is true.",
     "score": 2
   },
   {
@@ -451,7 +451,7 @@
   },
   {
     "word": "unnerved",
-    "definition": "To deprive of nerve, force, or strength; to weaken; to enfeeble.",
+    "definition": "To deprive of courage, strength, or composure; to agitate or fluster.",
     "score": 2
   },
   {
@@ -461,12 +461,12 @@
   },
   {
     "word": "accommodate",
-    "definition": "To render fit, suitable, or correspondent; to adapt.",
+    "definition": "To provide lodging or space for; to adapt or adjust to fit a need.",
     "score": 1
   },
   {
     "word": "aesthetic",
-    "definition": "The study of art or beauty.",
+    "definition": "Concerned with beauty or the appreciation of beauty.",
     "score": 1
   },
   {
@@ -491,7 +491,7 @@
   },
   {
     "word": "amass",
-    "definition": "A large number of things collected or piled together.",
+    "definition": "To gather together or accumulate a large quantity of something.",
     "score": 1
   },
   {
@@ -526,7 +526,7 @@
   },
   {
     "word": "anthropogenic",
-    "definition": "Pertaining to the origin of man, or anthropogeny",
+    "definition": "Caused or influenced by human activity.",
     "score": 1
   },
   {
@@ -546,7 +546,7 @@
   },
   {
     "word": "authoritative",
-    "definition": "Arising or originating from a figure of authority",
+    "definition": "Considered to be the best of its kind and unlikely to be questioned; reliable.",
     "score": 1
   },
   {
@@ -556,7 +556,7 @@
   },
   {
     "word": "begrudge",
-    "definition": "To grudge about or over; be envious or covetous.",
+    "definition": "To envy someone's possession or enjoyment of something; to give reluctantly.",
     "score": 1
   },
   {
@@ -566,12 +566,12 @@
   },
   {
     "word": "casual",
-    "definition": "A worker who is only working for a company occasionally, not as its permanent employee.",
+    "definition": "Relaxed and unconcerned; without formality.",
     "score": 1
   },
   {
     "word": "catalyze",
-    "definition": "To bring about the catalysis of a chemical reaction.",
+    "definition": "To cause or accelerate a reaction or change.",
     "score": 1
   },
   {
@@ -586,7 +586,7 @@
   },
   {
     "word": "commend",
-    "definition": "Commendation; praise.",
+    "definition": "To praise formally or officially.",
     "score": 1
   },
   {
@@ -611,7 +611,7 @@
   },
   {
     "word": "cryptic",
-    "definition": "A cryptic crossword.",
+    "definition": "Mysterious or obscure in meaning.",
     "score": 1
   },
   {
@@ -646,7 +646,7 @@
   },
   {
     "word": "diminutive",
-    "definition": "(grammar) A word form expressing smallness, youth, unimportance, or endearment.",
+    "definition": "Extremely small in size; tiny.",
     "score": 1
   },
   {
@@ -656,7 +656,7 @@
   },
   {
     "word": "disparate",
-    "definition": "(chiefly in the plural) Any of a group of unequal or dissimilar things.",
+    "definition": "Distinct or dissimilar; fundamentally different.",
     "score": 1
   },
   {
@@ -686,7 +686,7 @@
   },
   {
     "word": "dogmatic",
-    "definition": "One of an ancient sect of physicians who went by general principles; opposed to the empiric.",
+    "definition": "Asserting opinions in an arrogant or doctrinaire manner; stubbornly opinionated.",
     "score": 1
   },
   {
@@ -721,12 +721,12 @@
   },
   {
     "word": "endearing",
-    "definition": "To make (something) more precious or valuable.",
+    "definition": "Inspiring affection or fondness.",
     "score": 1
   },
   {
     "word": "engender",
-    "definition": "To beget (of a man); to bear or conceive (of a woman).",
+    "definition": "To cause or give rise to; to produce.",
     "score": 1
   },
   {
@@ -761,7 +761,7 @@
   },
   {
     "word": "extensibility",
-    "definition": "The capability of being extended",
+    "definition": "The quality of being easily extended or expanded.",
     "score": 1
   },
   {
@@ -781,7 +781,7 @@
   },
   {
     "word": "foment",
-    "definition": "Fomentation.",
+    "definition": "To stir up or instigate trouble or rebellion.",
     "score": 1
   },
   {
@@ -796,7 +796,7 @@
   },
   {
     "word": "foster",
-    "definition": "A foster parent.",
+    "definition": "To encourage the development or growth of something.",
     "score": 1
   },
   {
@@ -806,12 +806,12 @@
   },
   {
     "word": "halt",
-    "definition": "To limp; move with a limping gait.",
+    "definition": "To come or bring to a stop.",
     "score": 1
   },
   {
     "word": "halting",
-    "definition": "To limp; move with a limping gait.",
+    "definition": "Hesitant or faltering in speech or movement.",
     "score": 1
   },
   {
@@ -821,12 +821,12 @@
   },
   {
     "word": "hypothesize",
-    "definition": "To believe or assert on uncertain grounds.",
+    "definition": "To propose an explanation or theory based on limited evidence.",
     "score": 1
   },
   {
     "word": "idle",
-    "definition": "An idle animation.",
+    "definition": "Not active or in use; lazy or avoiding work.",
     "score": 1
   },
   {
@@ -841,12 +841,12 @@
   },
   {
     "word": "imperative",
-    "definition": "(grammar) The grammatical mood expressing an order (see jussive). In English, the imperative form of a verb is the same as that of the bare infinitive.",
+    "definition": "Absolutely necessary or required.",
     "score": 1
   },
   {
     "word": "imposing",
-    "definition": "To establish or apply by authority.",
+    "definition": "Grand and impressive in appearance.",
     "score": 1
   },
   {
@@ -881,7 +881,7 @@
   },
   {
     "word": "inertia",
-    "definition": "The property of a body that resists any change to its uniform motion; equivalent to its mass.",
+    "definition": "A tendency to remain unchanged; a lack of energy or motivation.",
     "score": 1
   },
   {
@@ -911,7 +911,7 @@
   },
   {
     "word": "invariable",
-    "definition": "Something that does not vary; a constant.",
+    "definition": "Not subject to change; constant.",
     "score": 1
   },
   {
@@ -931,7 +931,7 @@
   },
   {
     "word": "magnify",
-    "definition": "To praise, glorify (someone or something, especially God).",
+    "definition": "To increase the apparent size of something, or to exaggerate its importance.",
     "score": 1
   },
   {
@@ -951,27 +951,27 @@
   },
   {
     "word": "monetizing",
-    "definition": "To convert something (especially a security) into currency.",
+    "definition": "To convert something into money or a source of revenue.",
     "score": 1
   },
   {
     "word": "mutable",
-    "definition": "Something mutable; a variable or value that can change.",
+    "definition": "Liable to change; inconstant.",
     "score": 1
   },
   {
     "word": "myriad",
-    "definition": "Ten thousand; 10,000",
+    "definition": "A very large number; countless.",
     "score": 1
   },
   {
     "word": "nebulous",
-    "definition": "In the form of a cloud or haze; hazy.",
+    "definition": "Vague, indistinct, or ill-defined.",
     "score": 1
   },
   {
     "word": "neutral",
-    "definition": "A nonaligned state, or a member of such a state.",
+    "definition": "Not taking sides in a conflict; impartial.",
     "score": 1
   },
   {
@@ -981,17 +981,17 @@
   },
   {
     "word": "notional",
-    "definition": "A fake company used as a front in espionage.",
+    "definition": "Existing only in the mind or as a concept; theoretical.",
     "score": 1
   },
   {
     "word": "obtrusive",
-    "definition": "Sticking out; protruding.",
+    "definition": "Noticeable or prominent in an unwelcome or intrusive way.",
     "score": 1
   },
   {
     "word": "occluded",
-    "definition": "To obstruct, cover, or otherwise block (an opening, a portion of an image, etc.).",
+    "definition": "Blocked or obstructed.",
     "score": 1
   },
   {
@@ -1016,7 +1016,7 @@
   },
   {
     "word": "permeability",
-    "definition": "The property of being permeable",
+    "definition": "The state of being permeable; the ability to be penetrated or passed through.",
     "score": 1
   },
   {
@@ -1026,7 +1026,7 @@
   },
   {
     "word": "perturbation",
-    "definition": "Agitation; the state of being perturbed",
+    "definition": "A disturbance or upset.",
     "score": 1
   },
   {
@@ -1041,12 +1041,12 @@
   },
   {
     "word": "preempts",
-    "definition": "A preemptive bid.",
+    "definition": "To take action to prevent (an event or action) from happening; to supersede.",
     "score": 1
   },
   {
     "word": "preliminary",
-    "definition": "A preparation for a main matter; an introduction.",
+    "definition": "Coming before and preparing for something else; introductory.",
     "score": 1
   },
   {
@@ -1071,12 +1071,12 @@
   },
   {
     "word": "prudent",
-    "definition": "Sagacious in adapting means to ends; circumspect in action, or in determining any line of conduct; careful, discreet, sensible; — opposed to rash; directed by prudence or wise forethought; evincing prudence",
+    "definition": "Acting with or showing care and thought for the future.",
     "score": 1
   },
   {
     "word": "quotidian",
-    "definition": "A fever which recurs every day; quotidian malaria.",
+    "definition": "Occurring daily; commonplace.",
     "score": 1
   },
   {
@@ -1091,17 +1091,17 @@
   },
   {
     "word": "rectify",
-    "definition": "To heal (an organ or part of the body).",
+    "definition": "To correct or make right.",
     "score": 1
   },
   {
     "word": "reiterate",
-    "definition": "A tree with vertical branches alongside the main trunk and which continue to grow upwards.",
+    "definition": "To say something again or repeatedly.",
     "score": 1
   },
   {
     "word": "renounce",
-    "definition": "An act of renouncing.",
+    "definition": "To formally give up or reject something.",
     "score": 1
   },
   {
@@ -1111,7 +1111,7 @@
   },
   {
     "word": "resolute",
-    "definition": "A determined person; one showing resolution.",
+    "definition": "Admirably purposeful, determined, and unwavering.",
     "score": 1
   },
   {
@@ -1141,12 +1141,12 @@
   },
   {
     "word": "sophisticated",
-    "definition": "To make less natural or innocent.",
+    "definition": "Having refined tastes or worldly knowledge; complex or intricate.",
     "score": 1
   },
   {
     "word": "steward",
-    "definition": "A person who manages the property or affairs for another entity, particularly the chief administrator of a medieval manor.",
+    "definition": "A person employed to manage another's property, especially a large house or estate.",
     "score": 1
   },
   {
@@ -1171,7 +1171,7 @@
   },
   {
     "word": "substantial",
-    "definition": "Anything having substance; an essential part.",
+    "definition": "Of considerable importance, size, or worth.",
     "score": 1
   },
   {
@@ -1186,7 +1186,7 @@
   },
   {
     "word": "superficial",
-    "definition": "(chiefly in plural) A surface detail.",
+    "definition": "Existing or occurring at or on the surface; shallow or not thorough.",
     "score": 1
   },
   {
@@ -1206,7 +1206,7 @@
   },
   {
     "word": "tantamount",
-    "definition": "Something which has the same value or amount (as something else). (attributive use passing into adjective, below)",
+    "definition": "Equivalent in effect or value; virtually the same as.",
     "score": 1
   },
   {
@@ -1221,7 +1221,7 @@
   },
   {
     "word": "underpinned",
-    "definition": "To support from below with props or masonry.",
+    "definition": "Supported or strengthened; served as a foundation for.",
     "score": 1
   },
   {
@@ -1231,7 +1231,7 @@
   },
   {
     "word": "universal",
-    "definition": "A characteristic or property that particular things have in common.",
+    "definition": "Relating to or characteristic of all or the whole; applicable everywhere or to everyone.",
     "score": 1
   },
   {
@@ -1241,7 +1241,7 @@
   },
   {
     "word": "utilitarian",
-    "definition": "Someone who practices or advocates utilitarianism.",
+    "definition": "Designed to be practical and useful rather than attractive.",
     "score": 1
   },
   {
@@ -1261,7 +1261,7 @@
   },
   {
     "word": "visionary",
-    "definition": "Someone who has visions; a seer",
+    "definition": "Thinking about or planning the future with imagination or wisdom.",
     "score": 1
   },
   {
@@ -1271,7 +1271,7 @@
   },
   {
     "word": "wrought",
-    "definition": "To do a specific task by employing physical or mental powers.",
+    "definition": "Shaped or created, often referring to metal or other materials.",
     "score": 1
   }
 ]
