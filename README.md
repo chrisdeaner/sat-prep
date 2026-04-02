@@ -32,9 +32,11 @@ sat-prep/
 ├── sat_vocabulary.csv                 # Source of truth — 255 words with definitions & scores
 ├── scripts/
 │   ├── backfill_definitions.py        # Fill missing definitions (Free Dictionary API + Gemini)
+│   ├── audit_definitions.py           # Audit definitions for SAT accuracy via Gemini
 │   └── build_site.py                  # Generate docs/words.json from CSV
 ├── tests/
 │   ├── test_backfill.py               # Tests for backfill script
+│   ├── test_audit.py                  # Tests for audit script
 │   └── test_build.py                  # Tests for build script
 ├── developer-documentation/           # Plans, design docs, dev notes
 │   └── flashcard-site-plan.md         # Implementation plan
@@ -103,7 +105,24 @@ You can preview what would happen without making changes:
 python scripts/backfill_definitions.py --dry-run
 ```
 
-### 4. Rebuild the Site Data
+### 4. Audit Definitions for Accuracy
+
+The Free Dictionary API sometimes returns archaic or niche definitions. Use the audit script to have Gemini review all definitions for SAT accuracy:
+
+```bash
+# Run the audit (requires GEMINI_API_KEY in .env)
+python scripts/audit_definitions.py
+
+# Review the generated corrections.json file
+# Delete any suggested corrections you disagree with
+
+# Apply the approved corrections
+python scripts/audit_definitions.py --apply
+```
+
+Use `--force` to re-audit even if a `corrections.json` already exists.
+
+### 5. Rebuild the Site Data
 
 After updating the CSV (e.g., adding words or editing definitions), regenerate the JSON file:
 
@@ -113,16 +132,41 @@ python scripts/build_site.py
 
 This converts `sat_vocabulary.csv` → `docs/words.json`, sorted by score (high-frequency words first).
 
-### 5. Run Tests
+### 6. Run Tests
 
 ```bash
 source venv/bin/activate
 python -m pytest tests/ -v
 ```
 
+## Adding New Words
+
+End-to-end workflow for adding vocabulary to the app:
+
+```bash
+# 1. Add words to sat_vocabulary.csv (leave definition blank, set score)
+
+# 2. Backfill definitions from Free Dictionary API + Gemini
+python scripts/backfill_definitions.py
+
+# 3. Audit definitions for SAT accuracy
+python scripts/audit_definitions.py
+
+# 4. Review corrections.json — delete any you disagree with
+
+# 5. Apply approved corrections
+python scripts/audit_definitions.py --apply
+
+# 6. Rebuild the site data
+python scripts/build_site.py
+
+# 7. Commit and push (site auto-deploys via GitHub Pages)
+git add . && git commit -m "feat: add new vocabulary words" && git push
+```
+
 ## Deployment
 
-The site is designed to be hosted on **GitHub Pages**:
+The site is hosted on **GitHub Pages** and auto-deploys on every push to `main`:
 
 1. Push the repo to GitHub
 2. In repo **Settings → Pages**, set source to `main` branch, `/docs` folder
