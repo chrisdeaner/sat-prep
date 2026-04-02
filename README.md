@@ -39,10 +39,12 @@ sat-prep/
 ├── requirements.txt                   # Python dependencies
 ├── sat_vocabulary.csv                 # Source of truth — 275 words with definitions & scores
 ├── sentences.json                     # Pre-generated example sentences (3 per word)
+├── alt_meanings.json                  # Words with SAT-relevant secondary meanings
 ├── scripts/
 │   ├── backfill_definitions.py        # Fill missing definitions via Gemini
 │   ├── generate_sentences.py          # Generate example sentences via Gemini
-│   └── build_site.py                  # Generate docs/words.json from CSV + sentences
+│   ├── generate_alt_meanings.py       # Identify words with tricky secondary meanings
+│   └── build_site.py                  # Merge CSV + sentences + alt meanings → words.json
 ├── tests/
 │   ├── test_backfill.py               # Tests for backfill script
 │   ├── test_build.py                  # Tests for build script
@@ -51,7 +53,7 @@ sat-prep/
 │   └── flashcard-site-plan.md         # Implementation plan
 └── docs/                              # GitHub Pages root (static site only)
     ├── index.html                     # Flashcard app (HTML/CSS/JS)
-    └── words.json                     # Generated vocabulary data (with sentences)
+    └── words.json                     # Generated vocabulary data
 ```
 
 ## Getting Started

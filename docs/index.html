@@ -297,6 +297,37 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    .alt-meaning {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255, 193, 7, 0.06);
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      text-align: center;
+    }
+
+    .alt-meaning .alt-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #ffc107;
+      margin-bottom: 6px;
+    }
+
+    .alt-meaning .alt-def {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--text-primary);
+    }
+
+    .alt-meaning .alt-note {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-top: 6px;
+    }
+
     /* ========================================
        Navigation
        ======================================== */
@@ -572,6 +603,15 @@
           <div class="tap-hint">tap to reveal</div>
         `;
 
+        const hasAltMeaning = word.alt_definition && word.alt_definition.length > 0;
+        const altMeaningHtml = hasAltMeaning
+          ? `<div class="alt-meaning">
+               <div class="alt-label">⚡ Also means</div>
+               <div class="alt-def">${word.alt_definition}</div>
+               ${word.alt_note ? `<div class="alt-note">${word.alt_note}</div>` : ''}
+             </div>`
+          : '';
+
         const hasSentences = word.sentences && word.sentences.length > 0;
         const exampleBtn = hasSentences
           ? `<button class="example-toggle" id="exampleToggle">📝 Show Example</button>
@@ -581,6 +621,7 @@
         back.innerHTML = `
           <div class="word-small">${word.word}</div>
           <div class="definition">${word.definition || 'No definition available.'}</div>
+          ${altMeaningHtml}
           ${exampleBtn}
         `;
 

@@ -1,7 +1,8 @@
 """
 build_site.py — Convert sat_vocabulary.csv to docs/words.json for the static site.
 
-Merges example sentences from sentences.json if available.
+Merges example sentences from sentences.json and alternate meanings from
+alt_meanings.json if available.
 
 Usage:
   python scripts/build_site.py
@@ -15,15 +16,16 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = PROJECT_ROOT / "sat_vocabulary.csv"
 SENTENCES_PATH = PROJECT_ROOT / "sentences.json"
+ALT_MEANINGS_PATH = PROJECT_ROOT / "alt_meanings.json"
 OUTPUT_PATH = PROJECT_ROOT / "docs" / "words.json"
 
 
-def _load_sentences(sentences_path: Path = SENTENCES_PATH) -> dict[str, list[str]]:
-    """Load pre-generated sentences from sentences.json if it exists."""
-    if sentences_path.exists():
-        with open(sentences_path, "r") as f:
+def _load_json(path: Path, label: str) -> dict:
+    """Load a JSON data file if it exists."""
+    if path.exists():
+        with open(path, "r") as f:
             data = json.load(f)
-        print(f"📖 Loaded sentences for {len(data)} words")
+        print(f"📖 Loaded {label} for {len(data)} words")
         return data
     return {}
 
@@ -32,14 +34,17 @@ def csv_to_json(
     csv_path: Path = CSV_PATH,
     output_path: Path = OUTPUT_PATH,
     sentences_path: Path = SENTENCES_PATH,
+    alt_meanings_path: Path = ALT_MEANINGS_PATH,
 ) -> list[dict]:
     """
     Read sat_vocabulary.csv and write a JSON file for the flashcard site.
 
-    Each word object has: word, definition, score, and optionally sentences.
+    Each word object has: word, definition, score, and optionally
+    sentences, alt_definition, and alt_note.
     Returns the list of word objects.
     """
-    sentences = _load_sentences(sentences_path)
+    sentences = _load_json(sentences_path, "sentences")
+    alt_meanings = _load_json(alt_meanings_path, "alt meanings")
 
     words = []
     with open(csv_path, "r", newline="") as f:
@@ -54,6 +59,10 @@ def csv_to_json(
             # Merge sentences if available
             if word_key in sentences:
                 entry["sentences"] = sentences[word_key]
+            # Merge alternate meanings if available
+            if word_key in alt_meanings:
+                entry["alt_definition"] = alt_meanings[word_key].get("alt_definition", "")
+                entry["alt_note"] = alt_meanings[word_key].get("note", "")
             words.append(entry)
 
     # Sort by score descending (high-frequency first), then alphabetically
@@ -66,7 +75,9 @@ def csv_to_json(
         json.dump(words, f, indent=2, ensure_ascii=False)
 
     with_sentences = sum(1 for w in words if "sentences" in w)
-    print(f"✅ Generated {output_path} with {len(words)} words ({with_sentences} with example sentences)")
+    with_alt = sum(1 for w in words if "alt_definition" in w)
+    print(f"✅ Generated {output_path} with {len(words)} words "
+          f"({with_sentences} with sentences, {with_alt} with alt meanings)")
     return words
 
 
