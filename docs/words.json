@@ -465,6 +465,16 @@
     "score": 1
   },
   {
+    "word": "acquiesce",
+    "definition": "To agree or comply silently without protest.",
+    "score": 1
+  },
+  {
+    "word": "acumen",
+    "definition": "The ability to make good judgments and quick decisions, typically in a particular domain.",
+    "score": 1
+  },
+  {
     "word": "aesthetic",
     "definition": "Concerned with beauty or the appreciation of beauty.",
     "score": 1
@@ -497,6 +507,11 @@
   {
     "word": "ambiguous",
     "definition": "Open to multiple interpretations.",
+    "score": 1
+  },
+  {
+    "word": "ambivalent",
+    "definition": "Having mixed feelings or contradictory ideas about something or someone.",
     "score": 1
   },
   {
@@ -560,13 +575,28 @@
     "score": 1
   },
   {
+    "word": "benevolent",
+    "definition": "Well-meaning and kindly; charitable.",
+    "score": 1
+  },
+  {
     "word": "burgeoning",
     "definition": "To grow or expand.",
     "score": 1
   },
   {
+    "word": "candor",
+    "definition": "The quality of being open and honest in expression; frankness.",
+    "score": 1
+  },
+  {
     "word": "casual",
     "definition": "Relaxed and unconcerned; without formality.",
+    "score": 1
+  },
+  {
+    "word": "catalyst",
+    "definition": "A person or thing that precipitates an event or change.",
     "score": 1
   },
   {
@@ -590,6 +620,11 @@
     "score": 1
   },
   {
+    "word": "compelling",
+    "definition": "Evoking interest, attention, or admiration in a powerfully irresistible way.",
+    "score": 1
+  },
+  {
     "word": "complacent",
     "definition": "Uncritically satisfied with oneself or one's achievements; smug.",
     "score": 1
@@ -597,6 +632,11 @@
   {
     "word": "confounded",
     "definition": "To perplex or puzzle.",
+    "score": 1
+  },
+  {
+    "word": "connotation",
+    "definition": "An idea or feeling that a word invokes in addition to its literal or primary meaning.",
     "score": 1
   },
   {
@@ -627,6 +667,11 @@
   {
     "word": "decry",
     "definition": "To denounce as harmful.",
+    "score": 1
+  },
+  {
+    "word": "delineate",
+    "definition": "To describe or portray something precisely.",
     "score": 1
   },
   {
@@ -700,6 +745,11 @@
     "score": 1
   },
   {
+    "word": "efficacy",
+    "definition": "The ability to produce a desired or intended result; effectiveness.",
+    "score": 1
+  },
+  {
     "word": "embellished",
     "definition": "To make more beautiful and attractive; to decorate.",
     "score": 1
@@ -712,6 +762,11 @@
   {
     "word": "emissary",
     "definition": "An agent sent on a mission to represent the interests of someone else.",
+    "score": 1
+  },
+  {
+    "word": "empirical",
+    "definition": "Based on observation or experience rather than theory or pure logic.",
     "score": 1
   },
   {
@@ -742,6 +797,11 @@
   {
     "word": "entice",
     "definition": "To lure; to attract by arousing desire or hope.",
+    "score": 1
+  },
+  {
+    "word": "ephemeral",
+    "definition": "Lasting for a very short time; transient.",
     "score": 1
   },
   {
@@ -777,6 +837,11 @@
   {
     "word": "fecund",
     "definition": "Highly fertile; able to produce offspring.",
+    "score": 1
+  },
+  {
+    "word": "fervor",
+    "definition": "Intense and passionate feeling.",
     "score": 1
   },
   {
@@ -820,6 +885,11 @@
     "score": 1
   },
   {
+    "word": "hierarchy",
+    "definition": "A system or organization in which people or groups are ranked one above the other according to status or authority.",
+    "score": 1
+  },
+  {
     "word": "hypothesize",
     "definition": "To propose an explanation or theory based on limited evidence.",
     "score": 1
@@ -855,8 +925,18 @@
     "score": 1
   },
   {
+    "word": "inconsequential",
+    "definition": "Not important or significant.",
+    "score": 1
+  },
+  {
     "word": "inconspicuous",
     "definition": "Not prominent nor easily noticeable",
+    "score": 1
+  },
+  {
+    "word": "indifference",
+    "definition": "Lack of interest, concern, or sympathy.",
     "score": 1
   },
   {
@@ -877,6 +957,11 @@
   {
     "word": "induce",
     "definition": "To lead by persuasion or influence; incite or prevail upon.",
+    "score": 1
+  },
+  {
+    "word": "ineluctable",
+    "definition": "Impossible to avoid or prevent; inevitable.",
     "score": 1
   },
   {
@@ -1035,6 +1120,11 @@
     "score": 1
   },
   {
+    "word": "pragmatic",
+    "definition": "Dealing with things sensibly and realistically in a way that is based on practical considerations.",
+    "score": 1
+  },
+  {
     "word": "precursor",
     "definition": "That which precurses: a forerunner, predecessor, or indicator of approaching events.",
     "score": 1
@@ -1057,6 +1147,11 @@
   {
     "word": "pretentious",
     "definition": "Intended to impress others; ostentatious.",
+    "score": 1
+  },
+  {
+    "word": "pretentiousness",
+    "definition": "The act of trying to appear more important, intelligent, or cultured than one is.",
     "score": 1
   },
   {
@@ -1122,6 +1217,11 @@
   {
     "word": "sanction",
     "definition": "An approval, by an authority, generally one that makes something valid.",
+    "score": 1
+  },
+  {
+    "word": "scrutinize",
+    "definition": "To examine or inspect closely and critically.",
     "score": 1
   },
   {
