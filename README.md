@@ -145,4 +145,4 @@ The site is hosted on **GitHub Pages** and auto-deploys on every push to `main`:
 
 ## License
 
-*TBD*
+This project is licensed under the [MIT License](LICENSE).
