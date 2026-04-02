@@ -2,1376 +2,2751 @@
   {
     "word": "eschew",
     "definition": "To deliberately avoid or keep away from",
-    "score": 6
+    "score": 6,
+    "sentences": [
+      "Many health-conscious individuals eschew processed foods, opting instead for whole, natural alternatives.",
+      "The politician, hoping to appeal to a broader audience, decided to eschew controversial topics during the debate.",
+      "Although he appreciated modern technology, the author tried to eschew its influence on his writing style, preferring a more traditional approach."
+    ]
   },
   {
     "word": "ubiquitous",
     "definition": "Present, appearing, or found everywhere",
-    "score": 6
+    "score": 6,
+    "sentences": [
+      "With the rise of social media, smartphones have become ubiquitous in modern society.",
+      "The artist sought to challenge the ubiquitous consumerism that pervaded contemporary culture.",
+      "Despite efforts to eradicate it, the weed proved ubiquitous in the garden, sprouting up everywhere."
+    ]
   },
   {
     "word": "abridge",
     "definition": "To shorten or condense",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "Due to time constraints, the editor decided to abridge the lengthy novel, focusing on the key plot points.",
+      "Some critics argue that censorship abridges freedom of speech, a fundamental right.",
+      "The teacher chose to abridge the complex scientific paper for her students, presenting the core concepts in a more accessible manner."
+    ]
   },
   {
     "word": "attenuate",
     "definition": "To reduce in force, value, or intensity",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "The thick fog began to attenuate as the sun rose, gradually revealing the landscape.",
+      "The governor hoped the new policy would attenuate the economic inequalities plaguing the state.",
+      "Repeated criticism can attenuate a person's self-confidence, leading to feelings of self-doubt."
+    ]
   },
   {
     "word": "conjecture",
     "definition": "An opinion based on incomplete information; to guess",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "The scientist's conjecture about the existence of a new particle, though intriguing, required further experimental validation.",
+      "Historians often rely on conjecture when trying to reconstruct events from incomplete or ambiguous evidence.",
+      "The novel explored the author's conjecture that technology, while helpful, could lead to a loss of human connection."
+    ]
   },
   {
     "word": "exacerbate",
     "definition": "To make a problem or situation worse",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "The proposed trade war could exacerbate existing tensions between the two nations.",
+      "Scratching the rash will only exacerbate the itching and prolong the healing process.",
+      "Ignoring the underlying issues will only exacerbate the problems within the organization."
+    ]
   },
   {
     "word": "idiosyncratic",
     "definition": "Peculiar to an individual; distinctive",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "The author's idiosyncratic writing style, characterized by unusual sentence structures and word choices, set him apart from his contemporaries.",
+      "Her idiosyncratic approach to problem-solving often led to innovative and unexpected solutions.",
+      "The professor's lectures were filled with idiosyncratic anecdotes and personal reflections, making them both engaging and memorable."
+    ]
   },
   {
     "word": "index",
     "definition": "A sign or measure that indicates a trend, condition, or value.",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "The consumer price index is a key indicator of inflation, reflecting changes in the cost of goods and services.",
+      "The book's index allowed readers to quickly locate specific topics and references within the text.",
+      "Environmental scientists use various metrics to index the health of an ecosystem."
+    ]
   },
   {
     "word": "manifest",
     "definition": "Clear or obvious; to display clearly",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "The effects of the economic downturn began to manifest in rising unemployment rates and business closures.",
+      "Her artistic talent began to manifest at a young age, as evidenced by her intricate drawings and paintings.",
+      "The disease can manifest in a variety of ways, depending on the individual's genetic makeup and lifestyle."
+    ]
   },
   {
     "word": "proponent",
     "definition": "A person who advocates for something",
-    "score": 4
+    "score": 4,
+    "sentences": [
+      "As a leading proponent of renewable energy, she advocated for policies that would encourage its widespread adoption.",
+      "The economist, a staunch proponent of free trade, argued that it would benefit all participating nations.",
+      "He was a vocal proponent of civil rights, dedicating his life to fighting for equality and justice."
+    ]
   },
   {
     "word": "abate",
     "definition": "To reduce in intensity or amount",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The storm's intensity began to abate after several hours, giving residents a chance to assess the damage.",
+      "The medication helped to abate the patient's pain, allowing him to rest comfortably.",
+      "As the debate continued, the initial enthusiasm began to abate, and the participants grew weary."
+    ]
   },
   {
     "word": "alleviate",
     "definition": "To make something less severe",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The new medication helped to alleviate the patient's chronic pain.",
+      "International aid organizations are working to alleviate the suffering of refugees displaced by the conflict.",
+      "Increased funding for education can help alleviate the cycle of poverty in disadvantaged communities."
+    ]
   },
   {
     "word": "ameliorate",
     "definition": "To make something better",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The new policies were designed to ameliorate the negative impacts of poverty on local communities.",
+      "Efforts to ameliorate the environmental damage caused by the oil spill included cleaning the beaches and restoring the affected habitats.",
+      "Meditation can ameliorate feelings of stress and anxiety, promoting a sense of calm and well-being."
+    ]
   },
   {
     "word": "anomalous",
     "definition": "Deviating from the norm; irregular",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The scientist dismissed the data point as anomalous, suspecting a measurement error rather than a genuine deviation from the established trend.",
+      "In a society known for its conformity, his unconventional beliefs were seen as anomalous and often met with disapproval.",
+      "The sudden shift in tone in the author's later works was anomalous compared to his earlier, more consistent style."
+    ]
   },
   {
     "word": "belie",
     "definition": "To contradict or give a false impression",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "His calm demeanor belied the anxiety he felt about the upcoming presentation.",
+      "The seemingly simple plot of the novel belies its complex themes and underlying social commentary.",
+      "The politician's promises of fiscal responsibility are belied by his history of reckless spending."
+    ]
   },
   {
     "word": "capacious",
     "definition": "Having a lot of space; roomy",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The museum's capacious galleries provided ample space for displaying its extensive collection of artifacts.",
+      "Her capacious memory allowed her to recall even the smallest details from years past.",
+      "The suitcase was surprisingly capacious, easily accommodating all of his belongings."
+    ]
   },
   {
     "word": "enumerate",
     "definition": "To list or count one by one",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The report enumerates the various factors contributing to the decline in voter turnout.",
+      "Before making a decision, it is important to enumerate the potential benefits and drawbacks of each option.",
+      "The historian enumerated the key events that led to the outbreak of the war."
+    ]
   },
   {
     "word": "equivocal",
     "definition": "Open to multiple interpretations; ambiguous",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The politician's equivocal response to the question left many voters uncertain about his stance on the issue.",
+      "The scientist interpreted the experimental results as equivocal, requiring further research to draw a definitive conclusion.",
+      "The literature critic found the author's message to be equivocal, open to multiple interpretations."
+    ]
   },
   {
     "word": "evince",
     "definition": "To reveal or display clearly",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The student's dedication to the project was evinced by the countless hours spent researching and writing the report.",
+      "The archaeological findings evince the presence of a thriving civilization in the region centuries ago.",
+      "The politician's actions evince a disregard for the needs of the working class."
+    ]
   },
   {
     "word": "incongruous",
     "definition": "Out of place; not harmonious",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "His formal attire seemed incongruous at the casual beach party.",
+      "The artist intentionally placed the abstract sculpture in the traditional garden, creating an incongruous juxtaposition.",
+      "The detective found the suspect's alibi incongruous with the evidence at the crime scene."
+    ]
   },
   {
     "word": "multifariousness",
     "definition": "Having many different aspects or elements",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The multifariousness of the city's population contributes to its vibrant cultural landscape.",
+      "The internet offers a seemingly endless array of resources, reflecting the multifariousness of human knowledge.",
+      "The novel explores the multifariousness of human experience through the stories of diverse characters."
+    ]
   },
   {
     "word": "precede",
     "definition": "To come before in time or order",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "A period of economic prosperity often precedes a decline in social cohesion, as individuals become more focused on personal gain.",
+      "The historical context that precedes a literary work can greatly influence its interpretation.",
+      "A formal apology must precede any attempt at reconciliation."
+    ]
   },
   {
     "word": "quintessential",
     "definition": "Representing the most perfect example",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "Shakespeare's \"Hamlet\" is often considered the quintessential tragedy in English literature.",
+      "The small Italian town with its cobblestone streets and charming cafes is the quintessential European vacation destination.",
+      "The golden retriever is the quintessential family dog."
+    ]
   },
   {
     "word": "substantiate",
     "definition": "To provide evidence to support or prove",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The lawyer presented evidence to substantiate his client's claim of innocence.",
+      "The scientist conducted experiments to substantiate her hypothesis about the effects of climate change.",
+      "The historian used primary sources to substantiate his account of the events leading up to the revolution."
+    ]
   },
   {
     "word": "tenuous",
     "definition": "Very weak or slight; flimsy",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The evidence linking the suspect to the crime was tenuous, relying heavily on circumstantial details.",
+      "The peace agreement between the warring factions was tenuous, with frequent violations threatening to reignite the conflict.",
+      "The connection between the two seemingly disparate ideas was tenuous, requiring a complex chain of reasoning to establish."
+    ]
   },
   {
     "word": "transpose",
     "definition": "To transfer or reverse position",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The composer decided to transpose the melody to a higher key to better suit the soprano's vocal range.",
+      "In the equation, you must transpose the variable to the other side of the equals sign to solve for its value.",
+      "The novel explores what would happen if we were to transpose current social norms to the distant past."
+    ]
   },
   {
     "word": "undermine",
     "definition": "To weaken or damage gradually",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "Constant criticism can undermine a person's confidence and self-esteem.",
+      "The spread of misinformation can undermine public trust in reliable news sources.",
+      "The senator's attempts to undermine the president's authority ultimately failed."
+    ]
   },
   {
     "word": "underscore",
     "definition": "To emphasize or highlight",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "The author uses vivid imagery to underscore the importance of environmental conservation.",
+      "The recent economic downturn underscores the need for responsible financial planning.",
+      "The speaker used a rising tone to underscore the importance of his message."
+    ]
   },
   {
     "word": "vindicate",
     "definition": "To clear of blame; to prove right",
-    "score": 3
+    "score": 3,
+    "sentences": [
+      "New evidence emerged to vindicate the wrongly accused man, proving his innocence after years of imprisonment.",
+      "The company's successful product launch vindicated their decision to invest heavily in research and development.",
+      "The athlete felt vindicated when the drug test results confirmed she had not used performance-enhancing substances."
+    ]
   },
   {
     "word": "abound",
     "definition": "To exist in large numbers or amounts; to be plentiful.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "Rumors abound regarding the company's potential merger with its competitor.",
+      "The forests of the Pacific Northwest abound with diverse species of plant and animal life.",
+      "Opportunities abound for those who are willing to work hard and persevere."
+    ]
   },
   {
     "word": "appraise",
     "definition": "To assess the value or quality of something.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "An expert was brought in to appraise the value of the antique furniture.",
+      "The teacher will appraise each student's progress based on their class participation and assignments.",
+      "It is important to appraise the situation carefully before making a decision."
+    ]
   },
   {
     "word": "attrition",
     "definition": "Wearing or grinding down by friction.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The company suffered significant attrition in its workforce due to layoffs.",
+      "The general planned a war of attrition, hoping to wear down the enemy's resources.",
+      "The slow attrition of the glacier is a sign of climate change."
+    ]
   },
   {
     "word": "augment",
     "definition": "To increase or enlarge something.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The museum decided to augment its collection with a newly discovered set of ancient artifacts.",
+      "To augment his income, he started a small online business in addition to his regular job.",
+      "The software update is designed to augment the security features of the operating system."
+    ]
   },
   {
     "word": "capricious",
     "definition": "Impulsive and unpredictable; determined by chance, impulse, or whim",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The stock market's capricious nature makes it difficult for investors to predict future trends with any certainty.",
+      "The queen was known for her capricious decisions, often rewarding or punishing subjects based on a whim.",
+      "The weather in the mountains can be capricious, changing from sunny to snowy in a matter of hours."
+    ]
   },
   {
     "word": "circumspection",
     "definition": "Attention to all the facts and circumstances of a case; consideration of all that is pertinent.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "Given the sensitive nature of the negotiations, circumspection was essential.",
+      "Her circumspection made her an excellent diplomat, always careful not to offend.",
+      "He approached the problem with circumspection, carefully considering all the possible consequences."
+    ]
   },
   {
     "word": "conflate",
     "definition": "To combine or fuse into one; to confuse or mistake one thing for another.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "It is easy to conflate correlation with causation, leading to inaccurate conclusions about the relationship between variables.",
+      "Some historians conflate the economic policies of the two administrations, ignoring the subtle but significant differences between them.",
+      "The author warns against conflating the character's personal struggles with the political message of the novel."
+    ]
   },
   {
     "word": "contentious",
     "definition": "Marked by heated arguments or controversy.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The debate over abortion rights remains a contentious issue in American politics.",
+      "The negotiation process was contentious, with both sides refusing to compromise.",
+      "The professor's controversial remarks sparked a contentious discussion among the students."
+    ]
   },
   {
     "word": "copious",
     "definition": "Vast in quantity or number, profuse, abundant; taking place on a large scale.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The research paper required copious amounts of data to support its claims.",
+      "She took copious notes during the lecture, hoping to capture every detail.",
+      "The author conducted copious research before writing the historical novel."
+    ]
   },
   {
     "word": "corroborate",
     "definition": "To confirm or support something with additional evidence; to attest or vouch for.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "Multiple witnesses were able to corroborate the victim's account of the incident.",
+      "The scientific data corroborated the hypothesis, providing strong evidence to support it.",
+      "The newly discovered documents corroborated the historian's theory about the origins of the conflict."
+    ]
   },
   {
     "word": "counterfactual",
     "definition": "A claim, hypothesis, or other belief that is contrary to the facts.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "Historians often engage in counterfactual reasoning, exploring what might have happened if a key event had unfolded differently.",
+      "The novel explored a counterfactual scenario in which the South won the American Civil War.",
+      "Counterfactual statements, while hypothetical, can help us understand the causal relationships that shaped actual events."
+    ]
   },
   {
     "word": "cursory",
     "definition": "Hasty; superficial; careless",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The inspector gave the building a cursory examination, missing several critical structural flaws.",
+      "Due to time constraints, the lawyer could only give the documents a cursory review before the trial began.",
+      "A cursory glance at the data suggested a trend, but a more thorough analysis was needed to confirm it."
+    ]
   },
   {
     "word": "dearth",
     "definition": "A scarcity or lack of something.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "There is a dearth of affordable housing in many major cities.",
+      "During the drought, there was a dearth of water in the region.",
+      "The dearth of reliable information made it difficult to understand the situation."
+    ]
   },
   {
     "word": "decisive",
     "definition": "Having the power or quality of deciding a question or controversy; putting an end to contest or controversy; final; conclusive.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The general's decisive action on the battlefield led to a swift victory.",
+      "After much deliberation, the committee made a decisive vote in favor of the new policy.",
+      "A decisive factor in her success was her unwavering determination and commitment to her goals."
+    ]
   },
   {
     "word": "denote",
     "definition": "To indicate; to mark.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The color red can denote danger or passion, depending on the context.",
+      "In mathematics, the symbol 'x' often denotes an unknown variable.",
+      "The term 'Renaissance' denotes a period of renewed interest in classical art and literature."
+    ]
   },
   {
     "word": "detrimental",
     "definition": "Causing damage or harm.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The overuse of antibiotics can be detrimental to the human microbiome, leading to antibiotic resistance.",
+      "The company's detrimental environmental practices led to widespread pollution of the river.",
+      "Studies suggest that excessive screen time can be detrimental to a teenager's sleep patterns and academic performance."
+    ]
   },
   {
     "word": "discerning",
     "definition": "Having or showing good judgment; perceptive.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The discerning art collector could identify a forgery from a genuine masterpiece with a single glance.",
+      "A discerning reader can appreciate the subtle nuances of the author's writing style.",
+      "The restaurant critic was known for his discerning palate and his ability to differentiate between the various flavor profiles of a dish."
+    ]
   },
   {
     "word": "discrepancy",
     "definition": "An inconsistency between facts or sentiments.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The accountant discovered a significant discrepancy between the reported income and actual revenue.",
+      "There was a noticeable discrepancy in the witness's statements, raising doubts about their reliability.",
+      "A discrepancy in the historical records made it difficult to ascertain the precise date of the event."
+    ]
   },
   {
     "word": "eclipse",
     "definition": "To obscure or block out; to surpass or diminish in importance.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The popularity of streaming services has begun to eclipse traditional television.",
+      "The athlete's latest triumph threatened to eclipse all of his previous achievements.",
+      "The scandal threatened to eclipse the mayor's accomplishments during his term."
+    ]
   },
   {
     "word": "emanate",
     "definition": "To come from a source; issue from.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The aroma of freshly baked bread emanated from the bakery, enticing passersby.",
+      "A sense of calm emanated from the wise old sage, putting everyone at ease.",
+      "Heat emanated from the volcano, melting the surrounding snow and ice."
+    ]
   },
   {
     "word": "epitome",
     "definition": "The embodiment or encapsulation of a class of items.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "She is the epitome of grace and elegance.",
+      "The Model T is often considered the epitome of early 20th-century mass production.",
+      "The luxurious hotel was the epitome of opulence and comfort."
+    ]
   },
   {
     "word": "epitomize",
     "definition": "To be a perfect example of; to represent in miniature.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The Taj Mahal is said to epitomize the Mughal architecture.",
+      "He epitomizes the values of hard work and dedication.",
+      "The athlete's incredible performance epitomizes the spirit of the Olympic Games."
+    ]
   },
   {
     "word": "excise",
     "definition": "To remove by cutting; to eliminate.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The surgeon had to excise the tumor to prevent it from spreading.",
+      "The editor decided to excise several scenes from the film to shorten its running time.",
+      "The government plans to excise certain taxes in an effort to stimulate the economy."
+    ]
   },
   {
     "word": "exhaustive",
     "definition": "Thorough and complete; including all possibilities.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The researchers conducted an exhaustive study of the effects of pollution on the local ecosystem.",
+      "The detective conducted an exhaustive investigation of the crime scene, leaving no stone unturned.",
+      "The professor provided an exhaustive overview of the history of the Roman Empire."
+    ]
   },
   {
     "word": "exploit",
     "definition": "To use selfishly or for profit; to take unfair advantage of.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The company was accused of exploiting its workers by paying them extremely low wages.",
+      "Some critics argue that reality television exploits people's desire for fame and attention.",
+      "The documentary exposed how corporations exploit loopholes in the tax code."
+    ]
   },
   {
     "word": "expound",
     "definition": "To set out the meaning of; to explain or discuss at length",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The professor expounded on the intricacies of quantum physics during the lecture.",
+      "The lawyer will expound on the details of the contract during the meeting.",
+      "The author used the article to expound on his views about modern society."
+    ]
   },
   {
     "word": "facetious",
     "definition": "Treating serious issues with (often deliberately) inappropriate humour; flippant.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "While his tone was facetious, his underlying anger was palpable.",
+      "Her facetious comments about the importance of education were inappropriate considering she's a professor.",
+      "The politician's facetious remarks about the opposing party were not well-received, and many found them to be offensive."
+    ]
   },
   {
     "word": "harbinger",
     "definition": "A person or thing that foreshadows or foretells the coming of someone or something.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The robin's return is often seen as a harbinger of spring.",
+      "Rising unemployment can be a harbinger of an economic recession.",
+      "For some, the storm clouds on the horizon were a harbinger of disaster."
+    ]
   },
   {
     "word": "heterogeneity",
     "definition": "Diversity",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The heterogeneity of the student body enriched classroom discussions with diverse perspectives.",
+      "The heterogeneity of the forest ecosystem contributes to its resilience and stability.",
+      "The heterogeneity of opinions within the political party made it difficult to reach a consensus."
+    ]
   },
   {
     "word": "heterogeneous",
     "definition": "Diverse in kind or nature; composed of diverse parts.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The city's population is heterogeneous, comprising people from various cultural backgrounds.",
+      "The study group was a heterogeneous mix of students with different levels of experience.",
+      "The artist used a heterogeneous collection of materials to create the sculpture."
+    ]
   },
   {
     "word": "iconoclasm",
     "definition": "The practice of attacking cherished beliefs or institutions.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The artist's iconoclasm challenged traditional notions of beauty and art.",
+      "The political movement was characterized by its iconoclasm, seeking to dismantle established institutions and power structures.",
+      "Religious iconoclasm during the Reformation led to the destruction of many religious images and artifacts."
+    ]
   },
   {
     "word": "imperious",
     "definition": "Domineering, arrogant, or overbearing.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The imperious general barked orders at his subordinates, expecting immediate obedience.",
+      "The professor's imperious tone intimidated many students, discouraging them from asking questions.",
+      "The Duchess was known for her imperious manner, often looking down on those she considered beneath her."
+    ]
   },
   {
     "word": "impervious",
     "definition": "Unaffected or unable to be affected by something.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The fortress, with its thick stone walls, was seemingly impervious to attack.",
+      "Despite the overwhelming evidence, the defendant remained impervious to reason and continued to deny the charges.",
+      "The scientist wore a special suit that was impervious to radiation, allowing her to safely conduct the experiment."
+    ]
   },
   {
     "word": "impugn",
     "definition": "To challenge or attack as false; to cast doubt upon.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The editorial sought to impugn the mayor's integrity by highlighting inconsistencies in his financial disclosures.",
+      "No one dared to impugn the professor's expertise in the field of quantum physics.",
+      "Witnesses impugned the veracity of the defendant's alibi, claiming he was seen elsewhere during the time of the crime."
+    ]
   },
   {
     "word": "incongruence",
     "definition": "The state of being incompatible or inconsistent.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The incongruence between his words and his actions made it difficult to trust him.",
+      "The incongruence of the modern architecture with the historic surroundings was jarring to some.",
+      "Cognitive dissonance arises from the incongruence between a person's beliefs and their behavior."
+    ]
   },
   {
     "word": "inexplicable",
     "definition": "Impossible to explain; not easily accounted for.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The sudden surge in the stock's value was inexplicable, leaving analysts baffled.",
+      "The witness gave an inexplicable account of the events, leaving the jury skeptical of his testimony.",
+      "The novel explores the inexplicable nature of human connection and the mysteries of the universe."
+    ]
   },
   {
     "word": "insurmountable",
     "definition": "Incapable of being passed over, surmounted, or overcome; insuperable",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "At first, the challenges seemed insurmountable, but the team persevered and eventually succeeded.",
+      "The language barrier presented an insurmountable obstacle to communication.",
+      "The debt was so large that it felt like an insurmountable burden."
+    ]
   },
   {
     "word": "intermingle",
     "definition": "To mix or become mixed together.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The different cultures intermingle in the vibrant city, creating a unique atmosphere.",
+      "The colors in the painting intermingle to create a sense of depth and movement.",
+      "The sounds of laughter and music intermingle in the crowded marketplace."
+    ]
   },
   {
     "word": "irrefutable",
     "definition": "Undeniable; unable to be disproved or refuted",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The scientist presented irrefutable evidence that supported her theory on the origins of the universe, silencing her critics.",
+      "The surveillance footage provided irrefutable proof of the suspect's presence at the crime scene, leading to his immediate arrest.",
+      "Despite his eloquent defense, the irrefutable facts of the case led the jury to deliver a guilty verdict."
+    ]
   },
   {
     "word": "lambaste",
     "definition": "To scold, reprimand or criticize harshly.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The critic lambasted the play for its weak plot and uninspired acting.",
+      "The politician lambasted his opponent's policies during the debate, accusing them of being detrimental to the economy.",
+      "The coach lambasted the team after their embarrassing defeat, demanding they improve their performance."
+    ]
   },
   {
     "word": "meticulous",
     "definition": "Characterized by very precise, conscientious attention to details.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The detective conducted a meticulous investigation of the crime scene.",
+      "The chef's meticulous attention to detail ensured that every dish was perfect.",
+      "Her meticulous research uncovered several discrepancies in the historical record."
+    ]
   },
   {
     "word": "misconstrue",
     "definition": "To interpret erroneously, to understand incorrectly; to misunderstand.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "His comments were easily misconstrued as insensitive, leading to widespread criticism.",
+      "The politician accused the media of trying to misconstrue his remarks about immigration.",
+      "It is easy to misconstrue the artist's intent if you are not familiar with the historical context."
+    ]
   },
   {
     "word": "outmoded",
     "definition": "No longer fashionable or useful; outdated.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The typewriter is an outmoded technology, having been replaced by computers and word processors.",
+      "The company's outmoded business practices made it difficult to compete in the rapidly changing market.",
+      "Many considered the social customs of the time to be outmoded and in need of reform."
+    ]
   },
   {
     "word": "partition",
     "definition": "To divide into parts; something that separates.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The partition of India in 1947 led to widespread displacement and violence.",
+      "The researchers decided to partition the data into smaller subsets for more efficient analysis.",
+      "A screen was used to partition the large room into smaller, more intimate spaces."
+    ]
   },
   {
     "word": "perceptible",
     "definition": "Able to be noticed or felt; easily perceived.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "There was a barely perceptible change in his expression.",
+      "The effects of the medication were perceptible within a few hours.",
+      "A perceptible shift in public opinion indicates growing support for the policy."
+    ]
   },
   {
     "word": "pernicious",
     "definition": "Causing much harm in a subtle way.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The spread of misinformation online has had a pernicious effect on public discourse.",
+      "The pernicious effects of pollution on the environment are a growing concern for scientists.",
+      "Gossip can be a pernicious force in a community, damaging reputations and relationships."
+    ]
   },
   {
     "word": "pervade",
     "definition": "To be in every part of; to spread through.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "A sense of unease began to pervade the small town as the rumors spread.",
+      "The smell of freshly baked bread seemed to pervade every corner of the house.",
+      "During the Romantic era, a feeling of intense emotion and individualism began to pervade artistic expression."
+    ]
   },
   {
     "word": "preclude",
     "definition": "Remove the possibility of; rule out; prevent or exclude; to make impossible.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The dense fog precluded any chance of a safe landing, forcing the pilot to reroute to a different airport.",
+      "A lack of funding may preclude the museum from acquiring new artifacts, hindering its ability to expand its collection.",
+      "Her prior convictions do not necessarily preclude her from obtaining a job; many employers are willing to give people a second chance."
+    ]
   },
   {
     "word": "pretext",
     "definition": "A false, contrived, or assumed purpose or reason; a pretense.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "He used the pretext of needing to borrow a book to visit her apartment.",
+      "The government claimed the invasion was for humanitarian purposes, but that was just a pretext for seizing resources.",
+      "She called under the pretext of checking in, but really she wanted to know if he was dating anyone."
+    ]
   },
   {
     "word": "proxy",
     "definition": "An agent or substitute authorized to act for another person.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "Shareholders can vote by proxy if they are unable to attend the meeting in person.",
+      "The ambassador acted as a proxy for the president during the negotiations.",
+      "In the experiment, the change in temperature served as a proxy for the overall energy expenditure."
+    ]
   },
   {
     "word": "redundancy",
     "definition": "The state of being unnecessary or repetitive.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The report was criticized for its redundancy; many points were repeated unnecessarily.",
+      "The company eliminated the redundancy in its operations by streamlining its processes.",
+      "The principle of redundancy is often used in engineering to ensure system reliability."
+    ]
   },
   {
     "word": "refute",
     "definition": "To prove (something) to be false or incorrect.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The scientist sought to refute the existing theory with new evidence.",
+      "The lawyer attempted to refute the witness's testimony during cross-examination.",
+      "Critics were quick to refute the author's claims, pointing to inconsistencies in the plot."
+    ]
   },
   {
     "word": "reprisal",
     "definition": "An act of retaliation.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The company feared economic reprisal if they refused to comply with the demands.",
+      "The victim of the attack worried about reprisal from the perpetrator's associates.",
+      "International law prohibits reprisal against civilians during times of war."
+    ]
   },
   {
     "word": "rescind",
     "definition": "To repeal, annul, or declare void; to take (something such as a rule or contract) out of effect.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The university decided to rescind its offer of admission after discovering the student's history of academic dishonesty.",
+      "Due to public outcry, the government was forced to rescind the controversial policy.",
+      "The company had to rescind their statement when new evidence came to light."
+    ]
   },
   {
     "word": "sporadic",
     "definition": "Occurring at irregular intervals; having no set plan or order.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The rain was sporadic throughout the day, sometimes a light drizzle and other times a downpour.",
+      "The rebel forces launched sporadic attacks on the capital city, disrupting the fragile peace in the region.",
+      "Due to her chronic illness, her attendance was sporadic, making it difficult for her to maintain consistent progress in her studies."
+    ]
   },
   {
     "word": "supersede",
     "definition": "To replace or take the place of something, often something old or obsolete.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The new law will supersede the previous regulations.",
+      "Advances in technology often supersede older methods and techniques.",
+      "In many organizations, email has largely superseded traditional letter writing for routine communication."
+    ]
   },
   {
     "word": "supplant",
     "definition": "To take the place of; to replace, to supersede.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The internet has begun to supplant traditional forms of media, like newspapers and magazines.",
+      "The new CEO sought to supplant the old management style with a more innovative approach.",
+      "Renewable energy sources are gradually supplanting fossil fuels."
+    ]
   },
   {
     "word": "surreptitious",
     "definition": "Stealthy, furtive, well hidden, covert (especially movements).",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The rebels planned a surreptitious attack to overthrow the dictator.",
+      "She cast a surreptitious glance at the test paper, hoping to catch a glimpse of the answer.",
+      "The journalist obtained the documents through surreptitious means, risking legal repercussions."
+    ]
   },
   {
     "word": "synopsis",
     "definition": "(authorship) A brief summary of the major points of a written work, either as prose or as a table; an abridgment or condensation of a work.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The movie guide provided a brief synopsis of each film, helping viewers decide what to watch.",
+      "The author included a synopsis at the beginning of the book to give readers an overview of the story.",
+      "Before the presentation, the speaker gave a synopsis of the key points he would be discussing."
+    ]
   },
   {
     "word": "testament",
     "definition": "Proof or evidence that something exists or is true.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The museum serves as a testament to the artist's enduring legacy.",
+      "The widespread use of the internet is a testament to the power of technology to connect people.",
+      "The athlete's record-breaking performance is a testament to her hard work and dedication."
+    ]
   },
   {
     "word": "unequivocal",
     "definition": "Unambiguous; without equivocation or ambiguity; singularly clear, unmistakable, or unquestionable",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The evidence presented was unequivocal, leaving no doubt about the defendant's guilt.",
+      "The company issued an unequivocal apology for the data breach and promised to improve its security measures.",
+      "The treaty contained unequivocal language, clearly defining the boundaries between the two nations."
+    ]
   },
   {
     "word": "unnerved",
     "definition": "To deprive of courage, strength, or composure; to agitate or fluster.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The sudden loud noise unnerved her, causing her to jump.",
+      "The defendant's calm demeanor during the trial unnerved the prosecution.",
+      "The difficult questions from the audience unnerved the speaker, causing him to stumble over his words."
+    ]
   },
   {
     "word": "untenable",
     "definition": "Not able to be held, as of an opinion or position; unholdable, indefensible.",
-    "score": 2
+    "score": 2,
+    "sentences": [
+      "The politician's position on the issue became untenable after the scandal.",
+      "The argument that all cultures are equally valid is untenable, as it ignores human rights abuses.",
+      "Living in such a dangerous neighborhood became untenable, forcing them to move."
+    ]
   },
   {
     "word": "accommodate",
     "definition": "To provide lodging or space for; to adapt or adjust to fit a need.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The new museum was designed to accommodate visitors with disabilities, ensuring accessibility for all.",
+      "The hotel can accommodate large groups, making it a popular choice for conferences.",
+      "The theory of relativity had to accommodate new observations that challenged Newtonian physics."
+    ]
   },
   {
     "word": "acquiesce",
     "definition": "To agree or comply silently without protest.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite initial reservations, the board of directors ultimately chose to acquiesce to the CEO's proposed restructuring plan, hoping it would revitalize the struggling company.",
+      "Facing mounting public pressure and the threat of a boycott, the corporation was forced to acquiesce to demands for greater environmental responsibility.",
+      "Though she disagreed with her parents' decision, she chose to acquiesce in order to avoid a prolonged argument."
+    ]
   },
   {
     "word": "acumen",
     "definition": "The ability to make good judgments and quick decisions, typically in a particular domain.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "His exceptional business acumen allowed him to identify lucrative opportunities in emerging markets, transforming the small startup into a global powerhouse.",
+      "The historian's political acumen was evident in his insightful analysis of the complex power dynamics that led to the outbreak of the war.",
+      "Her sharp acumen for scientific research enabled her to quickly grasp complex concepts and design innovative experiments."
+    ]
   },
   {
     "word": "aesthetic",
     "definition": "Concerned with beauty or the appreciation of beauty.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The architect prioritized the aesthetic appeal of the building, incorporating curved lines and natural light.",
+      "The aesthetic value of a painting is often subjective, depending on the viewer's personal preferences and cultural background.",
+      "While functionality is important, the aesthetic design of the product also plays a significant role in consumer appeal."
+    ]
   },
   {
     "word": "affinity",
     "definition": "A natural attraction or feeling of kinship to a person or thing.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Birds demonstrate a natural affinity for flight, their bodies perfectly adapted for aerial movement.",
+      "He developed an affinity for jazz music at a young age, spending hours listening to recordings.",
+      "The chemical compound showed a strong affinity for binding to the target protein."
+    ]
   },
   {
     "word": "affront",
     "definition": "An open or intentional offense, slight, or insult.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The politician's rude comments were an affront to the entire community.",
+      "The company considered the competitor's advertising campaign an affront to their brand reputation.",
+      "To deny someone their basic human rights is a grave affront to their dignity."
+    ]
   },
   {
     "word": "aggregation",
     "definition": "The act of collecting together (aggregating).",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The aggregation of data from various sources allowed researchers to identify important trends.",
+      "The aggregation of protesters in the town square signaled growing public unrest.",
+      "In ecology, aggregation refers to the clustering of organisms in a particular area."
+    ]
   },
   {
     "word": "align",
     "definition": "To form a line; to fall into line.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The company's mission statement should align with its actual business practices.",
+      "Astronomers carefully align their telescopes to observe distant galaxies.",
+      "The political parties struggled to align their positions on key issues."
+    ]
   },
   {
     "word": "amass",
     "definition": "To gather together or accumulate a large quantity of something.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Over the course of his career, the art collector managed to amass a valuable collection of paintings.",
+      "The dictator used his power to amass a huge personal fortune.",
+      "Researchers amass data through experiments and observations to support their hypothesis."
+    ]
   },
   {
     "word": "ambiguous",
     "definition": "Open to multiple interpretations.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The author's use of ambiguous language left the reader unsure of the character's true intentions.",
+      "The legal contract contained several ambiguous clauses, leading to a dispute between the parties.",
+      "The scientific results were ambiguous, requiring further investigation to draw definitive conclusions."
+    ]
   },
   {
     "word": "ambivalent",
     "definition": "Having mixed feelings or contradictory ideas about something or someone.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "She felt ambivalent about accepting the prestigious award, torn between a desire for recognition and a discomfort with the public attention it would bring.",
+      "The public remains ambivalent about the proposed tax reform, with some praising its potential benefits and others fearing its negative consequences.",
+      "Many literary critics are ambivalent about the author's later works, acknowledging their technical skill while questioning their emotional depth."
+    ]
   },
   {
     "word": "amenable",
     "definition": "Willing to respond to persuasion or suggestions.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The students were amenable to the teacher's suggestion to have an outdoor class.",
+      "The patient was amenable to the proposed treatment plan, trusting the doctor's expertise.",
+      "The government was amenable to negotiating a peaceful resolution to the conflict."
+    ]
   },
   {
     "word": "amorphous",
     "definition": "Lacking a definite form or clear shape.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The amorphous cloud of smoke billowed across the sky, changing shape constantly.",
+      "The company's organizational structure was amorphous, lacking clear lines of authority.",
+      "The amorphous nature of public opinion makes it difficult to predict election outcomes."
+    ]
   },
   {
     "word": "analogous",
     "definition": "Having analogy; corresponding to something else; bearing some resemblance or proportion (often followed by \"to\".)",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The human brain is often described as analogous to a computer, processing information and making decisions.",
+      "The relationship between a plant and its pollinator is analogous to a symbiotic partnership.",
+      "The development of photography is analogous to the development of writing; both allowed the recording of information."
+    ]
   },
   {
     "word": "annihilate",
     "definition": "To reduce to nothing, to destroy, to eradicate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The powerful bomb was designed to annihilate entire city blocks.",
+      "The invading army sought to annihilate all resistance.",
+      "The debate team aimed to annihilate the opposing team's arguments with compelling evidence."
+    ]
   },
   {
     "word": "anomaly",
     "definition": "A deviation from a rule or from what is regarded as normal; an outlier.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The sudden drop in temperature was an anomaly for that time of year.",
+      "The scientist discovered an anomaly in the data that challenged existing theories.",
+      "In literature, a character who deviates significantly from societal norms can be seen as an anomaly."
+    ]
   },
   {
     "word": "anthropogenic",
     "definition": "Caused or influenced by human activity.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Scientists are increasingly concerned about the anthropogenic contributions to climate change, particularly the emission of greenhouse gases from industrial activities.",
+      "The debate over the extent of anthropogenic impact on deforestation continues, with some arguing that natural factors are equally significant.",
+      "While natural disasters have always shaped landscapes, recent studies highlight the growing role of anthropogenic alterations, such as urbanization and dam construction, in modifying river systems."
+    ]
   },
   {
     "word": "ascribe",
     "definition": "To attribute a cause or characteristic to someone or something.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "While some ascribe the novel's success to its compelling plot, others attribute it to the author's skillful use of symbolism.",
+      "Historians often ascribe the fall of the Roman Empire to a combination of factors, including economic decline, political instability, and external pressures.",
+      "It is tempting to ascribe his sudden change in behavior to the influence of his new friends, but there may be other underlying reasons."
+    ]
   },
   {
     "word": "attest",
     "definition": "To affirm to be correct, true, or genuine.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Numerous historical documents attest to the widespread use of opium in the 19th century, despite its known addictive properties.",
+      "The scientist's meticulous notes attest to the rigor of her research and the validity of her findings.",
+      "Eyewitness accounts attest to the chaos and confusion that ensued after the earthquake, painting a vivid picture of the disaster's immediate aftermath."
+    ]
   },
   {
     "word": "authentic",
     "definition": "Of the same origin as claimed; genuine.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The museum curator meticulously verified the painting's provenance to ensure its authentic status before adding it to the collection.",
+      "The author strived to create authentic characters whose struggles and triumphs would resonate with readers from diverse backgrounds.",
+      "Many tourists seek out authentic cultural experiences when they travel, hoping to immerse themselves in the local traditions and customs."
+    ]
   },
   {
     "word": "authoritative",
     "definition": "Considered to be the best of its kind and unlikely to be questioned; reliable.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The professor's lecture on quantum physics was delivered in an authoritative tone, reflecting her deep understanding of the subject matter.",
+      "The historian's biography of Abraham Lincoln is considered an authoritative source on the president's life and legacy.",
+      "When dealing with complex medical issues, it is crucial to consult authoritative sources of information to ensure accuracy and avoid misinformation."
+    ]
   },
   {
     "word": "banal",
     "definition": "Common in a boring way, to the point of being predictable; containing nothing new or fresh.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The politician's speech was filled with banal platitudes that failed to inspire any real enthusiasm among the audience.",
+      "The novel's plot was criticized for being too predictable and banal, lacking any originality or innovation.",
+      "In an attempt to appear relatable, the celebrity made a series of banal observations about everyday life that came across as insincere."
+    ]
   },
   {
     "word": "begrudge",
     "definition": "To envy someone's possession or enjoyment of something; to give reluctantly.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "While I may begrudge him his success, I must admit that he worked incredibly hard to achieve it.",
+      "The older generation sometimes begrudges the younger generation their perceived ease and privilege in a rapidly changing world.",
+      "Despite their rivalry, she couldn't begrudge him his moment of glory after he won the championship."
+    ]
   },
   {
     "word": "benevolent",
     "definition": "Well-meaning and kindly; charitable.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The benevolent dictator implemented a series of progressive reforms aimed at improving the lives of the impoverished citizens.",
+      "Fueled by benevolent intentions, the foundation provided grants to support educational programs in underserved communities.",
+      "The benevolent nature of the protagonist is revealed through her selfless acts of kindness toward her neighbors."
+    ]
   },
   {
     "word": "burgeoning",
     "definition": "To grow or expand.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The burgeoning field of artificial intelligence is rapidly transforming industries and raising profound ethical questions.",
+      "The burgeoning population of the city is putting a strain on its infrastructure and resources.",
+      "The artist's burgeoning career was cut short by a tragic accident, leaving behind a legacy of unfulfilled potential."
+    ]
   },
   {
     "word": "candor",
     "definition": "The quality of being open and honest in expression; frankness.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "In a moment of surprising candor, the politician admitted to past mistakes, earning both praise and criticism for his honesty.",
+      "The journalist's reputation for candor and integrity made her a trusted source of information in a media landscape often characterized by bias.",
+      "The professor appreciated the student's candor in admitting that they had struggled with the assigned reading."
+    ]
   },
   {
     "word": "casual",
     "definition": "Relaxed and unconcerned; without formality.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The historian noted a casual disregard for environmental regulations during the early stages of industrialization, leading to widespread pollution.",
+      "Despite the seemingly casual atmosphere of the meeting, important decisions were being made behind the scenes.",
+      "The author's casual tone belied the complex and nuanced arguments presented in the essay."
+    ]
   },
   {
     "word": "catalyst",
     "definition": "A person or thing that precipitates an event or change.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The assassination of Archduke Franz Ferdinand served as the catalyst for World War I, igniting a chain reaction of political and military events.",
+      "The discovery of penicillin acted as a catalyst for the rapid development of antibiotics, revolutionizing medicine.",
+      "The speaker's passionate speech proved to be the catalyst that galvanized the community into action."
+    ]
   },
   {
     "word": "catalyze",
     "definition": "To cause or accelerate a reaction or change.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The invention of the printing press catalyzed the spread of knowledge and ideas throughout Europe.",
+      "The economic crisis served to catalyze social unrest and demands for political reform.",
+      "The grant from the foundation will catalyze new research into the causes and treatment of Alzheimer's disease."
+    ]
   },
   {
     "word": "cite",
     "definition": "To quote; to repeat, as a passage from a book, or the words of another.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "In her research paper, the student meticulously cited all of her sources to avoid plagiarism.",
+      "The lawyer cited several precedents to support his client's case in court.",
+      "Critics often cite the author's early works as evidence of her evolving style and thematic concerns."
+    ]
   },
   {
     "word": "coalesce",
     "definition": "(of separate elements) To join into a single mass or whole.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Over time, the various protest groups began to coalesce into a unified movement with a common goal.",
+      "The droplets of water coalesced on the windowpane, forming larger streaks.",
+      "Different schools of thought began to coalesce around a central idea, leading to a new paradigm in the field."
+    ]
   },
   {
     "word": "commend",
     "definition": "To praise formally or officially.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The teacher commended the student for her insightful analysis of the poem.",
+      "The general commended the soldiers for their bravery and resilience in the face of adversity.",
+      "The organization should be commended for its efforts to promote environmental sustainability and conservation."
+    ]
   },
   {
     "word": "compelling",
     "definition": "Evoking interest, attention, or admiration in a powerfully irresistible way.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The lawyer presented a compelling case, weaving together forensic evidence and witness testimony to convince the jury of his client's innocence.",
+      "The novel's compelling narrative and vivid characters kept me engrossed from beginning to end.",
+      "Climate change is a compelling issue that demands immediate attention from policymakers worldwide."
+    ]
   },
   {
     "word": "complacent",
     "definition": "Uncritically satisfied with oneself or one's achievements; smug.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The team grew complacent after their initial success, leading to a series of disappointing losses.",
+      "It is dangerous to become complacent about social progress, as vigilance and continued effort are necessary to maintain positive change.",
+      "The government's complacent attitude towards the growing economic inequality sparked widespread protests and calls for reform."
+    ]
   },
   {
     "word": "confounded",
     "definition": "To perplex or puzzle.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The complex scientific data confounded even the most experienced researchers.",
+      "The magician's trick confounded the audience, leaving them wondering how it was done.",
+      "The contradictory evidence confounded the detective, making it difficult to solve the mystery."
+    ]
   },
   {
     "word": "connotation",
     "definition": "An idea or feeling that a word invokes in addition to its literal or primary meaning.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "While the word 'cheap' simply denotes a low price, its connotation often suggests poor quality or lack of value.",
+      "The author deliberately chose words with positive connotations to create a sense of hope and optimism in the story.",
+      "The word 'freedom' carries a powerful connotation of liberty, autonomy, and self-determination."
+    ]
   },
   {
     "word": "conspicuous",
     "definition": "Obvious or easy to notice.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The security cameras were placed in a conspicuous location, ensuring that their presence would deter potential vandals.",
+      "Her conspicuous wealth, displayed through extravagant parties and designer clothing, drew both admiration and envy from her peers.",
+      "Despite attempts to remain anonymous, the author's unique writing style made her identity conspicuous to literary critics."
+    ]
   },
   {
     "word": "continuity",
     "definition": "Lack of interruption or disconnection; the quality of being continuous in space or time.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The museum sought to ensure continuity in its programming by establishing a long-term endowment.",
+      "Despite the change in leadership, the company managed to maintain continuity in its core values and operational strategies.",
+      "The historian emphasized the importance of understanding the continuity between past and present events to fully grasp the complexities of modern society."
+    ]
   },
   {
     "word": "cryptic",
     "definition": "Mysterious or obscure in meaning.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The ancient text was filled with cryptic symbols that baffled scholars for centuries.",
+      "Her cryptic response to the question left everyone wondering about her true intentions.",
+      "The artist's cryptic paintings, open to multiple interpretations, sparked lively debates among art critics."
+    ]
   },
   {
     "word": "culled",
     "definition": "To pick or take someone or something (from a larger group).",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The researcher culled data from various sources to support her hypothesis.",
+      "The editor culled the best articles from the magazine's archives for the anniversary edition.",
+      "The gardener carefully culled the diseased leaves from the rose bushes to prevent the spread of infection."
+    ]
   },
   {
     "word": "decouple",
     "definition": "To unlink; to take or come apart.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Economists argued that it was necessary to decouple economic growth from environmental degradation.",
+      "The scientist sought to decouple the effects of the drug from the placebo effect in the clinical trial.",
+      "The activists advocated for decoupling political donations from corporate influence to ensure fair elections."
+    ]
   },
   {
     "word": "decry",
     "definition": "To denounce as harmful.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Many politicians decry the increasing polarization of political discourse.",
+      "Environmental activists decry the destruction of rainforests for agricultural expansion.",
+      "Literary critics decry the prevalence of formulaic writing in contemporary novels."
+    ]
   },
   {
     "word": "delineate",
     "definition": "To describe or portray something precisely.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The contract clearly delineates the responsibilities of each party involved, minimizing the potential for future disputes.",
+      "The artist used fine lines and subtle shading to delineate the intricate details of the human face.",
+      "The historian carefully delineates the key events and turning points that shaped the course of the American Revolution."
+    ]
   },
   {
     "word": "detractor",
     "definition": "A person who belittles the worth of another person or cause.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite the film's critical acclaim, it still had its detractors who found the plot convoluted.",
+      "The politician's detractors seized upon his controversial statement to undermine his credibility.",
+      "The scientist faced many detractors who questioned the validity of his groundbreaking research."
+    ]
   },
   {
     "word": "diffusion",
     "definition": "The act of diffusing or dispersing something, or the property of being diffused or dispersed; dispersion.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The diffusion of technology has transformed many aspects of modern life.",
+      "The diffusion of cultural ideas across borders can lead to both enrichment and conflict.",
+      "Scientists studied the diffusion of pollutants in the atmosphere to understand the extent of environmental damage."
+    ]
   },
   {
     "word": "diminution",
     "definition": "A lessening, decrease or reduction.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The diminution of natural resources poses a serious threat to future generations.",
+      "The gradual diminution of his eyesight forced him to retire from his profession.",
+      "The diminution of the empire's power was a slow but inevitable process."
+    ]
   },
   {
     "word": "diminutive",
     "definition": "Extremely small in size; tiny.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite his diminutive stature, the chess player was a formidable opponent.",
+      "The diminutive size of the apartment made it challenging to accommodate all of her belongings.",
+      "The author employed diminutive language to create a sense of intimacy and vulnerability in her poems."
+    ]
   },
   {
     "word": "discretion",
     "definition": "The quality of being discreet or circumspect.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The diplomat exercised discretion when discussing the sensitive matter with foreign officials.",
+      "The journalist promised to use discretion when reporting on the private lives of public figures.",
+      "The teacher emphasized the importance of using discretion when sharing personal information online."
+    ]
   },
   {
     "word": "disparate",
     "definition": "Distinct or dissimilar; fundamentally different.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The novel brought together disparate characters from different social backgrounds.",
+      "The economist analyzed disparate data points to identify underlying trends.",
+      "The museum showcased a collection of disparate artifacts from various historical periods."
+    ]
   },
   {
     "word": "disparity",
     "definition": "The state of being unequal; difference.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The disparity between the rich and the poor continues to widen in many countries.",
+      "The study revealed a significant disparity in healthcare access between urban and rural communities.",
+      "The disparity in test scores between different schools raised concerns about educational inequality."
+    ]
   },
   {
     "word": "dispassionate",
     "definition": "Not showing, and not affected by, emotion, bias, or prejudice",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The judge delivered a dispassionate verdict, based solely on the evidence presented.",
+      "The scientist approached the experiment with a dispassionate objectivity, free from personal bias.",
+      "The historian attempted to provide a dispassionate account of the events, avoiding subjective interpretations."
+    ]
   },
   {
     "word": "dispersed",
     "definition": "To scatter in different directions",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The crowd dispersed quickly after the concert ended.",
+      "The seeds were dispersed by the wind, ensuring the plant's survival in new locations.",
+      "The refugees were dispersed throughout the country, seeking safety and new opportunities."
+    ]
   },
   {
     "word": "disquieting",
     "definition": "To make (someone or something) worried or anxious.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The novel's disquieting portrayal of societal decay left readers deeply unsettled.",
+      "Scientists found the disquieting trend of rising global temperatures to be a cause for alarm.",
+      "The politician's sudden resignation was disquieting, prompting speculation about hidden scandals."
+    ]
   },
   {
     "word": "dissonance",
     "definition": "A harsh, discordant combination of sounds.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The dissonance between the candidate's promises and their voting record created distrust among voters.",
+      "The composer skillfully used dissonance to create a feeling of unease in the orchestral piece.",
+      "Cognitive dissonance arises when individuals hold conflicting beliefs, leading to discomfort."
+    ]
   },
   {
     "word": "dogmatic",
     "definition": "Asserting opinions in an arrogant or doctrinaire manner; stubbornly opinionated.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The professor's dogmatic adherence to traditional theories prevented him from considering new perspectives.",
+      "The dictator's dogmatic rule stifled dissent and suppressed individual freedoms.",
+      "Her dogmatic belief in the power of positive thinking often clashed with the realities of the situation."
+    ]
   },
   {
     "word": "durability",
     "definition": "Permanence by virtue of the power to resist stress or force.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The durability of the Roman Empire can be attributed to its sophisticated infrastructure and military strength.",
+      "The company focused on the durability of its products to ensure customer satisfaction and long-term value.",
+      "The poet's verses demonstrate the durability of love as a timeless theme."
+    ]
   },
   {
     "word": "dwindling",
     "definition": "To decrease, shrink, diminish, reduce in size or intensity.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The dwindling population of bees poses a serious threat to agricultural production.",
+      "The artist's dwindling health forced him to abandon his ambitious project.",
+      "Due to deforestation, the dwindling natural resources became a major concern for conservationists."
+    ]
   },
   {
     "word": "efficacy",
     "definition": "The ability to produce a desired or intended result; effectiveness.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The efficacy of the new drug in treating the disease is still being evaluated through clinical trials.",
+      "The government questioned the efficacy of the economic policies, noting the persistent levels of unemployment and inflation.",
+      "The study examined the efficacy of various teaching methods in improving student performance."
+    ]
   },
   {
     "word": "embellished",
     "definition": "To make more beautiful and attractive; to decorate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The historical account was embellished with fictional details to make it more engaging for readers.",
+      "The architect embellished the building's facade with intricate carvings and sculptures.",
+      "She embellished her speech with humorous anecdotes to keep the audience entertained."
+    ]
   },
   {
     "word": "emblematic",
     "definition": "Serving as, or relating to a symbol, emblem or illustration of a type.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The bald eagle is emblematic of American freedom and national pride.",
+      "The crumbling infrastructure is emblematic of the city's economic decline.",
+      "In the novel, the wilting rose is emblematic of lost innocence and fading beauty."
+    ]
   },
   {
     "word": "emissary",
     "definition": "An agent sent on a mission to represent the interests of someone else.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The president sent an emissary to negotiate a peace treaty with the opposing nation.",
+      "As an emissary of goodwill, she traveled the world promoting cultural understanding.",
+      "The company appointed an emissary to represent their interests at the international trade conference."
+    ]
   },
   {
     "word": "empirical",
     "definition": "Based on observation or experience rather than theory or pure logic.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Scientists rely on empirical evidence, gathered through observation and experimentation, to support their theories.",
+      "The economist based her analysis on empirical data, rather than theoretical models, to understand the causes of the recession.",
+      "The researcher's conclusions were grounded in empirical findings, providing a solid foundation for further investigation."
+    ]
   },
   {
     "word": "emulate",
     "definition": "To attempt to equal or be the same as.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Young writers often emulate the style of their favorite authors.",
+      "Aspiring athletes strive to emulate the achievements of their role models.",
+      "The company sought to emulate the innovative strategies of its competitors."
+    ]
   },
   {
     "word": "endearing",
     "definition": "Inspiring affection or fondness.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The puppy's endearing clumsiness made everyone smile.",
+      "Her endearing personality and genuine warmth made her a beloved figure in the community.",
+      "The film portrayed the characters' endearing flaws, making them relatable to the audience."
+    ]
   },
   {
     "word": "engender",
     "definition": "To cause or give rise to; to produce.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The politician's divisive rhetoric only served to engender further conflict.",
+      "The new policy is intended to engender a sense of community among the students.",
+      "The artist's provocative work was designed to engender debate and challenge conventional norms."
+    ]
   },
   {
     "word": "entangled",
     "definition": "To tangle up; to twist or interweave in such a manner as not to be easily separated",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The nation's foreign policy became entangled in a complex web of alliances and rivalries.",
+      "The climber's rope became entangled in the branches of the tree.",
+      "The characters' lives became entangled in a series of unexpected events."
+    ]
   },
   {
     "word": "entanglement",
     "definition": "The state of being entangled; intricate and confused involution.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The entanglement of politics and religion can lead to social unrest.",
+      "The legal entanglement surrounding the property dispute dragged on for years.",
+      "She tried to avoid any further entanglement in his complicated personal life."
+    ]
   },
   {
     "word": "entice",
     "definition": "To lure; to attract by arousing desire or hope.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Advertisements use persuasive language to entice consumers to buy their products.",
+      "The promise of adventure and riches enticed many Europeans to immigrate to the New World.",
+      "The baker used the aroma of freshly baked bread to entice customers into the shop."
+    ]
   },
   {
     "word": "ephemeral",
     "definition": "Lasting for a very short time; transient.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The beauty of cherry blossoms is ephemeral, lasting only a few weeks in the spring.",
+      "The popularity of certain fashion trends is often ephemeral, quickly fading as new styles emerge.",
+      "Social media posts are often ephemeral, quickly forgotten in the constant stream of information."
+    ]
   },
   {
     "word": "expansive",
     "definition": "Comprehensive in scope or extent.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The author's expansive prose, filled with elaborate metaphors and vivid descriptions, transported the reader to a bygone era.",
+      "The CEO presented an expansive plan for the company's growth, encompassing new product lines and international markets.",
+      "The expansive nature of the universe, with its countless galaxies and nebulae, continues to inspire awe and wonder among scientists."
+    ]
   },
   {
     "word": "expedite",
     "definition": "To accelerate the progress of.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "To expedite the delivery of humanitarian aid, the organization coordinated with local authorities to streamline the process.",
+      "The judge agreed to expedite the trial given the compelling evidence and the defendant's willingness to cooperate.",
+      "Online payment and digital signatures expedite many transactions that used to take weeks to complete."
+    ]
   },
   {
     "word": "extemporaneous",
     "definition": "Without preparation or advanced thought; offhand.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The speaker's extemporaneous remarks were surprisingly eloquent and insightful.",
+      "The actor's ability to deliver extemporaneous lines saved the play when a prop malfunctioned.",
+      "Instead of reading from a prepared script, she gave an extemporaneous speech about her experiences."
+    ]
   },
   {
     "word": "extensibility",
     "definition": "The quality of being easily extended or expanded.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The software's extensibility allows developers to add new features and functionalities without altering the core code.",
+      "The extensibility of the scientific method allows it to be used in many different disciplines.",
+      "The extensibility of the language gives poets the ability to create new meanings and new forms."
+    ]
   },
   {
     "word": "extraneous",
     "definition": "Not belonging to, or dependent upon, a thing; without or beyond a thing; foreign",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "During the debate, the politician dismissed the opponent's comments as extraneous and irrelevant to the central issue.",
+      "When revising the essay, the student removed extraneous details to improve clarity and focus.",
+      "The researcher carefully controlled the experiment environment to eliminate extraneous variables that could skew the results."
+    ]
   },
   {
     "word": "feasible",
     "definition": "Able to be done in practice.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite initial skepticism, the engineer demonstrated that the project was technically feasible and could be completed within budget.",
+      "Given the limited resources, it is not feasible to implement all of the proposed reforms at once.",
+      "It is not feasible to expect every student to achieve a perfect score on the SAT."
+    ]
   },
   {
     "word": "fecund",
     "definition": "Highly fertile; able to produce offspring.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The Amazon rainforest is a fecund ecosystem, teeming with a vast array of plant and animal life.",
+      "The artist's fecund imagination produced a constant stream of innovative and thought-provoking works.",
+      "The social media influencer leveraged the fecund online environment to rapidly grow her following."
+    ]
   },
   {
     "word": "fervor",
     "definition": "Intense and passionate feeling.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The activist spoke with such fervor about social justice that she inspired many to join her cause.",
+      "The religious fervor of the pilgrims led them to brave harsh conditions in search of religious freedom.",
+      "The team played with a renewed fervor after their coach's inspiring halftime speech."
+    ]
   },
   {
     "word": "foment",
     "definition": "To stir up or instigate trouble or rebellion.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The inflammatory rhetoric used by the political commentator served to foment unrest among the populace.",
+      "Accusations that the government was attempting to foment discord with neighboring countries were quickly denied.",
+      "The documentary explored how biased media coverage can foment fear and division within society."
+    ]
   },
   {
     "word": "forestall",
     "definition": "To prevent, delay or hinder something by taking precautionary or anticipatory measures; to avert.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The government implemented new regulations to forestall further environmental damage from industrial pollution.",
+      "By investing in preventative maintenance, the company hoped to forestall costly equipment failures.",
+      "Negotiators worked tirelessly to forestall a trade war between the two nations."
+    ]
   },
   {
     "word": "forsake",
     "definition": "To abandon, to give up, to leave (permanently), to renounce.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The artist chose to forsake commercial success in order to pursue their own unique artistic vision.",
+      "Many immigrants were forced to forsake their homelands due to political persecution and economic hardship.",
+      "The knight refused to forsake his oath, even in the face of overwhelming odds."
+    ]
   },
   {
     "word": "foster",
     "definition": "To encourage the development or growth of something.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The university established a new program to foster collaboration between students and faculty on cutting-edge research.",
+      "Parents can foster a love of reading in their children by providing them with access to a wide variety of books.",
+      "The company implemented policies to foster a more inclusive and equitable workplace."
+    ]
   },
   {
     "word": "fraudulent",
     "definition": "Dishonest; based on fraud or deception.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The investigation revealed that the company had engaged in fraudulent accounting practices to inflate its profits.",
+      "The art collector discovered that the painting he had purchased was a fraudulent imitation of the original.",
+      "The fraudulent scheme involved using fake identities to obtain government benefits."
+    ]
   },
   {
     "word": "halt",
     "definition": "To come or bring to a stop.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The construction project came to a halt due to a lack of funding.",
+      "The government ordered a halt to all logging activities in the protected forest.",
+      "Progress in the peace talks came to a halt after the recent outbreak of violence."
+    ]
   },
   {
     "word": "halting",
     "definition": "Hesitant or faltering in speech or movement.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The student's halting speech revealed their nervousness during the presentation.",
+      "The negotiations proceeded in a halting manner, with frequent disagreements and delays.",
+      "The car's engine made a series of halting noises before finally stalling."
+    ]
   },
   {
     "word": "haughty",
     "definition": "Conveying in demeanour the assumption of superiority; disdainful, supercilious.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The wealthy socialite was known for her haughty demeanor and disdain for those she considered beneath her.",
+      "The haughty professor dismissed the student's question with a condescending remark.",
+      "The protagonist's haughty attitude masks a deep-seated insecurity about their own abilities."
+    ]
   },
   {
     "word": "hierarchy",
     "definition": "A system or organization in which people or groups are ranked one above the other according to status or authority.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The rigid social hierarchy of the 18th century dictated one's opportunities and status in life.",
+      "Within the corporate hierarchy, each employee reports to a supervisor at the next level.",
+      "The novel explores the complex power dynamics within the prison's internal hierarchy."
+    ]
   },
   {
     "word": "hypothesize",
     "definition": "To propose an explanation or theory based on limited evidence.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Scientists hypothesize that dark matter makes up a significant portion of the universe's mass.",
+      "Historians hypothesize that the decline of the Roman Empire was caused by a combination of factors, including economic instability and political corruption.",
+      "Based on the evidence, we can hypothesize that the suspect was familiar with the victim."
+    ]
   },
   {
     "word": "idle",
     "definition": "Not active or in use; lazy or avoiding work.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The factory remained idle for months after the economic downturn, leaving many workers unemployed and the community struggling.",
+      "Philosophers often caution against idle speculation, urging us to ground our theories in empirical evidence.",
+      "The poem's idle imagery, though pleasant, failed to deliver a profound message, ultimately lacking substance."
+    ]
   },
   {
     "word": "immoderate",
     "definition": "Not moderate; excessive.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The king's immoderate spending led to the depletion of the royal treasury and widespread discontent among his subjects.",
+      "Scientists warn that immoderate consumption of fossil fuels will have dire consequences for the planet's climate.",
+      "The critic lambasted the novel for its immoderate length and reliance on excessive detail, arguing that it lacked focus and pacing."
+    ]
   },
   {
     "word": "impartial",
     "definition": "Treating all parties, rivals, or disputants equally; not partial; not biased",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "A judge must remain impartial, setting aside personal biases to ensure a fair trial for all parties involved.",
+      "The news organization strives to provide impartial coverage of political events, presenting all sides of the issue without favoritism.",
+      "The success of the scientific method relies on impartial observation and analysis, free from preconceived notions."
+    ]
   },
   {
     "word": "imperative",
     "definition": "Absolutely necessary or required.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "It is imperative that governments address climate change with swift and decisive action to protect future generations.",
+      "Understanding the nuances of historical context is imperative for interpreting literature accurately.",
+      "In a crisis situation, it is imperative to remain calm and follow established protocols to ensure everyone's safety."
+    ]
   },
   {
     "word": "imposing",
     "definition": "Grand and impressive in appearance.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The imposing architecture of the cathedral reflected the power and influence of the church in medieval society.",
+      "The imposing figure of the general commanded respect and obedience from his troops.",
+      "The sheer volume of research required for the project presented an imposing challenge to the students."
+    ]
   },
   {
     "word": "inaugurate",
     "definition": "To induct into office with a formal ceremony.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The president will inaugurate a new program designed to improve access to education in underserved communities.",
+      "The university will inaugurate a new research center dedicated to the study of renewable energy.",
+      "The museum plans to inaugurate its new exhibit with a gala event, inviting prominent figures in the art world."
+    ]
   },
   {
     "word": "inconsequential",
     "definition": "Not important or significant.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Compared to the global crisis, the local dispute seemed relatively inconsequential.",
+      "The editor dismissed the grammatical errors as inconsequential, focusing instead on the overall quality of the writing.",
+      "Don't get bogged down in inconsequential details; focus on the main objectives."
+    ]
   },
   {
     "word": "inconspicuous",
     "definition": "Not prominent nor easily noticeable",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The detective tried to remain inconspicuous as he followed the suspect through the crowded marketplace.",
+      "The plant's inconspicuous flowers allowed it to blend seamlessly into its surroundings, avoiding the attention of herbivores.",
+      "The author's subtle, inconspicuous use of symbolism added depth and complexity to the narrative, rewarding careful readers."
+    ]
   },
   {
     "word": "indifference",
     "definition": "Lack of interest, concern, or sympathy.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The public's indifference to the plight of the refugees allowed the government to delay providing aid.",
+      "Her feigned indifference to his compliments only served to pique his interest further.",
+      "Despite the professor's passionate lecture, a palpable wave of indifference washed over the students, many of whom were preoccupied with their phones."
+    ]
   },
   {
     "word": "indigenous",
     "definition": "Born or originating in, native to a land or region, especially before an intrusion.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The tribe fought to protect their indigenous lands from encroaching development.",
+      "Researchers are studying the medicinal properties of indigenous plants to find new treatments for diseases.",
+      "The preservation of indigenous languages is crucial to maintaining cultural diversity and heritage."
+    ]
   },
   {
     "word": "indoctrinate",
     "definition": "To teach with a biased, one-sided or uncritical ideology; to brainwash.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Critics argue that some educational systems attempt to indoctrinate students with particular political or social views, rather than encouraging critical thinking.",
+      "Cults often use manipulative techniques to indoctrinate new members into their beliefs.",
+      "The government was accused of trying to indoctrinate the population through state-controlled media."
+    ]
   },
   {
     "word": "indolence",
     "definition": "Habitual laziness or sloth.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "His indolence prevented him from completing his assignments on time, leading to academic struggles.",
+      "The wealthy heir's indolence led him to squander his inheritance on frivolous pursuits.",
+      "The novel explores the theme of moral decay resulting from prolonged indolence and lack of purpose."
+    ]
   },
   {
     "word": "induce",
     "definition": "To lead by persuasion or influence; incite or prevail upon.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The scientist used a specific stimulus to induce a response in the experimental subject.",
+      "The economic policies were designed to induce investment and stimulate economic growth.",
+      "The author's vivid descriptions of nature induced a sense of tranquility in the reader."
+    ]
   },
   {
     "word": "ineluctable",
     "definition": "Impossible to avoid or prevent; inevitable.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "For the protagonist, the tragic ending seemed ineluctable, foreshadowed by the events of his troubled past.",
+      "Despite advancements in medicine, the aging process remains an ineluctable aspect of the human condition.",
+      "The rise of automation appears to be an ineluctable trend in the modern economy, promising increased efficiency but also job displacement."
+    ]
   },
   {
     "word": "inertia",
     "definition": "A tendency to remain unchanged; a lack of energy or motivation.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The government struggled to overcome bureaucratic inertia and implement the necessary reforms.",
+      "Newton's first law of motion describes inertia, the tendency of an object to resist changes in its state of motion.",
+      "The company's inertia in adopting new technologies led to its decline in the face of competition."
+    ]
   },
   {
     "word": "inestimable",
     "definition": "Not able to be estimated; not able to be calculated, computed or comprehended, as because of great scale, degree or magnitude.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The value of clean air and water is inestimable, as they are essential for human survival.",
+      "The contributions of the unsung heroes of the Civil Rights Movement are of inestimable worth.",
+      "The historical significance of the ancient ruins is inestimable, providing invaluable insights into past civilizations."
+    ]
   },
   {
     "word": "inherent",
     "definition": "Naturally as part or consequence of something.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The inherent limitations of the experimental design made it difficult to draw definitive conclusions.",
+      "Humans possess an inherent desire for freedom and self-determination.",
+      "The novel explores the inherent contradictions of human nature, highlighting both our capacity for good and evil."
+    ]
   },
   {
     "word": "inimical",
     "definition": "Harmful in effect.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The dictator's policies were inimical to the interests of the people, leading to widespread suffering.",
+      "Excessive regulation can be inimical to economic growth, stifling innovation and entrepreneurship.",
+      "The harsh climate of the Arctic is inimical to most forms of plant life."
+    ]
   },
   {
     "word": "intercede",
     "definition": "To plead on someone else's behalf.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The ambassador attempted to intercede on behalf of the wrongly accused prisoners, hoping to secure their release.",
+      "When the siblings argued, their mother would often intercede, trying to mediate and find a peaceful resolution.",
+      "Some believe that prayer can intercede with divine power to influence events."
+    ]
   },
   {
     "word": "inure",
     "definition": "To cause someone to become accustomed to something (usually) unpleasant.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Years of working in harsh conditions had inured the miners to the cold and damp.",
+      "Children inured to violence may develop a disturbing indifference to suffering.",
+      "Constant exposure to criticism can inure an artist, making them less sensitive to feedback."
+    ]
   },
   {
     "word": "invariable",
     "definition": "Not subject to change; constant.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite the changing economic climate, the company's commitment to quality remained invariable.",
+      "The laws of physics, such as gravity, are often considered invariable constants of the universe.",
+      "His routine was invariable: wake up, exercise, read the newspaper, and then leave for work."
+    ]
   },
   {
     "word": "invoke",
     "definition": "To call upon (a person, a god) for help, assistance or guidance.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The lawyer invoked the Fifth Amendment to protect his client from self-incrimination.",
+      "Historians often invoke the concept of manifest destiny to explain westward expansion in the United States.",
+      "The poem invokes a sense of nostalgia for a simpler time."
+    ]
   },
   {
     "word": "irrespective",
     "definition": "Heedless, regardless",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The scholarship is awarded irrespective of the applicant's race or socioeconomic background.",
+      "The company policy applies to all employees, irrespective of their position or seniority.",
+      "The judge ruled that the evidence was admissible irrespective of how it was obtained."
+    ]
   },
   {
     "word": "juxtapose",
     "definition": "To place side by side, especially for contrast or comparison.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The artist chose to juxtapose images of war and peace to highlight the stark contrast between them.",
+      "The essay juxtaposes the philosophies of Plato and Aristotle, exploring their similarities and differences.",
+      "By juxtaposing scenes of wealth and poverty, the documentary exposes the inequalities within the city."
+    ]
   },
   {
     "word": "magnify",
     "definition": "To increase the apparent size of something, or to exaggerate its importance.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The microscope can magnify tiny organisms, allowing scientists to study them in detail.",
+      "The media tends to magnify scandals, often blowing them out of proportion.",
+      "The poet uses imagery to magnify the beauty of nature."
+    ]
   },
   {
     "word": "mitigate",
     "definition": "To reduce, lessen, or decrease; to make less severe or easier to bear.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Planting trees can help mitigate the effects of climate change by absorbing carbon dioxide.",
+      "The governor implemented policies to mitigate the economic impact of the factory closure.",
+      "Medication can help mitigate the symptoms of the disease, improving the patient's quality of life."
+    ]
   },
   {
     "word": "modesty",
     "definition": "The quality of being modest; having a limited and not overly high opinion of oneself and one's abilities.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite her numerous accomplishments, she accepted the award with modesty and grace.",
+      "The scientist's modesty prevented him from boasting about his groundbreaking discovery.",
+      "The author's modesty belied the depth of her knowledge and talent."
+    ]
   },
   {
     "word": "modulate",
     "definition": "To regulate, adjust or adapt",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The speaker modulated his voice to emphasize key points and keep the audience engaged.",
+      "The thermostat modulates the temperature to maintain a comfortable environment.",
+      "Musicians modulate the tempo and dynamics of a piece to create different effects."
+    ]
   },
   {
     "word": "monetizing",
     "definition": "To convert something into money or a source of revenue.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The website is monetizing its content through advertisements and subscriptions.",
+      "The artist is exploring ways of monetizing her online presence by selling merchandise.",
+      "Many social media platforms are monetizing user data, raising concerns about privacy."
+    ]
   },
   {
     "word": "mutable",
     "definition": "Liable to change; inconstant.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Fashion is mutable, constantly evolving with new trends and styles.",
+      "The human genome, once thought to be fixed, is now understood to be somewhat mutable under certain conditions.",
+      "Political opinions are often mutable, influenced by current events and social pressures."
+    ]
   },
   {
     "word": "myriad",
     "definition": "A very large number; countless.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "There are a myriad of reasons why students choose to attend this university.",
+      "The night sky was filled with a myriad of stars, stretching endlessly into the distance.",
+      "The internet offers a myriad of opportunities for learning and entertainment."
+    ]
   },
   {
     "word": "nebulous",
     "definition": "Vague, indistinct, or ill-defined.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The politician's promises were nebulous and lacked specific details.",
+      "The concept of justice can be nebulous, with different interpretations across cultures.",
+      "The future of the company remains nebulous, with many uncertainties and challenges ahead."
+    ]
   },
   {
     "word": "neutral",
     "definition": "Not taking sides in a conflict; impartial.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Switzerland has a long history of remaining neutral in international conflicts.",
+      "The scientist tried to maintain a neutral stance when presenting the controversial research findings.",
+      "The judge remained neutral during the trial, ensuring a fair hearing for both sides."
+    ]
   },
   {
     "word": "nonchalance",
     "definition": "Indifference; carelessness; coolness; disregard, detachment.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Despite the high stakes of the competition, the chess prodigy displayed a remarkable nonchalance, calmly analyzing each move.",
+      "Her nonchalance regarding the upcoming exams masked a deep-seated anxiety about her future.",
+      "The diplomat's nonchalance during the tense negotiations was a calculated strategy to project an image of strength."
+    ]
   },
   {
     "word": "notional",
     "definition": "Existing only in the mind or as a concept; theoretical.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "While the company had a notional plan for expansion, it lacked the concrete resources to execute it.",
+      "The professor presented a notional model of the atom to the students, clarifying that it was a simplified representation.",
+      "The notional benefits of the proposed legislation were widely debated, with critics questioning their actual impact."
+    ]
   },
   {
     "word": "obtrusive",
     "definition": "Noticeable or prominent in an unwelcome or intrusive way.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The security cameras, though necessary, were obtrusive in the otherwise elegant lobby of the museum.",
+      "The author's commentary became obtrusive, overshadowing the narrative and distracting the reader.",
+      "The bright, obtrusive advertisement clashed with the historic architecture of the old town square."
+    ]
   },
   {
     "word": "occluded",
     "definition": "Blocked or obstructed.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Thick fog occluded the view of the coastline, making navigation treacherous for the ships.",
+      "The buildup of plaque occluded the artery, hindering blood flow and causing potential health problems.",
+      "The truth was occluded by layers of propaganda, making it difficult for citizens to discern reality."
+    ]
   },
   {
     "word": "orthodox",
     "definition": "Conforming to the accepted, established, or traditional doctrines of a given faith, religion, or ideology.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The scientist challenged the orthodox view of genetics with her groundbreaking research on epigenetics.",
+      "The political party adhered to orthodox economic policies, resisting calls for radical reforms.",
+      "In the small village, orthodox religious practices dictated many aspects of daily life."
+    ]
   },
   {
     "word": "oscillate",
     "definition": "To swing back and forth, especially if with a regular rhythm.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The pendulum continued to oscillate, marking the passage of time with its rhythmic swing.",
+      "The debate over the new policy caused public opinion to oscillate between support and opposition.",
+      "The stock market tends to oscillate in response to economic news and investor sentiment."
+    ]
   },
   {
     "word": "palpable",
     "definition": "Capable of being touched, felt or handled; touchable, tangible.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The tension in the courtroom was palpable as the jury delivered its verdict.",
+      "There was a palpable sense of excitement in the air as the band took the stage.",
+      "The writer created a palpable atmosphere of dread in the horror novel, captivating the reader."
+    ]
   },
   {
     "word": "paucity",
     "definition": "Fewness in number; too few.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The paucity of evidence made it difficult for the detective to solve the case.",
+      "Due to the drought, there was a paucity of water resources in the region.",
+      "The library suffered from a paucity of funding, which resulted in limited access to new books and resources."
+    ]
   },
   {
     "word": "permeability",
     "definition": "The state of being permeable; the ability to be penetrated or passed through.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The permeability of the soil determines how quickly water can drain through it.",
+      "The membrane's permeability to certain ions is crucial for nerve cell function.",
+      "The company studied the permeability of the new fabric to different gases."
+    ]
   },
   {
     "word": "pertinent",
     "definition": "Important with regard to (a subject or matter); relevant",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The lawyer presented pertinent evidence to support his client's defense.",
+      "The student asked a pertinent question that clarified a complex concept.",
+      "Only information pertinent to the investigation should be included in the report."
+    ]
   },
   {
     "word": "perturbation",
     "definition": "A disturbance or upset.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The unexpected market crash caused a significant perturbation in the global economy.",
+      "A slight perturbation in the orbit of the asteroid led scientists to believe it might collide with Earth.",
+      "The loud noise created a perturbation in the otherwise tranquil atmosphere of the forest."
+    ]
   },
   {
     "word": "placate",
     "definition": "To calm; to bring peace to; to influence someone who was furious to the point that they become content or at least no longer irate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The politician attempted to placate the angry crowd by promising to address their concerns.",
+      "The mother tried to placate her crying child with a soothing lullaby.",
+      "The company offered discounts to placate customers affected by the product recall."
+    ]
   },
   {
     "word": "pragmatic",
     "definition": "Dealing with things sensibly and realistically in a way that is based on practical considerations.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The engineer took a pragmatic approach to the problem, focusing on the most efficient and cost-effective solution.",
+      "While idealists dream of a perfect world, politicians must make pragmatic decisions based on the realities of power and compromise.",
+      "Faced with dwindling resources, the community adopted a pragmatic strategy of conservation and sustainable living."
+    ]
   },
   {
     "word": "precursor",
     "definition": "That which precurses: a forerunner, predecessor, or indicator of approaching events.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The invention of the printing press was a precursor to the widespread dissemination of knowledge.",
+      "High inflation rates are often a precursor to economic recession.",
+      "The French Revolution served as a precursor to other movements for democracy around the world."
+    ]
   },
   {
     "word": "preempts",
     "definition": "To take action to prevent (an event or action) from happening; to supersede.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The company's early investment in renewable energy preempts future environmental regulations.",
+      "The general's strategic move preempts the enemy's planned attack.",
+      "The emergency broadcast preempts regularly scheduled programming to provide critical information."
+    ]
   },
   {
     "word": "preliminary",
     "definition": "Coming before and preparing for something else; introductory.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The scientists conducted preliminary research to determine the feasibility of the project.",
+      "The preliminary investigation revealed no evidence of wrongdoing.",
+      "The preliminary rounds of the tournament determined which teams would advance to the finals."
+    ]
   },
   {
     "word": "premiering",
     "definition": "To perform, display or exhibit for the first time.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The highly anticipated film is premiering at the film festival, drawing crowds eager to see its innovative storytelling.",
+      "The university is premiering a new program in environmental studies, reflecting a growing commitment to sustainability.",
+      "The composer's latest symphony is premiering tonight, showcasing a blend of classical structure and modern harmonies."
+    ]
   },
   {
     "word": "pretentious",
     "definition": "Intended to impress others; ostentatious.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The art critic dismissed the painting as pretentious, arguing that its complexity was merely a facade for a lack of substance.",
+      "His pretentious language and affected mannerisms alienated many of his colleagues, who perceived him as arrogant.",
+      "The novel's pretentious prose, filled with obscure allusions, made it inaccessible to the average reader."
+    ]
   },
   {
     "word": "pretentiousness",
     "definition": "The act of trying to appear more important, intelligent, or cultured than one is.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The critic dismissed the film as a work of pretentiousness, citing its convoluted plot and overwrought symbolism.",
+      "His pretentiousness was evident in the way he name-dropped famous authors and artists to impress his audience.",
+      "The novel satirizes the pretentiousness of the upper class, exposing the superficiality beneath their polished facade."
+    ]
   },
   {
     "word": "propagate",
     "definition": "(of animals or plants) To cause to continue or multiply by generation, or successive production",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The wind helps to propagate the seeds of the dandelion, ensuring the plant's widespread distribution.",
+      "Social media can propagate misinformation rapidly, making it difficult to discern fact from fiction.",
+      "The scientist studied how certain environmental conditions propagate the growth of bacteria."
+    ]
   },
   {
     "word": "provoke",
     "definition": "To cause someone to become annoyed or angry.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The government's controversial policies provoked widespread protests and civil unrest.",
+      "The author uses vivid imagery to provoke a sense of unease and foreboding in the reader.",
+      "The scientist's provocative experiment challenged long-held assumptions about the nature of gravity."
+    ]
   },
   {
     "word": "prudent",
     "definition": "Acting with or showing care and thought for the future.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "It is prudent to save money for unexpected expenses, ensuring financial stability in the long run.",
+      "The general made a prudent decision to retreat, avoiding unnecessary casualties and preserving his forces.",
+      "A prudent investor diversifies their portfolio to minimize risk."
+    ]
   },
   {
     "word": "quotidian",
     "definition": "Occurring daily; commonplace.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The poet found beauty in the quotidian details of life, elevating the ordinary to the extraordinary.",
+      "The novel explores the struggles and triumphs of everyday people in their quotidian routines.",
+      "Despite the technological advancements, many find themselves still burdened by quotidian tasks."
+    ]
   },
   {
     "word": "recapitulate",
     "definition": "To summarize or repeat in concise form.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "To recapitulate the main points of the argument, the speaker presented a concise summary at the end of their presentation.",
+      "The teacher asked the students to recapitulate the key concepts of the chapter, ensuring they understood the material.",
+      "Before moving on, let's recapitulate what we've learned about the American Revolution so far."
+    ]
   },
   {
     "word": "reciprocity",
     "definition": "The characteristic of being reciprocal, e.g. of a relationship between people.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The two nations agreed to a trade agreement based on reciprocity, each granting the other preferential access to their markets.",
+      "The success of the community garden depends on reciprocity, with members sharing the labor and the harvest.",
+      "In a healthy relationship, reciprocity is essential, with both partners contributing and supporting each other equally."
+    ]
   },
   {
     "word": "rectify",
     "definition": "To correct or make right.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The company took steps to rectify the environmental damage caused by its factory, investing in cleanup efforts and sustainable practices.",
+      "The newspaper issued a retraction to rectify the error in its previous article.",
+      "The government sought to rectify past injustices by implementing affirmative action policies."
+    ]
   },
   {
     "word": "reiterate",
     "definition": "To say something again or repeatedly.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The professor had to reiterate the instructions several times to ensure that all the students understood the assignment.",
+      "The president used his speech to reiterate his commitment to economic reform.",
+      "The lawyer had to reiterate that the witness should only answer the questions asked and not volunteer additional information."
+    ]
   },
   {
     "word": "renounce",
     "definition": "To formally give up or reject something.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The prince chose to renounce his claim to the throne, preferring a life of simplicity and service.",
+      "The activist publicly renounced violence as a means of achieving social change.",
+      "The cult member decided to renounce their membership after realizing the group's harmful practices."
+    ]
   },
   {
     "word": "replicable",
     "definition": "That can be replicated.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The scientific experiment must be replicable by other researchers to validate its findings.",
+      "The company developed a replicable business model that could be easily expanded to new markets.",
+      "The chef shared a replicable recipe that anyone could follow to create the delicious dessert."
+    ]
   },
   {
     "word": "resolute",
     "definition": "Admirably purposeful, determined, and unwavering.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The athlete was resolute in her determination to win the gold medal, training tirelessly every day.",
+      "The colonists were resolute in their fight for independence, despite the overwhelming odds.",
+      "The doctor was resolute in his commitment to saving lives, even in the face of a deadly epidemic."
+    ]
   },
   {
     "word": "retrospect",
     "definition": "Consideration of past times.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "In retrospect, the decision to invest in that company proved to be a wise one.",
+      "Retrospectively, she realized that the challenges she faced had made her stronger.",
+      "Looking back in retrospect, the historian argued that the seeds of the conflict were sown long before the war began."
+    ]
   },
   {
     "word": "sanction",
     "definition": "An approval, by an authority, generally one that makes something valid.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The international community imposed economic sanctions on the country to pressure it to comply with human rights standards.",
+      "The university has the power to sanction students who violate the academic code of conduct.",
+      "The government did not sanction the use of chemical weapons, adhering to international law."
+    ]
   },
   {
     "word": "scrutinize",
     "definition": "To examine or inspect closely and critically.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The accountant was hired to scrutinize the company's financial records for any signs of fraud.",
+      "Literary scholars often scrutinize a text for hidden meanings and symbolic interpretations.",
+      "Before making a decision, it is important to scrutinize all available evidence to ensure a well-informed choice."
+    ]
   },
   {
     "word": "sentimental",
     "definition": "Characterized by sentiment, sentimentality or excess emotion.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The old photographs evoked a sentimental longing for her childhood, a time of carefree innocence and boundless joy.",
+      "While some viewed the historical preservation project as a waste of resources, others felt a sentimental attachment to the building, seeing it as a tangible link to the past.",
+      "The author's sentimental prose, filled with flowery language and exaggerated emotions, failed to resonate with modern readers who preferred a more understated style."
+    ]
   },
   {
     "word": "situate",
     "definition": "To place on or into a physical location.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Archaeologists were able to situate the ancient settlement near the river valley, based on the artifacts and geographical evidence found at the dig site.",
+      "The novel is situated in post-war Germany, a setting that powerfully shapes the characters' experiences and the unfolding narrative.",
+      "Before drawing any conclusions, it is important to situate the data within its proper context, considering the social, economic, and political factors that may have influenced the results."
+    ]
   },
   {
     "word": "sophist",
     "definition": "One of a class of teachers of rhetoric, philosophy, and politics in ancient Greece.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Critics accused the politician of being a sophist, more interested in winning arguments through rhetoric than in pursuing genuine truth or principled policies.",
+      "The debate club champion was admired for their ability to dismantle opponents' arguments, even if some considered their approach reminiscent of a sophist.",
+      "Beware of sophists who use clever but ultimately misleading arguments to manipulate you into accepting their point of view."
+    ]
   },
   {
     "word": "sophisticated",
     "definition": "Having refined tastes or worldly knowledge; complex or intricate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The wine connoisseur possessed a sophisticated palate, able to discern subtle nuances in aroma and taste that others missed entirely.",
+      "The city's sophisticated transportation system, including subway lines and bus routes, allowed residents to navigate the urban landscape with ease.",
+      "Her sophisticated understanding of economic theory enabled her to provide insightful analysis of complex market trends."
+    ]
   },
   {
     "word": "steward",
     "definition": "A person employed to manage another's property, especially a large house or estate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "As the land's steward, the farmer felt a deep responsibility to protect the soil and ensure its fertility for future generations.",
+      "The club president acted as a steward of the organization's resources, carefully managing its finances and ensuring its long-term sustainability.",
+      "The museum director saw herself as a steward of cultural heritage, committed to preserving and sharing the artistic treasures in her care."
+    ]
   },
   {
     "word": "stipulate",
     "definition": "To require (something) as a condition of a contract or agreement.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The contract stipulated that the project must be completed within six months, or the contractor would face financial penalties.",
+      "The treaty stipulated the terms of surrender, including the disarmament of the defeated army and the transfer of territory.",
+      "The professor's syllabus stipulated that all students must attend every class in order to receive credit for the course."
+    ]
   },
   {
     "word": "subdue",
     "definition": "To overcome, quieten, or bring under control.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The general ordered his troops to subdue the rebellion, using force if necessary to restore order and maintain control.",
+      "The artist used soft colors and gentle brushstrokes to subdue the intensity of the scene, creating a sense of peace and tranquility.",
+      "The medication helped to subdue the patient's anxiety, allowing them to feel more calm and relaxed."
+    ]
   },
   {
     "word": "subjugate",
     "definition": "To forcibly impose obedience or servitude upon.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Historically, powerful empires have sought to subjugate weaker nations, exploiting their resources and imposing their culture.",
+      "The dictator used propaganda and violence to subjugate the population, suppressing dissent and maintaining absolute power.",
+      "The protagonist refused to be subjugated by societal expectations, choosing to forge her own path and live life on her own terms."
+    ]
   },
   {
     "word": "subordinate",
     "definition": "One who is subordinate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "In a hierarchical organization, employees are subordinate to their supervisors, following their instructions and adhering to company policies.",
+      "The individual's desires were subordinate to the needs of the community, requiring a willingness to compromise and cooperate for the common good.",
+      "The clause in the contract was subordinate to the main agreement, meaning that it could not contradict or override the primary terms."
+    ]
   },
   {
     "word": "substantial",
     "definition": "Of considerable importance, size, or worth.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The scientist presented substantial evidence to support her theory, convincing many of her colleagues to accept her findings.",
+      "The donation provided substantial funding for the research project, allowing the team to expand its scope and accelerate its progress.",
+      "The novel explores substantial themes of love, loss, and redemption, offering readers a profound and moving experience."
+    ]
   },
   {
     "word": "subsumes",
     "definition": "To place (any one cognition) under another as belonging to it; to include or contain something else.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The category of 'mammals' subsumes a wide variety of animals, including humans, whales, and bats.",
+      "The theory of general relativity subsumes Newtonian physics as a special case, providing a more comprehensive understanding of gravity.",
+      "The concept of 'justice' subsumes notions of fairness, equality, and impartiality, encompassing a broad range of ethical considerations."
+    ]
   },
   {
     "word": "subtlety",
     "definition": "The quality of being subtle.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The chef's mastery lay in the subtlety of the flavors, a delicate balance of spices and herbs that created a truly exquisite dish.",
+      "The author employed subtlety in their writing, hinting at the character's inner turmoil through nuanced gestures and unspoken thoughts.",
+      "Understanding the subtlety of cultural differences is crucial for effective communication and collaboration in a globalized world."
+    ]
   },
   {
     "word": "superficial",
     "definition": "Existing or occurring at or on the surface; shallow or not thorough.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The journalist criticized the article for being superficial, lacking depth and failing to address the underlying issues.",
+      "Her interest in the subject was merely superficial; she had no genuine desire to learn more about it.",
+      "The politician's promise of change was superficial, offering no concrete plans or policies to address the country's problems."
+    ]
   },
   {
     "word": "superfluous",
     "definition": "In excess of what is required or sufficient.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The editor removed the superfluous details from the report, streamlining the text and making it more concise.",
+      "In a minimalist design, any superfluous ornamentation is avoided, focusing instead on essential forms and functions.",
+      "The student's essay contained superfluous information that detracted from the main argument, weakening its overall impact."
+    ]
   },
   {
     "word": "surmount",
     "definition": "To get over; to overcome.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The athlete had to surmount numerous obstacles to achieve their dream of competing in the Olympics.",
+      "The country managed to surmount the economic crisis through a combination of fiscal reforms and international aid.",
+      "The protagonist's determination allowed them to surmount their personal demons and find inner peace."
+    ]
   },
   {
     "word": "synthesis",
     "definition": "The formation of something complex or coherent by combining simpler things.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The author's synthesis of historical data and personal anecdotes created a compelling narrative.",
+      "Modern medicine often requires a synthesis of different treatment approaches for optimal patient care.",
+      "Her art represents a synthesis of classical techniques and modern sensibilities."
+    ]
   },
   {
     "word": "tantamount",
     "definition": "Equivalent in effect or value; virtually the same as.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "In this dictatorship, expressing dissent is tantamount to treason.",
+      "For some, failing to recycle is tantamount to condoning environmental destruction.",
+      "His silence on the matter was tantamount to an admission of guilt."
+    ]
   },
   {
     "word": "tranquil",
     "definition": "Free from emotional or mental disturbance.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The tranquil lake reflected the surrounding mountains, creating a scene of perfect serenity.",
+      "The yogi's tranquil demeanor calmed the anxious crowd.",
+      "After the storm, a tranquil silence descended upon the ravaged landscape."
+    ]
   },
   {
     "word": "unambiguous",
     "definition": "Clear, and having no uncertainty or ambiguity",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The contract's terms were unambiguous, leaving no room for misinterpretation.",
+      "The scientist presented unambiguous evidence to support his hypothesis.",
+      "The politician's statement was surprisingly unambiguous, clearly outlining his stance on the issue."
+    ]
   },
   {
     "word": "underpinned",
     "definition": "Supported or strengthened; served as a foundation for.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The theory of evolution is underpinned by a vast body of fossil evidence.",
+      "A strong sense of community underpinned the town's resilience after the disaster.",
+      "The nation's economic success is underpinned by a well-educated workforce."
+    ]
   },
   {
     "word": "unfounded",
     "definition": "Having no strong foundation; not based on solid reasons or facts.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The rumors of the company's bankruptcy were completely unfounded.",
+      "The conspiracy theory is based on unfounded claims and speculation.",
+      "Her fears about the presentation were unfounded; it went exceptionally well."
+    ]
   },
   {
     "word": "universal",
     "definition": "Relating to or characteristic of all or the whole; applicable everywhere or to everyone.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The desire for love and belonging is a universal human experience.",
+      "The laws of physics are considered universal, applying throughout the cosmos.",
+      "Shakespeare's plays explore universal themes of ambition, betrayal, and redemption."
+    ]
   },
   {
     "word": "unsympathetic",
     "definition": "Not sympathetic",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The judge was unsympathetic to the defendant's plea for leniency.",
+      "The novel portrays an unsympathetic character who cares only about personal gain.",
+      "Many found the politician's response to the crisis to be cold and unsympathetic."
+    ]
   },
   {
     "word": "utilitarian",
     "definition": "Designed to be practical and useful rather than attractive.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The design of the building was strictly utilitarian, prioritizing function over aesthetics.",
+      "Bentham's philosophy promoted utilitarian principles, where the greatest good for the greatest number is the goal.",
+      "The soldier chose a utilitarian approach to survival, focusing only on the necessary actions."
+    ]
   },
   {
     "word": "vacillate",
     "definition": "To sway unsteadily from one side to the other; oscillate.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The senator continued to vacillate on the issue, frustrating both supporters and opponents.",
+      "The student tended to vacillate between different career paths, unsure of her true passion.",
+      "Investors often vacillate when the market shows signs of instability."
+    ]
   },
   {
     "word": "verisimilitude",
     "definition": "The property of seeming true, of resembling reality; resemblance to reality, realism.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The author achieved verisimilitude by incorporating realistic details into her fictional world.",
+      "The actor's portrayal of the historical figure was praised for its verisimilitude.",
+      "The special effects in the film enhanced the verisimilitude of the alien landscape."
+    ]
   },
   {
     "word": "vindictive",
     "definition": "Having a tendency to seek revenge when wronged, vengeful.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Driven by a vindictive desire for revenge, he plotted against his former employer.",
+      "The queen was known for her vindictive nature and merciless punishments.",
+      "After the betrayal, her vindictive actions poisoned the entire community."
+    ]
   },
   {
     "word": "visionary",
     "definition": "Thinking about or planning the future with imagination or wisdom.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "Steve Jobs was a visionary leader who revolutionized the technology industry.",
+      "The architect's visionary designs pushed the boundaries of modern architecture.",
+      "Martin Luther King Jr.'s visionary speeches inspired a generation to fight for civil rights."
+    ]
   },
   {
     "word": "warranted",
     "definition": "Justified or deserved; having good reason.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The police officer felt that the suspect's aggressive behavior warranted an immediate arrest.",
+      "The company's poor performance warranted a thorough investigation.",
+      "Given the severity of the offense, a harsh punishment was warranted."
+    ]
   },
   {
     "word": "wrought",
     "definition": "Shaped or created, often referring to metal or other materials.",
-    "score": 1
+    "score": 1,
+    "sentences": [
+      "The sculptor wrought a beautiful statue from a block of marble.",
+      "The years of hardship wrought a noticeable change in her personality.",
+      "The intense pressure of the competition wrought a sense of anxiety among the athletes."
+    ]
   }
 ]

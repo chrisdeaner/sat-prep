@@ -37,18 +37,21 @@ sat-prep/
 ├── .gitignore                         # Git ignore rules
 ├── .env                               # Gemini API key (git-ignored)
 ├── requirements.txt                   # Python dependencies
-├── sat_vocabulary.csv                 # Source of truth — 255 words with definitions & scores
+├── sat_vocabulary.csv                 # Source of truth — 275 words with definitions & scores
+├── sentences.json                     # Pre-generated example sentences (3 per word)
 ├── scripts/
 │   ├── backfill_definitions.py        # Fill missing definitions via Gemini
-│   └── build_site.py                  # Generate docs/words.json from CSV
+│   ├── generate_sentences.py          # Generate example sentences via Gemini
+│   └── build_site.py                  # Generate docs/words.json from CSV + sentences
 ├── tests/
 │   ├── test_backfill.py               # Tests for backfill script
-│   └── test_build.py                  # Tests for build script
+│   ├── test_build.py                  # Tests for build script
+│   └── test_sentences.py             # Tests for sentence generation & merging
 ├── developer-documentation/           # Plans, design docs, dev notes
 │   └── flashcard-site-plan.md         # Implementation plan
 └── docs/                              # GitHub Pages root (static site only)
     ├── index.html                     # Flashcard app (HTML/CSS/JS)
-    └── words.json                     # Generated vocabulary data
+    └── words.json                     # Generated vocabulary data (with sentences)
 ```
 
 ## Getting Started
@@ -109,17 +112,27 @@ You can preview what would happen without making changes:
 python scripts/backfill_definitions.py --dry-run
 ```
 
-### 4. Rebuild the Site Data
+### 4. Generate Example Sentences (optional)
 
-After updating the CSV (e.g., adding words or editing definitions), regenerate the JSON file:
+Generate 3 SAT-style example sentences per word. Re-run anytime to get fresh sentences:
+
+```bash
+python scripts/generate_sentences.py
+```
+
+This creates/overwrites `sentences.json`. The build step merges these into `words.json`.
+
+### 5. Rebuild the Site Data
+
+After updating the CSV, sentences, or definitions, regenerate the JSON file:
 
 ```bash
 python scripts/build_site.py
 ```
 
-This converts `sat_vocabulary.csv` → `docs/words.json`, sorted by score (high-frequency words first).
+This merges `sat_vocabulary.csv` + `sentences.json` → `docs/words.json`, sorted by score (high-frequency words first).
 
-### 5. Run Tests
+### 6. Run Tests
 
 ```bash
 source venv/bin/activate
@@ -136,10 +149,13 @@ End-to-end workflow for adding vocabulary to the app:
 # 2. Backfill definitions via Gemini
 python scripts/backfill_definitions.py
 
-# 3. Rebuild the site data
+# 3. Generate example sentences (optional, or re-run for fresh sentences)
+python scripts/generate_sentences.py
+
+# 4. Rebuild the site data
 python scripts/build_site.py
 
-# 4. Commit and push (site auto-deploys via GitHub Pages)
+# 5. Commit and push (site auto-deploys via GitHub Pages)
 git add . && git commit -m "feat: add new vocabulary words" && git push
 ```
 

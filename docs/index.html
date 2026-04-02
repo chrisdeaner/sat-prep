@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="description" content="Master SAT vocabulary with interactive flashcards. 256 words from official SAT exams (2024–2026), weighted by frequency.">
+  <meta name="description" content="Master SAT vocabulary with interactive flashcards. 275 words from official SAT exams (2024–2026), weighted by frequency.">
   <title>SAT Vocab Flash — Master High-Frequency SAT Words</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -257,6 +257,44 @@
       line-height: 1.6;
       text-align: center;
       color: var(--text-primary);
+    }
+
+    .example-toggle {
+      margin-top: 20px;
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(233, 69, 96, 0.25);
+      background: rgba(233, 69, 96, 0.08);
+      color: var(--accent-soft);
+      font-size: 0.78rem;
+      font-weight: 500;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .example-toggle:hover {
+      background: rgba(233, 69, 96, 0.15);
+      border-color: rgba(233, 69, 96, 0.4);
+    }
+
+    .example-sentence {
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      font-style: italic;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ========================================
@@ -534,10 +572,35 @@
           <div class="tap-hint">tap to reveal</div>
         `;
 
+        const hasSentences = word.sentences && word.sentences.length > 0;
+        const exampleBtn = hasSentences
+          ? `<button class="example-toggle" id="exampleToggle">📝 Show Example</button>
+             <div class="example-sentence" id="exampleSentence" style="display: none;"></div>`
+          : '';
+
         back.innerHTML = `
           <div class="word-small">${word.word}</div>
           <div class="definition">${word.definition || 'No definition available.'}</div>
+          ${exampleBtn}
         `;
+
+        // Bind example toggle
+        if (hasSentences) {
+          const toggleEl = document.getElementById('exampleToggle');
+          const sentenceEl = document.getElementById('exampleSentence');
+          toggleEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (sentenceEl.style.display === 'none') {
+              const randomSentence = word.sentences[Math.floor(Math.random() * word.sentences.length)];
+              sentenceEl.textContent = randomSentence;
+              sentenceEl.style.display = 'block';
+              toggleEl.textContent = '📝 Hide Example';
+            } else {
+              sentenceEl.style.display = 'none';
+              toggleEl.textContent = '📝 Show Example';
+            }
+          });
+        }
 
         // Update counter
         document.getElementById('counter').textContent =
