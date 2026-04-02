@@ -159,6 +159,16 @@ python scripts/build_site.py
 git add . && git commit -m "feat: add new vocabulary words" && git push
 ```
 
+## Refreshing Example Sentences
+
+The flashcards include example sentences that are pre-generated at build time. Re-run the generator anytime to get fresh sentences:
+
+```bash
+python scripts/generate_sentences.py   # ~3 min, overwrites sentences.json
+python scripts/build_site.py
+git add . && git commit -m "chore: refresh example sentences" && git push
+```
+
 ## Deployment
 
 The site is hosted on **GitHub Pages** and auto-deploys on every push to `main`:
