@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="description" content="Master SAT vocabulary with interactive flashcards. 275 words from official SAT exams (2024–2026), weighted by frequency.">
+  <meta name="description" content="Master SAT vocabulary with interactive flashcards and quizzes. 275 words from official SAT exams (2024–2026), weighted by frequency.">
   <title>SAT Vocab Flash — Master High-Frequency SAT Words</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +27,10 @@
       --radius: 20px;
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --correct: #2ecc71;
+      --correct-glow: rgba(46, 204, 113, 0.25);
+      --wrong: #e74c3c;
+      --wrong-glow: rgba(231, 76, 60, 0.25);
     }
 
     /* ========================================
@@ -96,6 +100,43 @@
     }
 
     /* ========================================
+       Mode Toggle
+       ======================================== */
+    .mode-toggle {
+      display: flex;
+      gap: 4px;
+      padding: 3px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+    }
+
+    .mode-btn {
+      padding: 5px 14px;
+      border-radius: 100px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .mode-btn.active {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    @media (hover: hover) {
+      .mode-btn:not(.active):hover {
+        color: var(--text-primary);
+      }
+    }
+
+    /* ========================================
        Filter Pills
        ======================================== */
     .filters {
@@ -138,7 +179,7 @@
     }
 
     /* ========================================
-       Card Container
+       Card Container (Flashcard Mode)
        ======================================== */
     .card-area {
       flex: 1;
@@ -358,7 +399,7 @@
     }
 
     /* ========================================
-       Navigation
+       Navigation (Flashcard Mode)
        ======================================== */
     .nav {
       display: flex;
@@ -417,6 +458,447 @@
     }
 
     /* ========================================
+       Quiz Mode — Setup
+       ======================================== */
+    .quiz-setup {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-setup-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .quiz-option-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .quiz-option-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .quiz-count-pills {
+      display: flex;
+      gap: 8px;
+    }
+
+    .quiz-count-pill {
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .quiz-count-pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    @media (hover: hover) {
+      .quiz-count-pill:not(.active):hover {
+        border-color: var(--accent);
+        color: var(--text-primary);
+      }
+    }
+
+    .quiz-start-btn {
+      padding: 14px 40px;
+      border-radius: 100px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #d63851);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: var(--font);
+      cursor: pointer;
+      box-shadow: 0 4px 24px var(--accent-glow);
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    @media (hover: hover) {
+      .quiz-start-btn:hover {
+        box-shadow: 0 6px 32px rgba(233, 69, 96, 0.4);
+        transform: translateY(-1px);
+      }
+    }
+
+    .quiz-start-btn:active {
+      transform: scale(0.96);
+    }
+
+    .quiz-word-count-note {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    /* ========================================
+       Quiz Mode — Progress Bar
+       ======================================== */
+    .quiz-progress {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 2px;
+      overflow: hidden;
+      flex-shrink: 0;
+      margin-bottom: 8px;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+      border-radius: 2px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .quiz-progress-text {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ========================================
+       Quiz Mode — Question
+       ======================================== */
+    .quiz-question-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-sentence {
+      background: linear-gradient(145deg, var(--bg-card-front), #1c1c38);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+      text-align: center;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .quiz-blank {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .quiz-option {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quiz-option .option-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    @media (hover: hover) {
+      .quiz-option:not(.disabled):hover {
+        border-color: var(--accent);
+        background: rgba(233, 69, 96, 0.06);
+      }
+      .quiz-option:not(.disabled):hover .option-letter {
+        background: rgba(233, 69, 96, 0.15);
+        color: var(--accent-soft);
+      }
+    }
+
+    .quiz-option.disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    .quiz-option.correct {
+      border-color: var(--correct);
+      background: rgba(46, 204, 113, 0.1);
+      opacity: 1;
+    }
+
+    .quiz-option.correct .option-letter {
+      background: var(--correct);
+      color: #fff;
+    }
+
+    .quiz-option.wrong {
+      border-color: var(--wrong);
+      background: rgba(231, 76, 60, 0.1);
+      opacity: 1;
+      animation: shake 0.4s ease;
+    }
+
+    .quiz-option.wrong .option-letter {
+      background: var(--wrong);
+      color: #fff;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    .quiz-feedback {
+      margin-top: 12px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-feedback.correct {
+      background: rgba(46, 204, 113, 0.08);
+      border: 1px solid rgba(46, 204, 113, 0.2);
+      color: var(--correct);
+    }
+
+    .quiz-feedback.wrong {
+      background: rgba(231, 76, 60, 0.08);
+      border: 1px solid rgba(231, 76, 60, 0.2);
+      color: var(--text-secondary);
+    }
+
+    .quiz-feedback .correct-word {
+      color: var(--correct);
+      font-weight: 600;
+    }
+
+    .quiz-next-btn {
+      margin-top: 16px;
+      padding: 12px 32px;
+      border-radius: 100px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #d63851);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      box-shadow: 0 4px 20px var(--accent-glow);
+      transition: var(--transition);
+      align-self: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-next-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* ========================================
+       Quiz Mode — Results
+       ======================================== */
+    .quiz-results {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+      animation: fadeIn 0.4s ease;
+      padding-bottom: 20px;
+    }
+
+    .quiz-score-ring {
+      width: 140px;
+      height: 140px;
+      position: relative;
+      margin: 16px 0 8px;
+    }
+
+    .quiz-score-ring svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .quiz-score-ring .ring-bg {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.06);
+      stroke-width: 8;
+    }
+
+    .quiz-score-ring .ring-fill {
+      fill: none;
+      stroke: url(#scoreGradient);
+      stroke-width: 8;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .quiz-score-number {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quiz-score-number .big {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .quiz-score-number .small {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .quiz-score-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .quiz-breakdown {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .quiz-breakdown-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+    }
+
+    .quiz-breakdown-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .quiz-breakdown-content {
+      flex: 1;
+    }
+
+    .quiz-breakdown-word {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .quiz-breakdown-def {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    .quiz-results-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-shrink: 0;
+      padding: 0 0 8px;
+    }
+
+    .quiz-results-btn {
+      padding: 12px 24px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .quiz-results-btn.primary {
+      background: linear-gradient(135deg, var(--accent), #d63851);
+      border: none;
+      color: #fff;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    @media (hover: hover) {
+      .quiz-results-btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .quiz-results-btn.primary:hover {
+        background: linear-gradient(135deg, #f05070, var(--accent));
+      }
+    }
+
+    /* ========================================
        Loading State
        ======================================== */
     .loading {
@@ -456,6 +938,10 @@
       .card {
         aspect-ratio: 4 / 3;
       }
+      .quiz-sentence {
+        padding: 16px 14px;
+        font-size: 0.95rem;
+      }
     }
 
     /* ========================================
@@ -491,6 +977,16 @@
     </div>
   </div>
 
+  <!-- SVG gradient for score ring (hidden) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#e94560"/>
+        <stop offset="100%" style="stop-color:#ff6b81"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <script>
     // =============================================
     // SAT Vocab Flash — Core App Logic
@@ -501,6 +997,17 @@
       filtered: [],        // Currently filtered/shuffled deck
       currentIndex: 0,
       activeFilter: 'all',
+      mode: 'study',       // 'study' or 'quiz'
+
+      // Quiz state
+      quiz: {
+        questions: [],
+        currentQ: 0,
+        answers: [],       // { correct: bool, word: str, userAnswer: str }
+        score: 0,
+        count: 10,
+        phase: 'setup',    // 'setup', 'active', 'results'
+      },
 
       // ----- Initialization -----
 
@@ -516,6 +1023,20 @@
             `<span style="color: var(--accent)">Failed to load vocabulary data.</span>`;
           console.error(err);
         }
+      },
+
+      // ----- Mode Switching -----
+
+      setMode(mode) {
+        this.mode = mode;
+        if (mode === 'quiz') {
+          this.quiz.phase = 'setup';
+          this.quiz.questions = [];
+          this.quiz.currentQ = 0;
+          this.quiz.answers = [];
+          this.quiz.score = 0;
+        }
+        this.render();
       },
 
       // ----- Filtering -----
@@ -537,14 +1058,12 @@
       },
 
       // ----- Weighted Shuffle -----
-      // Uses score as weight: higher score = more likely to appear earlier.
 
       weightedShuffle() {
         const items = [...this.filtered];
         const shuffled = [];
 
         while (items.length > 0) {
-          // Build cumulative weights
           const totalWeight = items.reduce((sum, w) => sum + w.score, 0);
           let rand = Math.random() * totalWeight;
 
@@ -561,7 +1080,7 @@
         this.currentIndex = 0;
       },
 
-      // ----- Navigation -----
+      // ----- Flashcard Navigation -----
 
       next() {
         if (this.filtered.length === 0) return;
@@ -600,7 +1119,7 @@
         if (card) card.classList.toggle('flipped');
       },
 
-      // ----- Score Badge (visual dots) -----
+      // ----- Score Badge -----
 
       renderScoreBadge(score) {
         const maxDots = 6;
@@ -618,7 +1137,7 @@
         </div>`;
       },
 
-      // ----- Rendering -----
+      // ----- Flashcard Rendering -----
 
       renderCard() {
         const word = this.filtered[this.currentIndex];
@@ -661,7 +1180,6 @@
           <a class="info-link" href="${googleUrl}" target="_blank" rel="noopener" title="Look up on Google" aria-label="Look up definition on Google">ⓘ</a>
         `;
 
-        // Bind example toggle
         if (hasSentences) {
           const toggleEl = document.getElementById('exampleToggle');
           const sentenceEl = document.getElementById('exampleSentence');
@@ -679,69 +1197,325 @@
           });
         }
 
-        // Update counter
         document.getElementById('counter').textContent =
           `${this.currentIndex + 1} / ${this.filtered.length}`;
       },
 
-      render() {
+      // =============================================
+      // Quiz Logic
+      // =============================================
+
+      generateQuiz(count) {
+        const candidates = this.filtered.filter(w => w.sentences && w.sentences.length > 0);
+
+        if (candidates.length < 4) {
+          alert('Not enough words with sentences to generate a quiz. Try a different filter.');
+          return false;
+        }
+
+        const quizWords = [];
+        const pool = [...candidates];
+        const actualCount = Math.min(count, pool.length);
+
+        for (let i = 0; i < actualCount; i++) {
+          const idx = Math.floor(Math.random() * pool.length);
+          quizWords.push(pool.splice(idx, 1)[0]);
+        }
+
+        this.quiz.questions = quizWords.map(wordData => {
+          const sentence = wordData.sentences[Math.floor(Math.random() * wordData.sentences.length)];
+          const blanked = sentence.replace(
+            new RegExp(wordData.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
+            '______'
+          );
+
+          // Pick 3 distractors from the same filtered pool
+          const others = candidates.filter(w => w.word.toLowerCase() !== wordData.word.toLowerCase());
+          const distractors = [];
+          const distPool = [...others];
+          for (let i = 0; i < Math.min(3, distPool.length); i++) {
+            const idx = Math.floor(Math.random() * distPool.length);
+            distractors.push(distPool.splice(idx, 1)[0]);
+          }
+
+          const options = [wordData.word, ...distractors.map(d => d.word)];
+          // Shuffle options
+          for (let i = options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [options[i], options[j]] = [options[j], options[i]];
+          }
+
+          return {
+            word: wordData.word,
+            definition: wordData.definition,
+            sentence: blanked,
+            options: options,
+            correctIndex: options.indexOf(wordData.word),
+          };
+        });
+
+        this.quiz.currentQ = 0;
+        this.quiz.answers = [];
+        this.quiz.score = 0;
+        this.quiz.phase = 'active';
+        return true;
+      },
+
+      handleAnswer(selectedIndex) {
+        const q = this.quiz.questions[this.quiz.currentQ];
+        const isCorrect = selectedIndex === q.correctIndex;
+
+        if (isCorrect) this.quiz.score++;
+        this.quiz.answers.push({
+          correct: isCorrect,
+          word: q.word,
+          definition: q.definition,
+          userAnswer: q.options[selectedIndex],
+        });
+
+        // Update option styles
+        const optionEls = document.querySelectorAll('.quiz-option');
+        optionEls.forEach((el, i) => {
+          el.classList.add('disabled');
+          if (i === q.correctIndex) el.classList.add('correct');
+          if (i === selectedIndex && !isCorrect) el.classList.add('wrong');
+        });
+
+        // Show feedback
+        const feedbackArea = document.getElementById('quizFeedback');
+        if (isCorrect) {
+          feedbackArea.innerHTML = `<div class="quiz-feedback correct">✅ Correct!</div>`;
+        } else {
+          feedbackArea.innerHTML = `
+            <div class="quiz-feedback wrong">
+              The answer is <span class="correct-word">${q.word}</span> — ${q.definition}
+            </div>`;
+        }
+
+        // Show next button
+        const isLast = this.quiz.currentQ >= this.quiz.questions.length - 1;
+        feedbackArea.innerHTML += `
+          <button class="quiz-next-btn" id="quizNextBtn">
+            ${isLast ? '📊 See Results' : 'Next →'}
+          </button>`;
+
+        document.getElementById('quizNextBtn').addEventListener('click', () => {
+          if (isLast) {
+            this.quiz.phase = 'results';
+            this.renderQuizResults();
+          } else {
+            this.quiz.currentQ++;
+            this.renderQuizQuestion();
+          }
+        });
+      },
+
+      // ----- Quiz Rendering -----
+
+      renderQuizSetup() {
         const app = document.getElementById('app');
-        app.innerHTML = `
-          <header class="header">
-            <h1>SAT Vocab Flash</h1>
-            <span class="counter" id="counter">1 / ${this.filtered.length}</span>
-          </header>
+        const wordsWithSentences = this.filtered.filter(w => w.sentences && w.sentences.length > 0).length;
 
-          <div class="filters" id="filters">
-            <button class="filter-pill active" data-filter="all">All (${this.words.length})</button>
-            <button class="filter-pill" data-filter="high">High Freq (${this.words.filter(w => w.score >= 3).length})</button>
-            <button class="filter-pill" data-filter="medium">Medium (${this.words.filter(w => w.score === 2).length})</button>
-            <button class="filter-pill" data-filter="single">Single (${this.words.filter(w => w.score === 1).length})</button>
+        const contentArea = document.getElementById('contentArea');
+        contentArea.innerHTML = `
+          <div class="quiz-setup">
+            <div class="quiz-setup-title">📝 Vocabulary Quiz</div>
+
+            <div class="quiz-option-group">
+              <span class="quiz-option-label">Number of Questions</span>
+              <div class="quiz-count-pills" id="quizCountPills">
+                ${[5, 10, 15, 20].map(n =>
+                  `<button class="quiz-count-pill ${n === this.quiz.count ? 'active' : ''}" 
+                           data-count="${n}" ${n > wordsWithSentences ? 'disabled style="opacity:0.3"' : ''}>${n}</button>`
+                ).join('')}
+              </div>
+            </div>
+
+            <span class="quiz-word-count-note">${wordsWithSentences} words available in this filter</span>
+
+            <button class="quiz-start-btn" id="quizStartBtn">Start Quiz →</button>
           </div>
+        `;
 
-          <div class="card-area">
-            <div class="card" id="card">
-              <div class="card-face card-front"></div>
-              <div class="card-face card-back"></div>
+        // Bind count pills
+        document.getElementById('quizCountPills').addEventListener('click', (e) => {
+          const pill = e.target.closest('.quiz-count-pill');
+          if (!pill || pill.disabled) return;
+          document.querySelectorAll('.quiz-count-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          this.quiz.count = parseInt(pill.dataset.count);
+        });
+
+        // Bind start
+        document.getElementById('quizStartBtn').addEventListener('click', () => {
+          if (this.generateQuiz(this.quiz.count)) {
+            this.renderQuizQuestion();
+          }
+        });
+      },
+
+      renderQuizQuestion() {
+        const q = this.quiz.questions[this.quiz.currentQ];
+        const total = this.quiz.questions.length;
+        const progress = ((this.quiz.currentQ) / total) * 100;
+        const letters = ['A', 'B', 'C', 'D'];
+
+        const contentArea = document.getElementById('contentArea');
+        contentArea.innerHTML = `
+          <div class="quiz-question-area">
+            <div class="quiz-progress">
+              <div class="quiz-progress-fill" style="width: ${progress}%"></div>
+            </div>
+            <div class="quiz-progress-text">Question ${this.quiz.currentQ + 1} of ${total}</div>
+
+            <div class="quiz-sentence">
+              ${q.sentence.replace('______', '<span class="quiz-blank">______</span>')}
+            </div>
+
+            <div class="quiz-options" id="quizOptions">
+              ${q.options.map((opt, i) => `
+                <button class="quiz-option" data-index="${i}">
+                  <span class="option-letter">${letters[i]}</span>
+                  ${opt}
+                </button>
+              `).join('')}
+            </div>
+
+            <div id="quizFeedback"></div>
+          </div>
+        `;
+
+        // Bind option clicks
+        document.getElementById('quizOptions').addEventListener('click', (e) => {
+          const btn = e.target.closest('.quiz-option');
+          if (!btn || btn.classList.contains('disabled')) return;
+          this.handleAnswer(parseInt(btn.dataset.index));
+        });
+      },
+
+      renderQuizResults() {
+        const total = this.quiz.questions.length;
+        const score = this.quiz.score;
+        const pct = Math.round((score / total) * 100);
+        const circumference = 2 * Math.PI * 58; // r=58
+
+        let label = 'Keep practicing!';
+        if (pct === 100) label = 'Perfect score! 🎉';
+        else if (pct >= 80) label = 'Excellent work! 🌟';
+        else if (pct >= 60) label = 'Good effort! 💪';
+
+        const contentArea = document.getElementById('contentArea');
+        contentArea.innerHTML = `
+          <div class="quiz-results">
+            <div class="quiz-score-ring">
+              <svg viewBox="0 0 128 128">
+                <circle class="ring-bg" cx="64" cy="64" r="58"/>
+                <circle class="ring-fill" cx="64" cy="64" r="58"
+                  stroke-dasharray="${circumference}"
+                  stroke-dashoffset="${circumference}"
+                  id="scoreRing"/>
+              </svg>
+              <div class="quiz-score-number">
+                <span class="big">${score}/${total}</span>
+                <span class="small">${pct}%</span>
+              </div>
+            </div>
+            <div class="quiz-score-label">${label}</div>
+
+            <div class="quiz-breakdown">
+              ${this.quiz.answers.map((a, i) => `
+                <div class="quiz-breakdown-item">
+                  <span class="quiz-breakdown-icon">${a.correct ? '✅' : '❌'}</span>
+                  <div class="quiz-breakdown-content">
+                    <div class="quiz-breakdown-word">${a.word}${!a.correct ? ` <span style="color:var(--text-dim)">— you said: ${a.userAnswer}</span>` : ''}</div>
+                    ${!a.correct ? `<div class="quiz-breakdown-def">${a.definition}</div>` : ''}
+                  </div>
+                </div>
+              `).join('')}
             </div>
           </div>
 
-          <nav class="nav">
-            <button class="nav-btn" id="prevBtn" aria-label="Previous card">←</button>
-            <button class="nav-btn shuffle-btn" id="shuffleBtn">🔀 Shuffle</button>
-            <button class="nav-btn" id="nextBtn" aria-label="Next card">→</button>
-          </nav>
+          <div class="quiz-results-actions">
+            <button class="quiz-results-btn" id="quizBackStudy">📚 Study</button>
+            <button class="quiz-results-btn primary" id="quizRetry">🔄 New Quiz</button>
+          </div>
         `;
 
-        this.renderCard();
+        // Animate the score ring
+        requestAnimationFrame(() => {
+          const ring = document.getElementById('scoreRing');
+          const offset = circumference - (pct / 100) * circumference;
+          ring.style.strokeDashoffset = offset;
+        });
+
+        // Bind actions
+        document.getElementById('quizBackStudy').addEventListener('click', () => this.setMode('study'));
+        document.getElementById('quizRetry').addEventListener('click', () => {
+          this.quiz.phase = 'setup';
+          this.render();
+        });
+      },
+
+      // =============================================
+      // Main Render
+      // =============================================
+
+      render() {
+        const app = document.getElementById('app');
+        const isQuiz = this.mode === 'quiz';
+
+        app.innerHTML = `
+          <header class="header">
+            <h1>SAT Vocab Flash</h1>
+            <div class="mode-toggle">
+              <button class="mode-btn ${!isQuiz ? 'active' : ''}" data-mode="study" id="modeStudy">📚 Study</button>
+              <button class="mode-btn ${isQuiz ? 'active' : ''}" data-mode="quiz" id="modeQuiz">📝 Quiz</button>
+            </div>
+            ${!isQuiz ? `<span class="counter" id="counter">1 / ${this.filtered.length}</span>` : ''}
+          </header>
+
+          <div class="filters" id="filters">
+            <button class="filter-pill ${this.activeFilter==='all' ? 'active' : ''}" data-filter="all">All (${this.words.length})</button>
+            <button class="filter-pill ${this.activeFilter==='high' ? 'active' : ''}" data-filter="high">High Freq (${this.words.filter(w => w.score >= 3).length})</button>
+            <button class="filter-pill ${this.activeFilter==='medium' ? 'active' : ''}" data-filter="medium">Medium (${this.words.filter(w => w.score === 2).length})</button>
+            <button class="filter-pill ${this.activeFilter==='single' ? 'active' : ''}" data-filter="single">Single (${this.words.filter(w => w.score === 1).length})</button>
+          </div>
+
+          ${isQuiz ? `
+            <div id="contentArea"></div>
+          ` : `
+            <div class="card-area">
+              <div class="card" id="card">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"></div>
+              </div>
+            </div>
+
+            <nav class="nav">
+              <button class="nav-btn" id="prevBtn" aria-label="Previous card">←</button>
+              <button class="nav-btn shuffle-btn" id="shuffleBtn">🔀 Shuffle</button>
+              <button class="nav-btn" id="nextBtn" aria-label="Next card">→</button>
+            </nav>
+          `}
+        `;
+
+        if (isQuiz) {
+          if (this.quiz.phase === 'setup') this.renderQuizSetup();
+          else if (this.quiz.phase === 'active') this.renderQuizQuestion();
+          else if (this.quiz.phase === 'results') this.renderQuizResults();
+        } else {
+          this.renderCard();
+        }
+
         this.bindEvents();
       },
 
       // ----- Event Binding -----
 
       bindEvents() {
-        // Card flip (ignore clicks on links and buttons inside the card)
-        document.getElementById('card').addEventListener('click', (e) => {
-          if (e.target.closest('a') || e.target.closest('button')) return;
-          this.flip();
-        });
-
-        // Nav buttons
-        document.getElementById('prevBtn').addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.prev();
-        });
-        document.getElementById('nextBtn').addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.next();
-        });
-        document.getElementById('shuffleBtn').addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.weightedShuffle();
-          this.renderCard();
-          // Unflip card on shuffle
-          document.getElementById('card').classList.remove('flipped');
-        });
+        // Mode toggle
+        document.getElementById('modeStudy').addEventListener('click', () => this.setMode('study'));
+        document.getElementById('modeQuiz').addEventListener('click', () => this.setMode('quiz'));
 
         // Filter pills
         document.getElementById('filters').addEventListener('click', (e) => {
@@ -752,30 +1526,85 @@
           pill.classList.add('active');
 
           this.applyFilter(pill.dataset.filter);
-          this.renderCard();
-          document.getElementById('card').classList.remove('flipped');
-        });
 
-        // Keyboard nav (desktop)
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') this.next();
-          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') this.prev();
-          else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); this.flip(); }
-        });
-
-        // Touch swipe
-        let touchStartX = 0;
-        const cardArea = document.querySelector('.card-area');
-        cardArea.addEventListener('touchstart', (e) => {
-          touchStartX = e.touches[0].clientX;
-        }, { passive: true });
-        cardArea.addEventListener('touchend', (e) => {
-          const dx = e.changedTouches[0].clientX - touchStartX;
-          if (Math.abs(dx) > 60) {
-            if (dx < 0) this.next();
-            else this.prev();
+          if (this.mode === 'study') {
+            this.weightedShuffle();
+            this.renderCard();
+            document.getElementById('card').classList.remove('flipped');
+          } else {
+            // Reset quiz when filter changes
+            this.quiz.phase = 'setup';
+            this.render();
           }
-        }, { passive: true });
+        });
+
+        // Study-mode specific bindings
+        if (this.mode === 'study') {
+          // Card flip
+          document.getElementById('card').addEventListener('click', (e) => {
+            if (e.target.closest('a') || e.target.closest('button')) return;
+            this.flip();
+          });
+
+          // Nav buttons
+          document.getElementById('prevBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.prev();
+          });
+          document.getElementById('nextBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.next();
+          });
+          document.getElementById('shuffleBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.weightedShuffle();
+            this.renderCard();
+            document.getElementById('card').classList.remove('flipped');
+          });
+
+          // Keyboard nav
+          this._keyHandler = (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') this.next();
+            else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') this.prev();
+            else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); this.flip(); }
+          };
+          document.removeEventListener('keydown', this._keyHandler);
+          document.addEventListener('keydown', this._keyHandler);
+
+          // Touch swipe
+          let touchStartX = 0;
+          const cardArea = document.querySelector('.card-area');
+          cardArea.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+          }, { passive: true });
+          cardArea.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 60) {
+              if (dx < 0) this.next();
+              else this.prev();
+            }
+          }, { passive: true });
+        }
+
+        // Quiz keyboard shortcuts
+        if (this.mode === 'quiz' && this.quiz.phase === 'active') {
+          this._keyHandler = (e) => {
+            const keyMap = { '1': 0, '2': 1, '3': 2, '4': 3, 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
+            const idx = keyMap[e.key.toLowerCase()];
+            if (idx !== undefined) {
+              const btn = document.querySelector(`.quiz-option[data-index="${idx}"]`);
+              if (btn && !btn.classList.contains('disabled')) {
+                this.handleAnswer(idx);
+              }
+            }
+            if (e.key === 'Enter') {
+              const nextBtn = document.getElementById('quizNextBtn');
+              if (nextBtn) nextBtn.click();
+            }
+          };
+          document.removeEventListener('keydown', this._keyHandler);
+          document.addEventListener('keydown', this._keyHandler);
+        }
       }
     };
 
