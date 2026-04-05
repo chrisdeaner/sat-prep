@@ -262,10 +262,139 @@ def generate_sentences(
 
 
 # ---------------------------------------------------------------------------
+# Grow mode — add 1 sentence to N random words
+# ---------------------------------------------------------------------------
+
+def grow_sentences(
+    words: list[str],
+    count: int = 30,
+    sentences_path: Path = SENTENCES_PATH,
+) -> dict[str, list[str]]:
+    """
+    Add 1 new sentence to a random subset of words.
+
+    Args:
+        count: Number of words to grow. 0 means all words.
+    """
+    import random
+
+    all_sentences = load_existing_sentences(sentences_path)
+    print(f"📂 Loaded {len(all_sentences)} words from existing sentences.json\n")
+
+    # Pick words to grow — all of them, or a random subset
+    candidates = [w for w in words if w.lower() in all_sentences]
+    if not candidates:
+        print("❌ No existing sentences to grow. Run without --grow first.")
+        return all_sentences
+
+    if count == 0 or count >= len(candidates):
+        selected = candidates
+    else:
+        selected = random.sample(candidates, count)
+
+    print(f"🌱 Growing: adding 1 sentence to {len(selected)} words\n")
+
+    # Temporarily bump each selected word's need to +1
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        print("❌ GEMINI_API_KEY not set in .env")
+        sys.exit(1)
+
+    from google import genai
+    from google.genai import types
+
+    client = genai.Client(api_key=api_key)
+    model_id = "gemini-2.0-flash"
+
+    grow_items = []
+    for w in selected:
+        key = w.lower()
+        existing = all_sentences.get(key, [])
+        grow_items.append({"word": w, "key": key, "existing": existing, "needed": 1})
+
+    for i in range(0, len(grow_items), GEMINI_BATCH_SIZE):
+        batch = grow_items[i : i + GEMINI_BATCH_SIZE]
+        batch_num = i // GEMINI_BATCH_SIZE + 1
+        total_batches = (len(grow_items) + GEMINI_BATCH_SIZE - 1) // GEMINI_BATCH_SIZE
+
+        word_list_str = "\n".join(f"- {item['word']} (need 1 new)" for item in batch)
+
+        existing_lines = []
+        for item in batch:
+            if item["existing"]:
+                existing_lines.append(f'\nExisting sentences for "{item["word"]}" (DO NOT repeat these):')
+                for s in item["existing"]:
+                    existing_lines.append(f"  - {s}")
+        existing_context = "\n".join(existing_lines) if existing_lines else "No existing sentences."
+
+        prompt = GEMINI_PROMPT.format(
+            count="exactly 1",
+            word_list=word_list_str,
+            existing_context=existing_context,
+        )
+
+        print(f"🤖 Batch {batch_num}/{total_batches}: {len(batch)} words...")
+
+        try:
+            resp = _api_call_with_retry(
+                client,
+                model_id,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.9,  # slightly higher for variety
+                ),
+            )
+
+            if resp.text:
+                raw = _clean_json_string(resp.text)
+                parsed = json.loads(raw)
+                if isinstance(parsed, dict):
+                    for item in batch:
+                        new_sentences = parsed.get(item["key"], parsed.get(item["word"], []))
+                        if isinstance(new_sentences, list) and len(new_sentences) >= 1:
+                            combined = item["existing"] + new_sentences
+                            combined = _deduplicate(combined)
+                            all_sentences[item["key"]] = combined
+                            print(f"  ✅ {item['key']}: {len(item['existing'])} → {len(combined)}")
+                        else:
+                            print(f"  ⚠️  {item['key']}: no new sentence returned")
+
+        except Exception as e:
+            print(f"  ❌ Batch failed: {e}")
+
+        if i + GEMINI_BATCH_SIZE < len(grow_items):
+            time.sleep(GEMINI_DELAY)
+
+    # Save
+    with open(sentences_path, "w") as f:
+        json.dump(all_sentences, f, indent=2, ensure_ascii=False)
+
+    total_sentences = sum(len(s) for s in all_sentences.values())
+    print(f"\n{'='*60}")
+    print(f"🌱 Grew sentence pool — now {total_sentences} total sentences across {len(all_sentences)} words")
+    print(f"💾 Saved to: {sentences_path}")
+
+    return all_sentences
+
+
+# ---------------------------------------------------------------------------
 # CLI entry point
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    force = "--force" in sys.argv
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate SAT vocabulary example sentences.")
+    parser.add_argument("--force", action="store_true",
+                        help="Regenerate all sentences from scratch")
+    parser.add_argument("--grow", type=int, nargs="?", const=30, default=None,
+                        help="Add 1 new sentence to N random words (default: 30, 0 = all)")
+    args = parser.parse_args()
+
     words = load_words()
-    generate_sentences(words, force=force)
+
+    if args.grow is not None:
+        grow_sentences(words, count=args.grow)
+    else:
+        generate_sentences(words, force=args.force)

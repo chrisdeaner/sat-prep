@@ -72,7 +72,7 @@ sat-prep/
 
 ```bash
 # Clone the repo
-git clone https://github.com/<your-username>/sat-prep.git
+git clone https://github.com/chrisdeaner/sat-prep.git
 cd sat-prep
 
 # Create and activate a virtual environment
@@ -168,12 +168,37 @@ git add . && git commit -m "feat: add new vocabulary words" && git push
 
 ## Refreshing Example Sentences
 
-The flashcards include example sentences that are pre-generated at build time. Re-run the generator anytime to get fresh sentences:
+Each word has 5+ example sentences used by both flashcards and quizzes. The sentence generator has three modes:
 
 ```bash
-python scripts/generate_sentences.py   # ~3 min, overwrites sentences.json
+# Backfill — ensure all words have 5 sentences (skips words that already do)
+python scripts/generate_sentences.py
+
+# Grow — add 1 new sentence to 30 random words (keeps existing sentences)
+python scripts/generate_sentences.py --grow         # 30 words, ~15 sec
+python scripts/generate_sentences.py --grow 100     # 100 words
+python scripts/generate_sentences.py --grow 0       # all 275 words, ~2 min
+
+# Force — regenerate all sentences from scratch
+python scripts/generate_sentences.py --force
+```
+
+After generating, rebuild the site and commit:
+```bash
 python scripts/build_site.py
-git add . && git commit -m "chore: refresh example sentences" && git push
+git add . && git commit -m "chore: grow sentence pool" && git push
+```
+
+### Pre-Commit Hook (Auto-Build)
+
+A pre-commit hook automatically runs `build_site.py` when you commit changes to
+`sat_vocabulary.csv`, `sentences.json`, or `alt_meanings.json`. This ensures
+`docs/words.json` is always in sync.
+
+To install (one-time setup after cloning):
+```bash
+cp scripts/pre-commit.hook .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
 ```
 
 ## MCP Server

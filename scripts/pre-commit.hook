@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# pre-commit hook: auto-rebuild docs/words.json if source data changed.
+
+CHANGED=$(git diff --cached --name-only -- sat_vocabulary.csv sentences.json alt_meanings.json)
+
+if [ -z "$CHANGED" ]; then
+    exit 0
+fi
+
+echo "🔨 Source data changed — rebuilding docs/words.json..."
+
+if [ -f "venv/bin/python" ]; then
+    PYTHON="venv/bin/python"
+else
+    PYTHON="python3"
+fi
+
+$PYTHON scripts/build_site.py
+
+if [ $? -ne 0 ]; then
+    echo "❌ build_site.py failed. Commit aborted."
+    exit 1
+fi
+
+git add docs/words.json
+echo "✅ docs/words.json rebuilt and staged."
