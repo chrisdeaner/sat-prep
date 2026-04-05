@@ -48,7 +48,12 @@ sat-prep/
 ├── tests/
 │   ├── test_backfill.py               # Tests for backfill script
 │   ├── test_build.py                  # Tests for build script
-│   └── test_sentences.py             # Tests for sentence generation & merging
+│   ├── test_sentences.py             # Tests for sentence generation & merging
+│   └── test_mcp_server.py            # Tests for MCP server tools
+├── mcp_server/                        # MCP server for AI-powered vocab tools
+│   ├── server.py                      # Entry point — registers tools, stdio transport
+│   ├── data.py                        # Loads CSV + JSON into memory at startup
+│   └── tools.py                       # lookup_word, list_words, quiz_me
 ├── developer-documentation/           # Plans, design docs, dev notes
 │   └── flashcard-site-plan.md         # Implementation plan
 └── docs/                              # GitHub Pages root (static site only)
@@ -170,6 +175,53 @@ python scripts/generate_sentences.py   # ~3 min, overwrites sentences.json
 python scripts/build_site.py
 git add . && git commit -m "chore: refresh example sentences" && git push
 ```
+
+## MCP Server
+
+The project includes an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server that exposes the vocabulary data as tools any AI assistant can call. No API keys required — it reads the local data files.
+
+### Available Tools
+
+| Tool | Description | Example Prompt |
+|------|-------------|----------------|
+| `lookup_word` | Look up a word — definition, sentences, alt meanings | *"Look up the word eschew"* |
+| `list_words` | Browse vocabulary by frequency tier | *"Show me all high-frequency SAT words"* |
+| `quiz_me` | Generate a multiple-choice quiz | *"Quiz me on 5 high-frequency SAT words"* |
+
+### Configure Your AI Client
+
+MCP servers run locally — the AI client spawns the server as a subprocess and communicates via stdin/stdout. Add this to your client's MCP config:
+
+```json
+{
+  "mcpServers": {
+    "sat-vocab": {
+      "command": "/path/to/sat-prep/venv/bin/python",
+      "args": ["-m", "mcp_server.server"],
+      "cwd": "/path/to/sat-prep"
+    }
+  }
+}
+```
+
+**Config file locations:**
+
+| Client | Config Path |
+|--------|-------------|
+| Antigravity | `~/.gemini/antigravity/mcp_config.json` |
+| Claude Desktop | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Cursor | Settings → MCP Servers |
+
+Restart your client after editing the config.
+
+### Test with MCP Inspector
+
+```bash
+source venv/bin/activate
+npx @modelcontextprotocol/inspector python -m mcp_server.server
+```
+
+This opens a browser UI where you can call each tool and inspect the responses.
 
 ## Deployment
 
