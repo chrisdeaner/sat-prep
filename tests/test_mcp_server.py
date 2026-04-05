@@ -35,7 +35,7 @@ class TestDataLoading:
 
     def test_sentences_loaded(self, index):
         word = index["eschew"]
-        assert len(word["sentences"]) == 3
+        assert len(word["sentences"]) == 5
 
     def test_alt_meanings_loaded(self, index):
         word = index["sanction"]

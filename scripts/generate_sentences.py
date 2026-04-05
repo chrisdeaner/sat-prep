@@ -1,12 +1,13 @@
 """
 generate_sentences.py — Generate SAT-style example sentences for vocabulary words.
 
-Creates 3 example sentences per word using Gemini, stored in sentences.json.
-These are merged into words.json during the build step. Re-run anytime to
-refresh the sentences.
+Ensures each word has 5 example sentences in sentences.json. Keeps existing
+sentences and only generates new ones to fill the gap. Deduplicates so no
+sentence appears twice for the same word.
 
 Usage:
-  python scripts/generate_sentences.py
+  python scripts/generate_sentences.py           # backfill to 5 per word
+  python scripts/generate_sentences.py --force    # regenerate all from scratch
 """
 
 import csv
@@ -23,10 +24,11 @@ from dotenv import load_dotenv
 # Configuration
 # ---------------------------------------------------------------------------
 
+TARGET_SENTENCES = 5  # desired number of sentences per word
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = PROJECT_ROOT / "sat_vocabulary.csv"
 SENTENCES_PATH = PROJECT_ROOT / "sentences.json"
-GEMINI_BATCH_SIZE = 15  # fewer per batch since we're asking for 3 sentences each
+GEMINI_BATCH_SIZE = 10  # words per batch
 GEMINI_DELAY = 4  # seconds between Gemini calls (rate limit)
 
 load_dotenv(PROJECT_ROOT / ".env")
@@ -39,14 +41,17 @@ load_dotenv(PROJECT_ROOT / ".env")
 GEMINI_PROMPT = """\
 You are a vocabulary tutor preparing students for the SAT.
 
-For each word below, write exactly 3 example sentences that:
+For each word below, write exactly {count} NEW example sentences that:
 - Use the word in a way a high school student would encounter in SAT reading passages
 - Vary in subject matter (e.g., science, history, literature, social commentary)
 - Show the word in its SAT-relevant meaning
 - Are 1-2 sentences long each
+- Do NOT repeat or closely paraphrase any of the existing sentences listed below
+
+{existing_context}
 
 Return a JSON object where each key is the word (lowercase) and the value is
-an array of exactly 3 sentences.
+an array of exactly {count} NEW sentences.
 
 Words:
 {word_list}
@@ -93,9 +98,39 @@ def load_words(csv_path: Path = CSV_PATH) -> list[str]:
         return [row["word"].strip() for row in reader if row["word"].strip()]
 
 
-def generate_sentences(words: list[str], sentences_path: Path = SENTENCES_PATH) -> dict[str, list[str]]:
+def load_existing_sentences(sentences_path: Path = SENTENCES_PATH) -> dict[str, list[str]]:
+    """Load existing sentences.json, or return empty dict if it doesn't exist."""
+    if sentences_path.exists():
+        with open(sentences_path, "r") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            return data
+    return {}
+
+
+def _deduplicate(sentences: list[str]) -> list[str]:
+    """Remove duplicate sentences (case-insensitive comparison)."""
+    seen: set[str] = set()
+    unique: list[str] = []
+    for s in sentences:
+        normalized = s.strip().lower()
+        if normalized not in seen:
+            seen.add(normalized)
+            unique.append(s)
+    return unique
+
+
+def generate_sentences(
+    words: list[str],
+    sentences_path: Path = SENTENCES_PATH,
+    force: bool = False,
+) -> dict[str, list[str]]:
     """
-    Generate 3 example sentences per word using Gemini.
+    Ensure each word has TARGET_SENTENCES example sentences.
+
+    - If force=False (default): keeps existing sentences, only generates
+      new ones for words that have fewer than TARGET_SENTENCES.
+    - If force=True: regenerates all sentences from scratch.
 
     Saves results to sentences.json and returns the full dict.
     """
@@ -110,17 +145,60 @@ def generate_sentences(words: list[str], sentences_path: Path = SENTENCES_PATH) 
     client = genai.Client(api_key=api_key)
     model_id = "gemini-2.0-flash"
 
-    all_sentences: dict[str, list[str]] = {}
+    # Load existing data
+    if force:
+        all_sentences: dict[str, list[str]] = {}
+        print("🔄 Force mode — regenerating all sentences from scratch.\n")
+    else:
+        all_sentences = load_existing_sentences(sentences_path)
+        print(f"📂 Loaded {len(all_sentences)} words from existing sentences.json\n")
 
-    print(f"📊 Generating example sentences for {len(words)} words...\n")
+    # Figure out which words need more sentences
+    words_needing_sentences: list[dict] = []
+    for w in words:
+        key = w.lower()
+        existing = all_sentences.get(key, [])
+        needed = TARGET_SENTENCES - len(existing)
+        if needed > 0:
+            words_needing_sentences.append({
+                "word": w,
+                "key": key,
+                "existing": existing,
+                "needed": needed,
+            })
 
-    for i in range(0, len(words), GEMINI_BATCH_SIZE):
-        batch = words[i : i + GEMINI_BATCH_SIZE]
+    if not words_needing_sentences:
+        print(f"✅ All {len(words)} words already have {TARGET_SENTENCES} sentences. Nothing to do.")
+        return all_sentences
+
+    print(f"📊 {len(words_needing_sentences)} words need more sentences:\n"
+          f"   {sum(w['needed'] for w in words_needing_sentences)} total sentences to generate\n")
+
+    # Process in batches
+    for i in range(0, len(words_needing_sentences), GEMINI_BATCH_SIZE):
+        batch = words_needing_sentences[i : i + GEMINI_BATCH_SIZE]
         batch_num = i // GEMINI_BATCH_SIZE + 1
-        total_batches = (len(words) + GEMINI_BATCH_SIZE - 1) // GEMINI_BATCH_SIZE
+        total_batches = (len(words_needing_sentences) + GEMINI_BATCH_SIZE - 1) // GEMINI_BATCH_SIZE
 
-        word_list_str = "\n".join(f"- {w}" for w in batch)
-        prompt = GEMINI_PROMPT.format(word_list=word_list_str)
+        # Build the word list and existing context for the prompt
+        word_list_str = "\n".join(f"- {item['word']} (need {item['needed']} new)" for item in batch)
+
+        # Include existing sentences so Gemini knows what to avoid
+        existing_lines = []
+        for item in batch:
+            if item["existing"]:
+                existing_lines.append(f"\nExisting sentences for \"{item['word']}\" (DO NOT repeat these):")
+                for s in item["existing"]:
+                    existing_lines.append(f"  - {s}")
+        existing_context = "\n".join(existing_lines) if existing_lines else "No existing sentences."
+
+        # All words in this batch need the same count? Not necessarily.
+        # Use per-word counts in the prompt.
+        prompt = GEMINI_PROMPT.format(
+            count="the specified number of",
+            word_list=word_list_str,
+            existing_context=existing_context,
+        )
 
         print(f"🤖 Batch {batch_num}/{total_batches}: {len(batch)} words...")
 
@@ -131,7 +209,7 @@ def generate_sentences(words: list[str], sentences_path: Path = SENTENCES_PATH) 
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
-                    temperature=0.8,  # some variety in sentence generation
+                    temperature=0.8,
                 ),
             )
 
@@ -139,29 +217,46 @@ def generate_sentences(words: list[str], sentences_path: Path = SENTENCES_PATH) 
                 raw = _clean_json_string(resp.text)
                 parsed = json.loads(raw)
                 if isinstance(parsed, dict):
-                    for word, sentences in parsed.items():
-                        w = word.strip().lower()
-                        if isinstance(sentences, list) and len(sentences) >= 1:
-                            all_sentences[w] = sentences[:3]
-                            print(f"  ✅ {w}: {len(sentences)} sentences")
+                    for item in batch:
+                        new_sentences = parsed.get(item["key"], parsed.get(item["word"], []))
+                        if isinstance(new_sentences, list) and len(new_sentences) >= 1:
+                            # Merge existing + new, then deduplicate
+                            combined = item["existing"] + new_sentences
+                            combined = _deduplicate(combined)
+                            all_sentences[item["key"]] = combined[:TARGET_SENTENCES]
+                            print(f"  ✅ {item['key']}: {len(item['existing'])} existing + "
+                                  f"{len(new_sentences)} new → {len(all_sentences[item['key']])} total")
+                        else:
+                            # Keep whatever we had
+                            if item["existing"]:
+                                all_sentences[item["key"]] = item["existing"]
+                            print(f"  ⚠️  {item['key']}: no new sentences returned")
 
         except Exception as e:
             print(f"  ❌ Batch failed: {e}")
+            # Preserve existing sentences for words in the failed batch
+            for item in batch:
+                if item["existing"] and item["key"] not in all_sentences:
+                    all_sentences[item["key"]] = item["existing"]
 
-        if i + GEMINI_BATCH_SIZE < len(words):
+        if i + GEMINI_BATCH_SIZE < len(words_needing_sentences):
             time.sleep(GEMINI_DELAY)
 
     # Save to sentences.json
     with open(sentences_path, "w") as f:
         json.dump(all_sentences, f, indent=2, ensure_ascii=False)
 
-    missing = [w for w in words if w.lower() not in all_sentences]
+    # Report
+    complete = sum(1 for w in words if len(all_sentences.get(w.lower(), [])) >= TARGET_SENTENCES)
+    missing = [w for w in words if len(all_sentences.get(w.lower(), [])) < TARGET_SENTENCES]
+
     print(f"\n{'='*60}")
-    print(f"✅ Generated sentences for {len(all_sentences)}/{len(words)} words")
+    print(f"✅ {complete}/{len(words)} words have {TARGET_SENTENCES}+ sentences")
     print(f"💾 Saved to: {sentences_path}")
 
     if missing:
-        print(f"⚠️  Missing: {', '.join(missing[:10])}{'...' if len(missing) > 10 else ''}")
+        print(f"⚠️  Still incomplete: {', '.join(missing[:10])}{'...' if len(missing) > 10 else ''}")
+        print(f"   Re-run this script to retry failed words.")
 
     return all_sentences
 
@@ -171,5 +266,6 @@ def generate_sentences(words: list[str], sentences_path: Path = SENTENCES_PATH) 
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    force = "--force" in sys.argv
     words = load_words()
-    generate_sentences(words)
+    generate_sentences(words, force=force)
