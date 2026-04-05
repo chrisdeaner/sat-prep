@@ -33,6 +33,10 @@ This application is an **SAT prep tool focused on vocabulary practice**. The goa
 - Use `python-dotenv` (Python) or `dotenv` (Node.js) to load environment variables.
 - The `.env` file must be listed in `.gitignore`.
 
+### Project Structure
+- **`developer-documentation/`** is for plans, design docs, analyses, and dev notes. Always place documentation artifacts here.
+- **`docs/`** is the GitHub Pages static site root (HTML/CSS/JS only). **Do not** put markdown docs or developer documentation in `docs/`.
+
 ### Version Control
 - This project uses **Git** for version control.
 - Write clear, conventional commit messages.
