@@ -861,6 +861,17 @@
       line-height: 1.4;
     }
 
+    .quiz-breakdown-sentence {
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 4px;
+      line-height: 1.4;
+      font-style: italic;
+      opacity: 0.85;
+      border-left: 2px solid var(--accent);
+      padding-left: 8px;
+    }
+
     .quiz-results-actions {
       display: flex;
       gap: 10px;
@@ -1249,6 +1260,7 @@
             word: wordData.word,
             definition: wordData.definition,
             sentence: blanked,
+            originalSentence: sentence,
             options: options,
             correctIndex: options.indexOf(wordData.word),
           };
@@ -1271,6 +1283,7 @@
           word: q.word,
           definition: q.definition,
           userAnswer: q.options[selectedIndex],
+          originalSentence: q.originalSentence,
         });
 
         // Update option styles
@@ -1429,6 +1442,7 @@
                   <div class="quiz-breakdown-content">
                     <div class="quiz-breakdown-word">${a.word}${!a.correct ? ` <span style="color:var(--text-dim)">— you said: ${a.userAnswer}</span>` : ''}</div>
                     ${!a.correct ? `<div class="quiz-breakdown-def">${a.definition}</div>` : ''}
+                    ${!a.correct && a.originalSentence ? `<div class="quiz-breakdown-sentence">"${a.originalSentence}"</div>` : ''}
                   </div>
                 </div>
               `).join('')}
